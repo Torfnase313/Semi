@@ -1,7 +1,10 @@
 .aux 
+.bcf
 .bit
 .blg 
 .bbl
+.fdb_latexmk
+.fls
 .lof 
 .log 
 .lot 
@@ -16,5 +19,6 @@
 .out
 .url
 .svn 
+.syntex.gz
 .toc
 .xml
