@@ -1,1 +1,2 @@
-# Semi
+todooo:
+glossar einfügen
