@@ -4,6 +4,39 @@
 \usepackage[ngerman]{babel}
 \usepackage{lmodern}
 
+%schriftgröße der Überschriften
+\setkomafont{chapter}{\Large}
+\setkomafont{section}{\large}
+\setkomafont{subsection}{\normalsize}
+
+%zeilenabstand der itemizes
+\usepackage{enumitem}
+\setlist[itemize]{itemsep=0pt, parsep=0pt, topsep=0pt, partopsep=0pt}
+
+%beginn fußnoten mit leerzeichen
+\deffootnote{1em}{1em}{\makebox[1em][r]{\thefootnotemark\ }}
+
+%normale Fußnoten mit Punkt schließen lassen, wenn noch kein '.', '!', '?' vorhanden
+\let\orgfootnote\footnote
+\newcommand\myautodot{%
+  \ifthenelse{\the\spacefactor>\sfcode`,}{}{.}%
+}
+\renewcommand\footnote[2][\empty]{%
+  \ifx#1\empty%
+    \orgfootnote{#2\myautodot}%
+  \else%
+    \orgfootnote[#1]{#2\myautodot}%
+  \fi%
+}
+
+%anpassung seitenränder
+\usepackage[
+    left=25mm,   % linker Rand
+    right=25mm,  % rechter Rand
+    top=25mm,    % oberer Rand
+    bottom=20mm  % unterer Rand
+]{geometry}
+
 %Festlegen des Seitenlayouts
 \usepackage[onehalfspacing]{setspace} %Zeilenabstand
 %alternativ \linespread{1.5}
