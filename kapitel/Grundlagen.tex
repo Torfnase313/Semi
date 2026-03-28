@@ -330,4 +330,53 @@ Um aufschlussreiche Ergebnisse aus der EEG Analyse zu gewinnen, müssen einige w
 Zusammenfassend zeigt sich, dass die Qualität und Aussagekraft von EEG-Daten maßgeblich von der sorgfältigen Kontrolle technischer, physiologischer und experimenteller Einflussfaktoren abhängt. Nur durch die Berücksichtigung dieser Aspekte können Artefakte minimiert und valide Rückschlüsse auf die zugrunde liegende Gehirnaktivität gezogen werden.
 
 \section{Merkmale von Brain-Computer-Interfaces und mögliche Andwendungen}
+
+Die zuvor beschriebene Frequenzbandanalyse ist eine wichtige Grundlage für die Funktionsweise von Brain-Computer-Interfaces (BCI).
+Dabei werden Gehirnsignale in Frequenzbereiche zerlegt, mit gespeicherten Referenzmustern verglichen und charakteristische Signale erkannt. 
+Diese können anschließend als Steuerbefehle für technische Geräte benutzt werden.
+
+
+Ein Brain-Computer-interface ermöglicht eine direkte Informationsübertragung zwischen einem organischen Gehirn und einem technischen System.
+Sie nehmen neuronale Signale auf, analysieren und übersetzen diese in Befehle, ohne das eine Muskelbewegung erforderlich ist. 
+Dadurch schaffen BCIs völlig neue und kreative Möglichkeiten, Geräte zu steuern, die unabhängig von körperlicher Bewegung oder Sprache funktionieren.
+
+
+Die Funktionsweise eines BCI beruht auf der kontinuierlichen Erfassung physiologischer Signale, vor allem der elektrischen Aktivität des Gehirn.
+Diese wird mithilfe eines Elektroenzephalogramms (EEG) gemessen.
+Die Signale, die aufgezeichnet werden, werden mit vorab festgelegten oder erlernten Mustern verglichen, um charakteristische neuronale Signale festzustellen, die gleichzeitig als Kontrollsignale dienen.\footnote{Vgl. \cite{heuer2015}}
+Durch die Analyse dieser Kontrollsignale kann das BCI die Intentionen des Benutzers erkennen und diese sodann in Steuerbefehle umsetzen.
+Damit ein BCI zuverlässig funktioniert, müssen die Signale möglichst genau ausgewertet und in Echtzeit verarbeitet werden.
+Gleichzeitig können äußere Störsignale sowie Unterschiede zwischen den Nutzern die Signalverarbeitung und Interpretation erschweren.
+Dies führt dazu, dass die Interpretation der Signale anfällig für Fehler ist und nicht immer zwischen verschiedenen Gehirnaktivitäts- Zuständen unterschieden werden kann.
+In der Praxis erfordert dies daher eine ausführliche Signalverarbeitung sowie oft eine Anpassung des Systems an den jeweiligen Nutzer.
+
+
+Ein vereinfachtes Beispiel wurde für ein BCI System  wurde im Rahmen eines Informatikprojekts in der 10.Klasse umgesetzt.
+Dabei wurden EEG-Daten von einem portablen EEG in Echtzeit erfasst, analysiert und als Spiel visuell dargestellt.
+Die Auswertung der EEG-Daten basierte auf der Analyse des bestimmten Frequenzbereiches Alpha, die Rückschlüsse auf die mentale Aktivität des Nutzers ermöglichte.
+Die Steuerung erfolgte über ein interaktives Spiel, bei welchem ein Ballon abhängig von der Gehirnaktivität gesteuert wurde. Dieses Projekt verdeutlichte die Funktionsweise eines BCI, da auch hier neuronale Signale verarbeitet und in eine visualisierte Auswertung der Gehirnströme überführt wurden.
+Während in diesem Projekt nur eine visuelle Rückmeldung erzeugt wurde, lässt sich die gleiche Funktionsweise auf andere reale Systeme übertragen.
+So können die analysierten Gehirnsignale auch genutzt werden, um einen Roboterarm, genannt "Arduino Tinkerkit Braccio" zu steuern.
+
+\begin{figure}[H]
+	\centering
+    	\includegraphics[width=0.5\textwidth]{bilder/arduino_roboterarm.jpg}
+    \quelle{\cite{lee2022}}
+    \captionof{figure}{Roboterarm Arduino Tinkerkit Braccio}
+    \label{invasiv}
+\end{figure}
+
+
+Dabei werden die erkannten Muster nicht mehr nur abgebildet, sondern direkt in physische Bewegungen umgesetzt.
+Im Rahmen der Seminarfacharbeit, wird neben der Validierungsstudie eines portablen sowie stationären EEG-Systems zusätzlich die Möglichkeiten zur Steuerung eines Roboterarms mithilfe eines BCI-Programms untersucht und praktisch umgesetzt.
+Dabei wird der Roboter XY verwendet, der in der Lage ist, die durch das BCI erzeugten Signale zu verarbeiten und in gezielte Bewegungen umzusetzen. 
+
+
+Brain-Computer-Interfaces gewinnen in der heutigen Zeit an Bedeutung.
+Insbesondere Menschen mit körperlichen Behinderungen können von der Technik mit der Umsetzung von BCIs profitieren.
+Es gibt bereits prototypische Systeme, wie beispielsweise die Steuerung eines Cursors, die Nutzung von Buchstabierprogrammen oder die Kontrolle von prothetischen Geräten ermöglichen.
+Neben medizinischen Anwendungen,  gewinnen in den vergangenen Jahren auch nicht-medizinische Einsatzmöglichkeiten an Aufmerksamkeit.
+Dazu zählen unter anderem die Steuerung von Fahrzeugen oder Robotern sowie die Überwachung von mentalen Zuständen.
+
+
 \section{Fragestellung und Hypothesen}
