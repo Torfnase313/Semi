@@ -32,9 +32,14 @@
 
 \input{kapitel/Anhang.tex}
 
-\printbibliography[nottype=onlinedokument, heading=bibliography, title={Literaturverzeichnis}]
+\defbibfilter{internet}{type=onlinedokument or type=onlinelexikon}
 
-\printbibliography[type=onlinedokument, heading=bibliography, title={Internetquellen}]
+\defbibfilter{literat}{type=zeitschriftartikel or type=buch}
+
+
+\printbibliography[filter = literat, heading=bibliography, title={Literaturverzeichnis}]
+
+\printbibliography[filter = internet, heading=bibliography, title={Internetquellen}]
 
 \listoffigures %Abbildungsverzeichnis
 
