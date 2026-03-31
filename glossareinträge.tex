@@ -1,6 +1,7 @@
 
 %https://de.overleaf.com/learn/latex/Glossaries infos über Erstellung glossareintraäge und aufrufe dieser
 %WICHTIG! wenn Änderungen an den Glossareinträgen vorgenommen werden,im Terminal hintereinander das hier iengeben:
+%erstmal .glo datei lsöchen, dann:
 %pdflatex Seminarfacharbeit.tex
 %makeglossaries Seminarfacharbeit
 %pdflatex Seminarfacharbeit.tex
@@ -10,6 +11,14 @@
     \newglossaryentry{}
     {}
 \end{comment}
+
+\newglossaryentry{silber-silberchlorid-elektrode}
+    {
+    name=Silber-Silberchlorid-Elektrode,
+    text={\textit{Silber-Silberchlorid-Elektrode}},
+    first={\textit{Silber-Silberchlorid-Elektrode}},
+    description={Die Silber-Silberchlorid-Elektrode ist eine häufig verwendete Elektrode in der Elektroenzephalographie und besteht aus einem Silberdraht, der mit einer Schicht aus Silberchlorid überzogen ist}
+    }
 
 \newglossaryentry{berger-effekt}
 {
