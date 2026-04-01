@@ -1,0 +1,84 @@
+\DeclareDatamodelEntrytypes{onlinelexikon, zeitschriftartikel, onlinedokument, Booknew}
+
+\DeclareDatamodelFields[type=field, datatype=date, skipout=false]{
+  lasteditdate,}
+
+\DeclareBibliographyDriver{onlinelexikon}{%
+\printfield{title}%
+\addspace%
+\printlasteditdate\adddot\addspace%
+In:\addspace\printfield{journaltitle}%
+\adddot\addspace%
+\printfield{url}%
+\addspace%
+\printfield{note}%
+\finentry%
+\newline
+}
+
+\DeclareBibliographyDriver{zeitschriftartikel}{% 
+\printnames{author}% 
+\addspace%
+\printfield{year}%
+\addcolon\addspace%
+\printfield{title}% 
+\adddot\addspace%
+In:\addspace\printfield{journaltitle}% 
+\addcomma\addspace%
+\printfield{volume}%
+\iffieldundef{issue}
+{}{
+	\adddot\printfield{issue}%
+}
+\iffieldundef{pages}{%
+	% keine Seitenangabe: Punkt nach Issue
+	\adddot\addspace%
+}{%
+	% Seiten vorhanden: Komma, dann Seiten und Schlusspunkt
+	\addcomma\addspace%
+	\printfield{pages}%
+	\adddot\addspace%
+}%
+\printfield{url}% 
+\addspace%
+\printfield{note}%
+\finentry%
+\newline
+}
+
+\DeclareBibliographyDriver{onlinedokument}{
+	\iffieldundef{year}
+	{
+		\printnames{author}\adddot\addspace%
+		\printfield{title}\adddot\addspace%
+		\printfield{subtitle}\adddot\addspace%
+		\printfield{url}\addspace%
+		\printfield{note}%
+	}
+	{
+		\printnames{author}\adddot\addspace%
+		\printfield{year}\addcolon\addspace%
+		\printfield{title}\adddot\addspace%
+		\printfield{subtitle}\adddot\addspace%
+		\printfield{url}\addspace%
+		\printfield{note}%
+	}%
+	\finentry%
+	\newline
+}
+
+\DeclareBibliographyDriver{Booknew}{
+	\printnames{author}\addspace%
+	\printfield{year}\addcolon\addspace%
+	\printfield{title}\adddot\addspace%
+	\printfield{subtitle}\adddot\addspace%
+	\iffieldundef{edition}
+	{}
+	{\printfield{edition}}
+	\printlist{publisher}\adddot%
+	\iffieldundef{url}
+	{}
+	{\addspace\printfield{url}\addspace\printfield{note}}%
+	\finentry%
+	\newline%
+}

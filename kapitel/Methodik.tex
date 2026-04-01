@@ -1,9 +1,80 @@
 \chapter{Methodisches Vorgehen einer EEG-Validierungsstudie}
-\section{Beschreibung der Stichprobe}
-\section{Experimentalaufbau für die Messung}
+
+
+
+
 \section{Beschreibung der Messapparatur}
+Katharina \newline
+
+Die Geräte, die miteinander verglichen werden, nutzen beide nicht-invasive Elektroden und schicken die gemessenen Daten digital an einen Rechner. Die Geräte werden zur Forschung genutzt. Die gleiche Einteilung der genutzten Geräte ermöglicht eine bessere Vergleichbarkeit.\newline
+
+Das EEG, das als Vergleich dient, wird mit einem BioSemi Active II-System aufgezeichnet. 32 Elektroden werden an einer Kappe mit festen Positionen angebracht. Die Pin-Type Elektroden sind \Gls{silber-silberchlorid-elektrode}, trocken, langzeitlich stabil und wie in Abbildung \ref{pinelectroden} aufgebaut. Sie sind in dem (erweiterten) 10-20-System angeordnet. \newline
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.325\textwidth]{bilder/Pin-Elektroden.jpg}
+    \quelle{\cite{biosemi_active_electrodes}}
+    \caption{Die Elektroden, die in einem BioSemi Active II-System genutzt werden}
+    \label{pinelectroden}
+\end{figure}
+
+Anstatt Ground-und Referenzelektroden wird ein \acrshort{cms} / \acrshort{drl}-Kreis genutzt. Dabei wird die CMS-Elektrode in der Mitte aller messenden Elektroden angebracht und die DRL-Elektrode entfernt vom Kopf, zum Beispiel am Bein oder Arm.\footnote{ Vgl. \cite{biosemi_systems}} \newline
+Die Messung findet in einer speziellen, für EEGs ausgelegten Kabine (4400 A-CT-Special) von Industrial Acoustics statt.\footnote{ Vgl. \cite{iac_eeg_kabine}} Sie ist schwach beleuchtet, elektrisch isoliert und schallgedämpft, um die Aufnahme äußerer, nichtmenschlicher elektrischer Signale, zu minimieren. Der Proband legt seinen Kopf in eine Kopfstütze und hat einen konstanten Abstand von 90cm zum Monitor, auf dem die Experimente präsentiert werden.\newline
+
+Das portable EEG-Gerät, das validiert werden soll, ist das Ultracortex Mark IV von OpenBCI. Es besteht aus einer 3D-gedruckten Halterung, welche auf das 10-20-System ausgelegt ist, in der 16 Silber-Silberchlorid-Elektroden eingesetzt werden. 14 davon sind trocken und mit spitzen Zacken versehen, um durch Haar zu dringen. Die restlichen zwei sind ebenfalls trocken, haben aber keine Zacken, um auf Haut aufgelegt zu werden und nicht zu verletzen. Sie werden an der Stirn angebracht. Alle Elektroden haben eine Lebenszeit von etwa zehn Nutzungen ohne Pflege, da die Beschichtung abgenutzt wird und sie schlechter leitet. Um eine korrekte Messung zu garantieren, müssen sie regelmäßig ausgetauscht werden.\footnote{ Vgl. \cite{openbci_dry_electrodes}}\newline 
+Zusätzlich zu den messenden Elektroden enthält das System zwei Ohrclips, die als Referenzelektroden fungieren und keine Gehirnaktivität messen.\footnote{ Vgl. \cite{openbci_ultracortex_shop}} Verbunden werden die Elektroden mit Kabeln, die zu einer Platine führen, die die gesammelten Daten über bluetooth an ein verbundenes Gerät schickt. Der Aufbau ist in Abbildung \ref{headset} zu sehen. \newline
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.325\textwidth]{bilder/Ultracortex_Headset.jpg}
+    \quelle{\cite{openbci_ultracortex_shop}}
+    \caption{Das Ultracortex Mark IV Headset}
+    \label{headset}
+\end{figure}
+
+Die Messungen mit diesem Gerät finden in demselben Labor statt wie die Messungen mit dem stationären System. Allerdings befinden sich die Probanden einmal innerhalb der Kabine und einmal außerhalb. In dem Raum sind viele elektronische Geräte wie PCs oder Monitore vorhanden, die genutzt werden, um die Daten des Gerätes in der Kabine auszuwerten. Diese Umgebung ist damit zu begründen, dass die Steuerung des Roboterarms ebenfalls nicht in einer geschützten Kabine stattfindet und die Messung zur Validierung in ähnlichen Umständen passieren soll.
+\section{Beschreibung der Stichprobe} 
+Lorenz \newline
+
+Es nehmen 15-20 Probanden an der Studie von April bis Juni 2026 teil. Sie sind zwischen 16 und 18 Jahren alt und besuchen das Carl-Zeiss-Gymnasium in der elften Klasse. Bevor ein EEG aufgenommen wird, unterschreiben die Teilnehmer eine schriftliche Einverständniserklärung, füllen einen Händigkeitsfragebogen aus und geben demographische Daten, wie Alter und Geschlecht, an. Ein genehmigter Ethik-Antrag unterstützt das Aufnehmen von Daten von Minderjährigen. Die Versuchspersonen absolvieren EEG-Messungen unter drei verschiedenen Bedingungen , die jeweils etwa zehn Minuten dauern. Dabei werden zwei etablierte Formen der Hirnaktivität erfasst: \Romannum{1}. visuelle ereigniskorrelierte Potenziale (EKPs auch P1 genannt) und \Romannum{2}. die Alpha-Power-Aktivität.
+
+\section{Experimentalaufbau für die Messung} 
+Lorenz \newline
+
+\subsection{Messung mit stationären EEG-System}
+Zur Erhebung der visuell ereigniskorrelierten Potenziale (\Romannum{1}). werden den Probanden verschiedene Spielkarten, auf einem Bildschirm,  aus einem Pokerdeck gezeigt. Jede Karte erscheint zweimal – einmal in großer Darstellung und einmal deutlich verkleinert mit reduziertem Kontrast. Dabei wird nach 100 ms eine Komponente der Hirnaktivität gemessen, die sogenannte P1. Diese spiegelt die Verarbeitung des visuellen Reizes wider und reagiert sensibel auf Unterschiede in Größe und Kontrast der dargebotenen Reize. Entsprechend wird erwartet, dass sich die P1-Antwort zwischen den beiden Darstellungsbedingungen deutlich unterscheidet.
+Ein einzelner Durchgang beginnt mit der Präsentation eines Fixationskreuzes für 500 ms, gefolgt von der Anzeige einer Spielkarte für 750 ms. Anschließend erscheint für 2000 ms ein schwarzer Bildschirm. Um die Aufmerksamkeit der Teilnehmenden sicherzustellen, sollen sie bei jedem gezeigten  Ass die Leertaste drücken. Insgesamt werden 104 Karten präsentiert (52 Karten eines Pokerdecks in zweifacher Wiederholung), was eine Dauer von etwa fünf Minuten ergibt.
+Um die Alpha-Power-Aktivität messen zu können (\Romannum{2}), wird das EEG einmal mit geschlossenen Augen aufgezeichnet und anschließend mit geöffneten. Zwischen diesen Bedingungen sollte ein großer Unterschied in der Alpha-Power-Aktivität zu sehen sein. Denn bei geschlossenen Augen ist die Alpha-Power-Aktivität größer als bei geöffneten. Diese Messung, inklusive Instruktion, dauert 3 Minuten.
 
 
 
 
+    \subsection{Messung mit portablem EEG-System}
+Folgt noch, erst muss sich eine Methode ausgedacht werden--> diese in ein Programm umgewandelt--> vergleichabr gemessen werden (gleiche Daten P1 und Alphapower) --> vergleichen
+
+    \subsection{Zeitlicher Ablauf des Experiments} 
+    Lorenz \newline
+
+Der geplante Ablauf sieht dabei folgendermaßen aus: 
+
+    \begin{itemize}
+\item Ankommen der ProbandInnen + unterschreiben einer Einverständniserklärung (ca 5 min.)
+\item Erhebung der demografischen Daten (ca. 10min)
+\item Anlegen und prüfen des portablen EEG-System(OpenBCI) ( ca. 10min)
+\begin{itemize}
+\item 1. Messung (ca. 10 min)
+\item 2. Messung (ca. 10 min)
+\end{itemize}
+\item Abnehmen des portablen EEG-Systems und anlegen des stationären EEG-System mit 32 Elektroden (ca.25min)
+\begin{itemize}
+\item 3. Messung, Daten (\Romannum{1}. und \Romannum{2}.) (ca. 10 min)
+\end{itemize}
+\item Abnehmen des stationären Systems (ca. 5 min)
+\item Haare waschen (ca.  10min)
+\item Belohnung, Auswertung, aufkommende Fragen besprechen, Verabschiedung der ProbandInnen (ca. 10 min) 
+
+\end{itemize}
+
+Für die Datenerhebung mit unseren ProbandInnen planen wir eine Gesamtdauer von etwa 110 Minuten pro Person ein. Diese Zeit umfasst sowohl die eigentliche EEG-Messung als auch die Vor- und Nachbereitung im Labor.
 \section{Auswertungsmethodik}
+

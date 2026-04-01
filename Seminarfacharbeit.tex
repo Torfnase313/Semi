@@ -1,10 +1,11 @@
-\documentclass[a4paper, 12pt]{scrreprt}
+\documentclass[headings=small,a4paper, 12pt]{scrreprt}
 
 \input{preamble.tex}
 
 \begin{document}
+\glsenablehyper
+\hypersetup{pageanchor=true}
 
-\hypersetup{pageanchor=false}
 \input{titelseite.tex}
 %für römische Nummerierung der Seite(n) des Inhaltsverzeichnis
 \pagenumbering{roman}
@@ -27,13 +28,19 @@
 
 \input{kapitel/Diskussion}
 
-\input{kapitel/Glossar}
+\printglossary
+\printglossary[type=\acronymtype, title=Abkürzungsverzeichnis, style=acrostyle]
 
 \input{kapitel/Anhang.tex}
 
-\printbibliography[nottype=misc, heading=bibliography, title={Literaturverzeichnis}]
+\defbibfilter{internet}{type=onlinedokument or type=onlinelexikon}
 
-\printbibliography[type=misc, heading=bibliography, title={Internetquellen}]
+\defbibfilter{literat}{type=zeitschriftartikel or type=buch}
+
+
+\printbibliography[filter = literat, heading=bibliography, title={Literaturverzeichnis}]
+
+\printbibliography[filter = internet, heading=bibliography, title={Internetquellen}]
 
 \listoffigures %Abbildungsverzeichnis
 
@@ -45,30 +52,30 @@
 \bibliographystyleonline{dinat}
 \end{comment}
 
-\begin{comment}
+
 	
 
-\chapter*{Danksagung}
+%\chapter*{Danksagung}
 %Kann auch als Kapitel angelegt werden.
 
 \chapter*{Eidesstattliche Erklärung}
-Wir erklären, dass wir die vorliegende Arbeit mit dem Titel \qt{Titel} selbstständig, ohne unzulässige fremde Hilfe angefertigt und nur unter Verwendung der angegebenen Literatur und Hilfsmittel verfasst haben. 
+Wir erklären, dass wir die vorliegende Arbeit mit dem Titel \qt{Validierungsstudie eines portablen EEG-Gerätes von OpenBCI} selbstständig, ohne unzulässige fremde Hilfe angefertigt und nur unter Verwendung der angegebenen Literatur und Hilfsmittel verfasst haben. 
 Sämtliche Stellen, die wörtlich oder inhaltlich anderen Werken entnommen sind, wurden unter Angabe der Quellen als Entlehnung kenntlich gemacht. 
 Dies trifft besonders auch auf Quellen aus dem Internet zu. Gleichzeitig geben wir das Einverständnis, unsere Arbeit mittels einer Plagiatssoftware durch die Schule überprüfen zu lassen.
 
 \vspace{0.3cm}
 \noindent
-Ort, den tt. Monat jjjj
+Jena, den 01. April 2026
 
 \vfill
 
 \noindent\begin{tabular}{ll}
 \makebox[2.5in]{\hrulefill} & \makebox[2.5in]{\hrulefill}\\
-Vorname Name& Vorname Name\\[8ex]
+Katharina Ensslen& Alisa Fiedler\\[8ex]
 \makebox[2.5in]{\hrulefill} & \makebox[2.5in]{\hrulefill}\\
-Vorname Name & Vorname Name\\
+Sophie Kleppe & Lorenz Kobylka\\
 \end{tabular}
 %Bei Drei Personen die Felder für Person Vier mit Leerzeichen ersetzen.
-\end{comment}
+
 
 \end{document}

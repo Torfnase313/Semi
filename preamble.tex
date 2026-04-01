@@ -3,6 +3,39 @@
 \usepackage[T1]{fontenc}
 \usepackage[ngerman]{babel}
 \usepackage{lmodern}
+\usepackage{romannum} %römische Ziffern in Code: \Romannum{1} (groß) \romannum{1} klein
+%schriftgröße der Überschriften
+\setkomafont{chapter}{\Large}
+\setkomafont{section}{\large}
+\setkomafont{subsection}{\normalsize}
+
+%zeilenabstand der itemizes
+\usepackage{enumitem}
+\setlist[itemize]{itemsep=0pt, parsep=0pt, topsep=0pt, partopsep=0pt}
+
+%beginn fußnoten mit leerzeichen
+\deffootnote{1em}{1em}{\makebox[1em][r]{\thefootnotemark\ }}
+
+%normale Fußnoten mit Punkt schließen lassen, wenn noch kein '.', '!', '?' vorhanden
+\let\orgfootnote\footnote
+\newcommand\myautodot{%
+  \ifthenelse{\the\spacefactor>\sfcode`,}{}{.}%
+}
+\renewcommand\footnote[2][\empty]{%
+  \ifx#1\empty%
+    \orgfootnote{#2\myautodot}%
+  \else%
+    \orgfootnote[#1]{#2\myautodot}%
+  \fi%
+}
+
+%anpassung seitenränder
+\usepackage[
+    left=25mm,   % linker Rand
+    right=25mm,  % rechter Rand
+    top=25mm,    % oberer Rand
+    bottom=20mm  % unterer Rand
+]{geometry}
 
 %Festlegen des Seitenlayouts
 \usepackage[onehalfspacing]{setspace} %Zeilenabstand
@@ -40,6 +73,8 @@
 \usepackage{graphicx}
 \usepackage{float}
 \graphicspath{{./abbildungen/}}
+\usepackage[export]{adjustbox}
+\usepackage{array}
 
 
 %Einfügen von Unformatiertem typewriter Text
@@ -53,15 +88,12 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 
-
 %Für die Literaturverzeichnisse
 \usepackage{csquotes}
 %\usepackage[backend=biber, bibstyle=authoryear, citestyle=apa]{biblatex}
 %Für Hauptname der Quelle in anderer Schriftart nehme man 'iso-authoryear'. (nutzt dreprecated Feld)
-\usepackage[backend=biber, style=authoryear]{biblatex}
-% URL-Schriftart ändern
-\renewcommand{\UrlFont}{\small\sffamily}
-\addbibresource{literatur.bib}
+
+
 
 
 %Literaturverzeichnis exakt nach ISO 690-3
@@ -78,6 +110,130 @@
 \usepackage{hyperref}
 %Zeilenumbrüche in URLs, standard url Paket wird von hyperref geladen, Befehl \url{} bleibt gleich
 \usepackage{microtype}[final]
+\urlstyle{same}
+
+%glossar
+\usepackage[acronym,hyperfirst=true,toc=true]{glossaries}
+%\hypersetup{pageanchor=true}
+\makeglossaries
+\input{glossareinträge.tex}
+\input{acronymeinträge.tex}
+
+%gkleiche abstände zwischen den Absätzen
+\newglossarystyle{acrostyle}{%
+  \setglossarystyle{long}%
+  \setlength{\glsdescwidth}{0.7\textwidth}%
+}
+
+
+
+%Formatierung und Import Bibliography
+
+\usepackage[affil-it]{authblk}	
+\usepackage[datamodel=datamodel,backend=biber,style=authoryear,autocite=footnote,maxnames=20,minnames=10]{biblatex}
+\addbibresource{literatur.bib}
+
+% slash zwischen namen 
+\DeclareDelimFormat{multinamedelim}{\space\slash\space}
+\DeclareDelimFormat{finalnamedelim}{\space\slash\space}
+%Vor und nach name richtige reinfolge
+\DeclareNameAlias{sortname}{family-given}   
+\DeclareNameAlias{default}{family-given}    
+
+\DefineBibliographyStrings{ngerman}{
+  urlseen = {Abgerufen am }
+}
+
+%\DeclareFieldFormat{note}{\mkbibbrackets{\bibstring{urlseen}\addcolon\space#1}}
+
+\DeclareFieldFormat{urldate}{\mkbibbrackets{\bibstring{urlseen}\addcolon\space#1}}
+
+\DeclareFieldFormat{lasteditdate}{\mkbibparens{#1}}
+
+\DeclareFieldFormat{year}{\mkbibparens{#1}}
+
+\DeclareFieldFormat{volume}{#1}
+
+
+
+
+
+
+%citation commands
+\DeclareCiteCommand{\vgl}[\mkbibfootnote]{%
+	\usebibmacro{citeindex}%
+	\iffieldundef{prenote}
+		{\printtext{Vgl\adddot\space}}
+		{\printfield{prenote}\setunit{\prenotedelim}}%
+}
+{%
+	% Ausgabe abhängig vom Eintragstyp
+	\ifentrytype{onlinedokument}
+		{\printnames{labelname}\addspace\bibhyperref{\printurldate}}%
+		{%
+					\ifentrytype{onlinelexikon}
+						{\printfield{journaltitle}\adddot\addspace\bibhyperref{\printfield{title}}}%
+						{%
+							\ifentrytype{zeitschriftartikel}
+								{\printnames[family]{labelname}\addspace\bibhyperref{\printfield{year}}}%
+								{\printnames[family]{labelname}\addspace\bibhyperref{\printfield{year}}}%
+						}%
+		}%
+}
+{\multicitedelim}
+{%
+	\iffieldundef{postnote}
+		{\adddot}
+		{\addcolon\addspace\printfield{postnote}\adddot}%
+	\nopunct%
+}
+
+\DeclareCiteCommand{\vglHier}[]{%
+	\usebibmacro{citeindex}%
+	\iffieldundef{prenote}
+		{\printtext{Vgl\adddot\space}}
+		{\printfield{prenote}\setunit{\prenotedelim}}%
+}
+{%
+	% Ausgabe abhängig vom Eintragstyp
+	\ifentrytype{onlinedokument}
+		{\printnames{labelname}\addspace\bibhyperref{\printurldate}}%
+		{%
+					\ifentrytype{onlinelexikon}
+						{\printfield{journaltitle}\adddot\addspace\bibhyperref{\printfield{title}}}%
+						{%
+							\ifentrytype{zeitschriftartikel}
+								{\printnames[family]{labelname}\addspace\bibhyperref{\printfield{year}}}%
+								{\printnames[family]{labelname}\addspace\bibhyperref{\printfield{year}}}%
+						}%
+		}%
+}
+{\multicitedelim}
+{%
+	\iffieldundef{postnote}
+		{\adddot}
+		{\addcolon\addspace\printfield{postnote}\adddot}%
+	\nopunct%
+}
+	
+
+
+\DeclareCiteCommand{\ebd}[\mkbibfootnote]
+{\usebibmacro{citeindex}%
+\iffieldundef{prenote}
+{\printtext{Vgl\adddot}}
+{\printfield{prenote}\setunit{\prenotedelim}}%
+}
+{
+	\printtext{ebd\adddot}
+	\iffieldundef{postnote}
+	{}
+	{\addspace\printfield{postnote}\adddot}
+}
+{}
+{}
+
+
 
 
 %Einbinden von Quelltext in Python (https://tex.stackexchange.com/questions/83882/how-to-highlight-python-syntax-in-latex-listings-lstinputlistings-command)
@@ -122,3 +278,5 @@ showstringspaces=false            %
 
 % Python for inline
 \newcommand\pythoninline[1]{{\pythonstyle\lstinline!#1!}}
+
+\usepackage{eurosym}
