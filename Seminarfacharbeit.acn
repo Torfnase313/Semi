@@ -1,10 +1,14 @@
 \glossaryentry{EEG?\glossentry{eeg}|setentrycounter[]{page}"\glsnumberformat}{1}
 \glossaryentry{BCI?\glossentry{bci}|setentrycounter[]{page}"\glsnumberformat}{1}
 \glossaryentry{ERP?\glossentry{erp}|setentrycounter[]{page}"\glsnumberformat}{2}
+\glossaryentry{EPSP?\glossentry{epsp}|setentrycounter[]{page}"\glsnumberformat}{10}
+\glossaryentry{IPSP?\glossentry{ipsp}|setentrycounter[]{page}"\glsnumberformat}{10}
 \glossaryentry{ADC?\glossentry{adc}|setentrycounter[]{page}"\glsnumberformat}{18}
 \glossaryentry{ICA?\glossentry{ica}|setentrycounter[]{page}"\glsnumberformat}{30}
 \glossaryentry{DC?\glossentry{dc}|setentrycounter[]{page}"\glsnumberformat}{31}
 \glossaryentry{DC?\glossentry{dc}|setentrycounter[]{page}"\glsnumberformat}{31}
 \glossaryentry{EOG?\glossentry{eog}|setentrycounter[]{page}"\glsnumberformat}{32}
-\glossaryentry{CMS?\glossentry{cms}|setentrycounter[]{page}"\glsnumberformat}{36}
-\glossaryentry{DRL?\glossentry{drl}|setentrycounter[]{page}"\glsnumberformat}{36}
+\glossaryentry{CMS?\glossentry{cms}|setentrycounter[]{page}"\glsnumberformat}{37}
+\glossaryentry{DRL?\glossentry{drl}|setentrycounter[]{page}"\glsnumberformat}{37}
+\glossaryentry{EKPs?\glossentry{ekp}|setentrycounter[]{page}"\glsnumberformat}{39}
+\glossaryentry{EKPs?\glossentry{ekp}|setentrycounter[]{page}"\glsnumberformat}{39}
