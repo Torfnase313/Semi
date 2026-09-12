@@ -104,7 +104,4 @@ Die im vorangegangenen Abschnitt beschriebenen Rohdaten werden für beide Zielgr
 
 \subsection{Vorverarbeitung der Rohdaten}
 
-Vor der eigentlichen Analyse werden die Rohdaten für jeder Versuchsperson bandpassgefiltert, um langsame Drifts als auch hochfrequentes Rauschen zu entfernen.  
-\subsection{Auswertung der ereigniskorrelierten Potenziale (P1)}
-
-\subsection{Auswertung der Alpha-Power (Berger-Effekt)}
+Vor der eigentlichen Analyse werden die Rohdaten für jeder Versuchsperson bandpassgefiltert, das bedeutet, dass nur Frequenzen in einem bestimmten Frequenzbereich erhalten bleiben und alles darüber und darunter entfernt wird. Dadurch werden sowohl langsame Schwankungen (Drifts) sowie sehr hochfrequentes Rauschen entfernt. Drifts sind langsame Veränderungen der Spannungen, die durch Schwitzen oder schlechtem Elektrodenkontakt entstehen. Hochfrequente Störungen, die zum Beispiel durch Muskelanspannung oder Elektronik entstehen, werden ebenfalls entfernt. Am Ende bleibt nur der Frequenzbereich übrig, in dem die interessierende Hinaktivität tatsächlich liegt. Anschließend wird mit einem Notch Filter dass durch das Wechselstromnetz verursachte 50-Hz Netzbrummen (Rauschen) entfernt. Danach erfolgt eine Re-Referenzierung auf die Durchschnittsrefernz. Das bedeutet, dass die Spannungen aller Elektroden gemittelt werden und diese Mittelspannung von allen Elektroden abgezogen wird. Dadurch werden Spannungsunterschiede zwischen den Elektroden reduziert, um die Signalqualität zu verbessern. Da sich die Anforderungen der beiden Zielgrößen unterscheiden, werden die Daten anschließend in zwei getrennten Auswertungssträngen weiterverarbeitet. 
