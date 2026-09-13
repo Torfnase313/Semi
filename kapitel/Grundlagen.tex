@@ -240,26 +240,28 @@ Dort werden die Signale nach Mustern durchsucht. Aus den erkannten und klassifiz
 
 
 
-\section{Auswertung von durch EEGs erzeugten Daten - Frequenzbandanaylse}
+\section{Auswertung der durch EEGs erzeugten Daten - Frequenzbandanalyse und ereignisbezogene Potenziale}
 Sophie \newline
 
-\subsection{Grundlagen der EEG-Analyse}
+\subsection{Zwei verschiedene Perspektiven der EEG-Analyse}
 
 Um EEG-Daten zu verstehen und zu interpretieren, können die Signale in zwei sich ergänzende Perspektiven unterteilt werden.\footnote{Vgl. \cite{wikipedia_eeg_nyquist}} 
-Es wird erstens in spontane EEG-Rhythmen unterschieden, welche als kontinuierliche Oszillationen in verschiedenen Frequenzbereichen beobachtet werden können, und zweitens in  ERPs (aus dem Englischen \emph{event-related potentials}, \glqq ereignisbezogene Potentiale\grqq), welche als zeitlich gebundene Spannungsänderungen in Reaktion auf bestimmte Ereignisse oder Stimuli erscheinen.\footnote{Vgl. Ebd.} Zusammen erlauben die Frequenzbänder und die zeitbezogenen ERPs die Analyse der EEG-Daten. \newline
+Es wird erstens in spontane EEG-Rhythmen unterschieden, welche als kontinuierliche Oszillationen in verschiedenen Frequenzbereichen beobachtet werden können, und zweitens in  ERPs (aus dem Englischen \emph{event-related potentials}, \glqq ereignisbezogene Potentiale\grqq), welche als zeitlich gebundene Spannungsänderungen in Reaktion auf bestimmte Ereignisse oder Stimuli erscheinen.\footnote{Vgl. Ebd.} Beide Perspektiven unterscheiden sich also  grundlegend in ihrer zeitlichen Struktur, während EEG-Rhythmen  kontinuierlich und ereignisunabhängig sind, sind ERPs kurzzeitig, gebunden an ein konkretes Ereignis und nur durch Mittelung vieler Wiederholungen im Experiment erkennbar. Zusammen erlauben beide Perspektiven die Analyse der EEG-Daten. \newline
 
 
+Genau diese eben beschriebenen Perspektiven bilden die methodische Grundlage für die im Rahmen unserer Arbeit durchgeführten Validierungsstudie. Um die Validität des portablen EEG-Systems zu bewerten, müssen deshalb beide Betrachtungsweisen bedacht werden. Deshalb  wird zum einen die \textbf{Alpha-Power} stellvertretend für die spontanen Rhythmen herangezogen, zum anderen die\textbf{P1-Komponente} stellvertretend für die ereignisbezogenen Potenziale. \newline 
+Im folgenden werden deshalb zunächst die Frequenzbandbereiche (Abschnitt \ref{sec:frequenzbaender}) und anschließend die ERPs (Abschnitt \ref{sec:erps}) erläutert, wobei ein besonderer Fokus auf die in unserer Studie gewählten Vergleichsgrößen gelegt wird. Alle weiteren  Bändern bzw. Komponenten können ausführlicher beschrieben auch im Anhang gefunden werden. \ref{app:frequenzbaender} und \ref{app:erp} Abschließend werden auch allgemeine Störgrößen behandelt, die später bei der Verarbeitung der in der Studie aufgenommenen Rohdaten beachtet werden müssen (Abschnitt \ref{sec:stoergroessen}). 
 
-
-
-
+\subsection{EEG-Rhythmen in verschiedenen Frequenzbandbereichen - Frequenzbandanalyse}
+\label{sec:frequenzbaender}
 
 EEG-Signale enthalten rhythmische Oszillationen, welche historisch in verschiedene Frequenzbänder unterteilt wurden, die mit griechischen Buchstaben bezeichnet wurden. Diese inkludieren $\delta$-, $\theta$-, $\alpha$-, $\beta$- und $\gamma$-Bänder sowie spezielle Bänder wie $\mu$ und $\sigma$.\footnote{Vgl. \cite{nayak_waveforms}}  Jedes Band wird mit bestimmten Gehirnzuständen oder Funktionen assoziiert. In der Praxis können diese Bänder von den rohen EEG-Daten durch Spektralanalysetechniken (z.B. Fourier-Transformationen oder Welch-Verfahren) extrahiert werden, was oft als quantitative EEG Analyse bezeichnet wird. \footnote{Vgl. \cite{wikipedia_eeg_nyquist}}  \newline
 
 Unter einem Frequenzband wird dabei ein definierter Frequenzbereich verstanden, in dem charakteristische EEG-Aktivität auftritt. Die elektrische Aktivität selbst beschreibt die im EEG gemessenen Signale, während regelmäßig auftretende, strukturierte Muster dieser Aktivität als Rhythmen bezeichnet werden.
 
-\subsection{Frequenzbänder}
-
+\subsubsection{Abgrenzung der Frequenzbänder voneinander}
+\label{sec:frequenzbaender_kurz}
+Die verschiedenen Frequenzbänder unterscheiden sich dabei aber nicht ausschließlich durch ihre Frequenz, auch die Amplitude, die Topographie und der assoziierte Wachheitszustand sind unterschiedlich. Mit steigender Frequenz lässt sich beispielsweise  
 \begin{description}
 
 \item[\textbf{\emph{Delta} ($\boldsymbol{\delta}$)}] 
