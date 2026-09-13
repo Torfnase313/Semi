@@ -290,22 +290,42 @@ Der Alpha-Rhythmus war die erste, von Hans Berger entdeckte, beschriebene EEG-Os
 Die korrekte Abbildung des Alpha-Rhythmus eignet sich besonders gut als Kiterium, um zwei EEG-Systeme miteinander zu vergleichen, da das auftreten dieses aufgrund des Hans-Berger-Effektes sehr gut vorhersagbar ist. Konkret bedeutet das, dass beim schließen der Augen das ansteigen der Alpha-Power zu erwarten ist und beim öfnnen der Augen das sinken dieser. .\footnote{Vgl. Ebd.} Zusätzlich ist dieses Phänomen sehr gut untersucht und sehr einfach als Teil des Versuches durchzuführen. ( Vgl. \ref{sec:Methodik}) 
 
 
-
-
-
-
-\subsection{Bedeutung und Anwendungen}
+\subsection{Bedeutung und Anwendungen der Frequenzbänder in BCI-Systemen}
 
  Die Frequenzbandanalyse ist auch für viele Anwendungen von besonderer Bedeutung. Im klinischen Kontext werden EEG-Rhythmen genutzt, um Anomalien zu identifizieren und BCI-Forscher entwickeln Systeme zur gezielten Modulation bestimmter Bänder. Eine klassische Applikation ist das Nutzen der Alpha- oder Beta-Rhythmusmodulation für die BCI-Steuerung, wie Beispielsweise, wenn eine Person lernt, ihre Alpha-Leistung zu Steigern, um einen Befehl auszuführen oder die Mu-/Beta-Suppression um eine Prothese zu steuern. Studien zeigten, dass eine einfache binäre Kontrolle durch die Erkennung von Veränderungen im EEG erreicht werden kann. In einer frühen Demonstration erlernte ein gelähmter Patient Beta Aktivität zu nutzen, um einen Schalter zu bedienen, welcher einen Computer Cursor bewegte und zusätzlich elektrische Stimulatoren für seine Hand aktivierte. Dadurch konnte der Patient ein gewisses Maß an Bewegungsfreiheit zurückgewinnen.\footnote{Vgl. \cite{uchida1991}} 
 
 
-\subsection{Event-Related Potentials}
+\subsection{Ereignisbezogene Potenziale (ERPs)}
+\label{sec:erps}
+
+\subsubsection{Grundprinzip und Abgrenzung zu spontanen Rhythmen}
 
 Während EEG-Rhythmen den generellen Zustand des Gehirns widerspiegeln, sind Event-Related-Potentials neuronale Reaktionen, welche mit bestimmten sensorischen, kognitiven oder motorischen Ereignissen verbunden sind und aus dem gesamten EEG extrahiert werden können.\footnote{Vgl. \cite{luck2005}, S. 4} Da jede ereignisausgelöste neuronale Reaktion sich  klein im Vergleich zu EEG-Schwankungen verhält, werden in den meisten EEG-Experimenten ERP-Wellen durch verschiedene Signalmittelungen von zufälligen Hintergundrauschen isoliert.\footnote{Vgl. Ebd., S. 56}
 
-\subsection{ERP-Komponenten}
+\subsubsection{Abgrenzung der ERP-Komponenten voneinander}
+ERP-Komponenten bestehen aus einer Serie von positiven und negativen Spannungsdeflexionen und werden anhand ihrer Polarität (P für positive oder N für negative Spannung relativ zur Basislinie (normale elektrische Gehirnaktivität eines Menschen im Ruhezustand)) sowie ihres typischen Zeitverlaufs gekennzeichnet. Die nachfolgende Tabelle soll einen Überblick über die Unterscheidungsmerkmale wie Latenz, Topographie und der vier frühen visuellen ERP-Komponenten geben. \newline
 
-ERP-Komponenten bestehen aus einer Serie von positiven und negativen Spannungsdeflexionen und werden anhand ihrer Polarität (P für positive oder N für negative Spannung relativ zur Basislinie (normale elektrische Gehirnaktivität eines Menschen im Ruhezustand)) sowie ihres typischen Zeitverlaufs gekennzeichnet.
+\begin{table}[htbp]
+\centering
+\caption{Unterscheidungsmerkmale der frühen visuellen ERP-Komponenten C1, P1, N1 und P2}
+\label{tab:erp}
+\begin{tabular}{ll p{3.2cm} p{3.2cm} p{4.2cm}}
+\toprule
+\textbf{Komp.} & \textbf{Polarität} & \textbf{Latenzfenster} & \textbf{Topographie} & \textbf{Ursprung / Funktion / Sensitivität} \\
+\midrule
+C1 & Variabel & $\approx$ 40--60 ms & Posteriore Mittellinie & Primäre Sehrinde (V1); sensitiv für physikalische Reizmerkmale \\
+\addlinespace
+P1 & Positiv  & Onset: $\approx$ 60--90 ms \newline Peak: $\approx$ 100--130 ms & Lateral okzipital & Frühe visuelle Verarbeitung; sensitiv für Kontrast \& Größe \\
+\addlinespace
+N1 & Negativ  & $\approx$ 100--200 ms \newline (Mehrere Subkomponenten) & Anterior (früh), parietal \newline \& lateral okzipital (spät) & Aufmerksamkeitsbezogene Reizverarbeitung \\
+\addlinespace
+P2 & Positiv  & $\approx$ 150--250 ms & Anterior-zentral & Höhere visuelle Analyse; oft überlappt durch N1/N2 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+
 
 \subsubsection{Zeitlicher Ablauf der ERP-Komponenten}
 
