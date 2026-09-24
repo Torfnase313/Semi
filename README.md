@@ -6,4 +6,4 @@ restliche anmerkungen von claude machen
 
 tabelle schön machen die der komponenten
 
-bild von vefe einfügen
+bild von vefa einfügen
