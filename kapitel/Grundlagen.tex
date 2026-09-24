@@ -91,14 +91,8 @@ Nach der Entstehung eines Aktionspotenzials öffnen sich spannungsabhängige Kal
 Lorenz \newline
 
 Jedes Neuron ist mit einer Vielzahl von Synapsen mit anderen Neuronen verbunden. Somit treffen in einem Neuron kontinuierlich zahlreiche Signale über Synapsen ein, die darüber entscheiden, ob ein Aktionspotenzial ausgelöst wird oder nicht. Diese Signale sind entweder erregend oder hemmend. Erregende Signale werden als exzitatorische postsynaptische Potenziale (EPSPs) bezeichnet und hemmende Signale als inhibitorische postsynaptische Potenziale (IPSPs).\footnote{Vgl. \cite{antwerpes_summation}} Ein einzelnes EPSP reicht in der Regel nicht aus, um den Schwellenwert für die Auslösung eines Aktionspotenzials zu überschreiten. Daher ist eine Verrechnung mehrerer Signale notwendig. Diese Verrechnung erfolgt am Axonhügel des Neurons, dort werden die EPSPs und IPSPs summiert. Übersteigt diese Summe einen bestimmten Schwellenwert, unter Berücksichtigung der hemmenden Signale, wird ein Aktionspotenzial am Axonhügel ausgelöst.\footnote{Vgl. Ebd.}\newline
-% EBD-FIX: Diese Fußnote zitierte im Original ein zweites Mal direkt
-% \cite{antwerpes_summation} ohne dass etwas anderes dazwischen zitiert
-% wurde - laut Zitierregel korrekt als "Vgl. Ebd." zu setzen.
 
 Dabei unterscheidet man zwei Formen der Summation: die zeitliche und die räumliche Summation. Bei der zeitlichen Summation addieren sich mehrere IPSPs oder EPSPs, die in kurzen Abständen an die Synapse übertragen werden. Wenn sich IPSPs zeitlich summieren, wird das Membranpotenzial des folgenden Neurons zunehmend negativer (Hyperpolarisation). Das bedeutet, dass sich das Membranpotenzial weiter vom Schwellenwert entfernt.\footnote{Vgl. \cite{examio_summation}} Hingegen, wenn sich EPSPs zeitlich summieren, wird das Membranpotenzial des folgenden Neurons zunehmend positiver (Depolarisation). Dadurch steigt die Chance, dass der Schwellenwert für ein Aktionspotenzial übertroffen wird.\footnote{Vgl. Ebd.} Die zweite Form der Summation ist die räumliche Summation, diese beschreibt das gleichzeitige Eintreffen von Signalen an verschiedenen Synapsen. Dabei werden mehrere EPSPs oder auch eine Mischung aus EPSPs und IPSPs gleichzeitig verrechnet.\footnote{Vgl. Ebd.} Ausschlaggebend dabei ist die Entfernung der Synapse zum Axonhügel. Signale, die näher am Axonhügel übertragen werden, haben einen stärkeren Einfluss auf die Entstehung eines Aktionspotenzials. Beispielsweise treffen entfernt vom Axonhügel viele EPSPs ein, während nahe am Axonhügel ein IPSP eintrifft, in diesem Fall kann es passieren, dass der Schwellenwert nicht überschritten wird. Zusammenfassend lässt sich sagen, dass die Entstehung eines Aktionspotenzials das Ergebnis einer komplexen Verrechnung von erregenden und hemmenden Einflüssen ist. Nur wenn die Summe der EPSPs die hemmenden Effekte der IPSPs überwiegt und der Schwellenwert am Axonhügel überschritten wird, kommt es zur Weiterleitung eines elektrischen Signals entlang des Axons.\footnote{Vgl. \cite{antwerpes_summation}}
-
-
-
 
 
 \begin{figure}[H]
@@ -108,8 +102,6 @@ Dabei unterscheidet man zwei Formen der Summation: die zeitliche und die räumli
     \caption{Darstellung des Einflusses eines EPSPs und IPSPs auf das Membranpotenzial}
     \label{IPSP}
 \end{figure}
-
-
 
 
 \section{Aufbau und Funktionsweise eines EEG-Systems}
@@ -136,13 +128,7 @@ Einige Anwendungen befinden sich noch in der Entwicklung, da sie eine noch höhe
 Um einen Vergleich zwischen EEG-Geräten zu ermöglichen, werden sie grundsätzlich nach drei Kriterien unterschieden, den Elektroden, der Art der Übertragung zur Weiterverarbeitung und dem Anwendungsbereich. \newline
 Die Elektroden können sich auf der Kopfhaut befinden, dann sind sie nicht-invasiv. Die Alternative sind invasive Elektroden, wobei sie beispielsweise ins Gewebe (tiefe Elektroenzephalographie) oder direkt auf den Cortex implantiert werden und sich innerhalb des Schädels befinden. \newline
 Anstatt einer herkömmlichen Elektrodenplatzierung und Kabeln als Verbindung nutzen drahtlose Geräte Bluetooth oder andere digitale Übertragungswege, um höhere Flexibilität, Bequemlichkeit und alternative Platzierung der Elektroden zu ermöglichen. Drahtlose Geräte können bei invasiven und nicht-invasiven EEGs eingesetzt werden. \newline
-Das letzte Kriterium zur Einordnung von Geräten, mit denen EEGs durchgeführt werden, ist der Anwendungsbereich. Die größten Bereiche sind Forschung und Kliniken. Die Geräte, die zur Forschung genutzt werden, besitzen mehr Elektroden und das Ziel ist eine hohe Präzision, um neue Erkenntnisse zu gewinnen. In Kliniken werden EEGs nach klinischen Standards durchgeführt und für medizinische Diagnosen und Überwachungen, auch über lange Zeiträume, genutzt. Dabei ist die Bequemlichkeit wichtiger als in der Forschung.\footnote{Vgl. Ebd., S. 1 und 2}
-% EBD-FIX: Im Original stand hier "Vgl. \cite{qin2023}, S. 1 und 2" - die
-% unmittelbar vorangehende Fußnote zitierte jedoch bereits qin2023 (S. 3),
-% ohne dass etwas anderes dazwischen zitiert wurde. Nach der Zitierregel
-% (dieselbe Quelle direkt hintereinander -> Ebd.) korrigiert zu "Vgl. Ebd.,
-% S. 1 und 2" - analog zur bereits im Original korrekt verwendeten Form
-% "Vgl. Ebd., S. 4" direkt im Anschluss.
+Das letzte Kriterium zur Einordnung von Geräten, mit denen EEGs durchgeführt werden, ist der Anwendungsbereich. Die größten Bereiche sind Forschung und Kliniken. Die Geräte, die zur Forschung genutzt werden, besitzen mehr Elektroden und das Ziel ist eine hohe Präzision, um neue Erkenntnisse zu gewinnen. In Kliniken werden EEGs nach klinischen Standards durchgeführt und für medizinische Diagnosen und Überwachungen, auch über lange Zeiträume, genutzt. Dabei ist die Bequemlichkeit wichtiger als in der Forschung.\footnote{Vgl. Ebd., S. 1 und 2.}
 
 \subsection{Allgemeiner Aufbau der Geräte}
 EEG-Geräte bestehen aus vier grundlegenden Komponenten: Elektroden, Vorverarbeitungsschaltungen, \acrshort{adc}s (kurz für \Gls{analog-digital-converter}) und Signalsteuerung und -feedback.\footnote{ Vgl. Ebd., S. 4}
@@ -248,9 +234,6 @@ Anschließend werden analoge Spannungssignale in digitale Form umgewandelt. Dies
 Dort werden die Signale nach Mustern durchsucht. Aus den erkannten und klassifizierten Mustern werden Schlüsse gezogen und, je nach Versuchsaufbau und Anwendungsbereich, Feedback gegeben.\footnote{ Vgl. \cite{qin2023}, S. 7}
 
 
-
-
-
 \section{Auswertung der durch EEGs erzeugten Daten - Frequenzbandanalyse und ereignisbezogene Potenziale}
 Sophie \newline
 
@@ -310,11 +293,8 @@ Der Alpha-Rhythmus war die erste, von Hans Berger entdeckte, beschriebene EEG-Os
 % inhaltliche/Quellen-Entscheidung wäre, habe ich NICHTS geändert - bitte
 % selbst prüfen, ob "Ebd." hier tatsächlich die richtige Quelle referenziert.
 
-Die korrekte Abbildung des Alpha-Rhythmus eignet sich besonders gut als Kriterium, um zwei EEG-Systeme miteinander zu vergleichen, da das Auftreten dieses aufgrund des Berger-Effekts sehr gut vorhersagbar ist. Konkret bedeutet das, dass beim Schließen der Augen ein Ansteigen der Alpha-Power zu erwarten ist und beim Öffnen der Augen ein Sinken dieser.\footnote{Vgl. Ebd.} Zusätzlich ist dieses Phänomen sehr gut untersucht und sehr einfach als Teil des Versuches durchzuführen (vgl. \ref{sec:Methodik}).
+Die korrekte Abbildung des Alpha-Rhythmus eignet sich besonders gut als Kriterium, um zwei EEG-Systeme miteinander zu vergleichen, da das Auftreten dieses aufgrund des Berger-Effekts sehr gut vorhersagbar ist. Konkret bedeutet das, dass beim Schließen der Augen ein Ansteigen der Alpha-Power zu erwarten ist und beim Öffnen der Augen ein Sinken dieser.\footnote{Vgl. Ebd.} Zusätzlich ist dieses Phänomen sehr gut untersucht und sehr einfach als Teil des Versuches durchzuführen (siehe Kapitel "Methodik").
 
-% ANMERKUNG: "\ref{sec:Methodik}" verweist auf kein vorhandenes \label und
-% ergibt beim Kompilieren "??". Bitte an der entsprechenden Stelle in
-% Kapitel 3 ein \label{sec:Methodik} setzen oder den Verweis anpassen.
 
 \subsection{Bedeutung und Anwendungen der Frequenzbänder in BCI-Systemen}
 
