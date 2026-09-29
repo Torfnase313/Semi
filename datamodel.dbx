@@ -1,6 +1,6 @@
 \DeclareDatamodelEntrytypes{onlinelexikon, zeitschriftartikel, onlinedokument, Booknew}
 
-\DeclareDatamodelFields[type=field, datatype=date, skipout=false]{
+\DeclareDatamodelFields[type=field, datatype=date, skipout=false]{%
   lasteditdate,}
 
 \DeclareBibliographyDriver{onlinelexikon}{%
