@@ -46,7 +46,7 @@ In:\addspace\printfield{journaltitle}%
 \newline
 }
 
-\DeclareBibliographyDriver{onlinedokument}{
+\DeclareBibliographyDriver{onlinedokument}{%
 	\iffieldundef{year}
 	{
 		\printnames{author}\adddot\addspace%
@@ -67,7 +67,7 @@ In:\addspace\printfield{journaltitle}%
 	\newline
 }
 
-\DeclareBibliographyDriver{Booknew}{
+\DeclareBibliographyDriver{Booknew}{%
 	\printnames{author}\addspace%
 	\printfield{year}\addcolon\addspace%
 	\printfield{title}\adddot\addspace%
