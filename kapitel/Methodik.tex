@@ -102,8 +102,14 @@ Vor der eigentlichen Analyse werden die Rohdaten für jede Versuchsperson bandpa
 
 Elektroden, die vor oder während der Messung als defekt oder stark verrauscht auffielen, werden markiert und gehen im weiteren Verlauf nicht wie normale Elektroden unverändert in die weiteren Berechnungen ein, sodass diese nicht verfälscht werden. Dagegen werden sie repariert, also aus Nachbarelektroden rechnerisch ersetzt (Interpolation), und anschließend in die weiteren Berechnungen einbezogen. Die Interpolation erfolgt über die 3D-Positionen der Elektroden, die in der Kappe festgelegt sind. Die Positionen werden genutzt, um die Spannungen der Nachbarelektroden zu bewerten und daraus die Spannung der defekten Elektrode zu berechnen. 
 
-
-\subsection{Auswertung der ereigniskorrelierten Potenziale (P1)}
+\begin{figure}
+	\centering
+	\includegraphics[width=0.325\textwidth]{bilder/Ultracortex_Headset.jpg}
+   \quelle{\cite{openbci_ultracortex_shop}}
+    \caption{Das Ultracortex Mark IV Headset}
+    \label{headset}
+\end{figure}
+\subsection{ (P1)}
 
 Da einzelne Aktionspotenziale und selbst einzelne ereigniskorrelierte Antworten im fortlaufenden EEG nicht direkt erkennbar sind, sondern von deutlich größeren Hintergrundschwankungen überlagert werden (vgl. Abschnitt 2.4.6), lässt sich die P1-Komponente nicht aus einer einzelnen Reizsetzung ablesen. Sie muss stattdessen aus vielen gleichartigen Reizwiederholungen herausgemittelt werden. Die Auswertung der P1-Komponente gliedert sich deshalb in mehrere aufeinanderfolgende Schritte, die zunächst pro Versuchsperson und erst am Ende über die gesamte Stichprobe hinweg durchgeführt werden.
 
