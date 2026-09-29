@@ -80,5 +80,5 @@ In:\addspace\printfield{journaltitle}%
 	{}
 	{\addspace\printfield{url}\addspace\printfield{note}}%
 	\finentry%
-	%\newline%
+	%\newline
 }
