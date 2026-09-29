@@ -268,13 +268,13 @@ Die verschiedenen Frequenzbänder unterscheiden sich dabei aber nicht ausschlie�
 \label{tab:frequenzbaender}
 \begin{tabular}{ll l p{4cm} p{5cm}}
 \toprule
-\textbf{Band} & \textbf{Frequenz (Hz)} & \textbf{Amplitude} & \textbf{Typische Topographie} & \textbf{Physiologischer Zustand} \\
+\textbf{Band} & \textbf{Frequenz (Hz)} & \textbf{Amplitude} &  \textbf{Physiologischer Zustand} \\
 \midrule
-Delta ($\boldsymbol{\delta}$) & 0,5 -- 4   & Sehr hoch  & Frontozentral (Erw.) / Posterior (Kinder) & Tiefschlaf \\
-Theta ($\boldsymbol{\theta}$) & 4 -- 7     & Hoch       & Frontozentral / Mittellinie               & Schläfrigkeit, Meditation \\
-Alpha ($\boldsymbol{\alpha}$) & 8 -- 12    & Mittel     & Posterior und Okzipital-dominant            & Entspannung, Wachzustand, geschlossene Augen \\
-Beta ($\boldsymbol{\beta}$)   & 13 -- 30   & Niedrig    & Frontozentral                       & Mentale Aktivität, Konzentration, Aufmerksamkeit \\
-Gamma ($\boldsymbol{\gamma}$) & $> 30$     & Sehr niedrig & Diffus / Lokal (Kortikal)                 & Kognitive Verarbeitung \\
+Delta ($\boldsymbol{\delta}$) & 0,5 -- 4   & Sehr hoch  &  Tiefschlaf \\
+Theta ($\boldsymbol{\theta}$) & 4 -- 7     & Hoch       &  Schläfrigkeit, Meditation \\
+Alpha ($\boldsymbol{\alpha}$) & 8 -- 12    & Mittel     &  Entspannung, Wachzustand, geschlossene Augen \\
+Beta ($\boldsymbol{\beta}$)   & 13 -- 30   & Niedrig    &  Mentale Aktivität, Konzentration, Aufmerksamkeit \\
+Gamma ($\boldsymbol{\gamma}$) & $> 30$     & Sehr niedrig  & Kognitive Verarbeitung \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -284,7 +284,7 @@ Werden die assoziierten mentalen und physiologischen Zustände betrachtet, läss
 
 \subsection{Der Alpha-Rhythmus (\textbf{\textasciitilde 8--13 Hz})}
 
-Der Alpha-Rhythmus war die erste, von Hans Berger entdeckte, beschriebene EEG-Oszillation. Klassischerweise wird er als ausgeprägter posterior dominanter Rhythmus beobachtet, wenn eine Person wach, aber entspannt ist und beispielsweise ihre Augen schließt.\footnote{Vgl. Ebd.} Alpha-Aktivität hat typischerweise ihre maximale Amplitude über dem Okzipitallappen und wird durch das Öffnen der Augen oder mentale Anstrengung abgeschwächt, ein Phänomen, welches als \gls{berger-effekt} bezeichnet wird.\footnote{Vgl. \cite{jensen2010}} Im Wesentlichen zeigt der Alpha-Rhythmus einen ruhigen, erholsamen Zustand an, welcher verschwindet, wenn wir wachsam werden oder uns aktiv mit Gedanken beschäftigen. Neben dem posterioren Alpha gibt es andere Varianten, wie z.B. den Mu-Rhythmus über dem sensomotorischen Kortex, welcher mit motorischer Inaktivität assoziiert wird.\footnote{Vgl. Ebd.} Der Mu-Rhythmus wird während Bewegungen oder sogar der reinen Beobachtung von Bewegungen (in Verbindung mit der Aktivität von Spiegelneuronen) unterdrückt (Desynchronisation).\footnote{Vgl. \cite{jadeja2021}} Die Mu-Suppression wird häufig in BCI-Anwendungen zur Erkennung motorischer Vorstellungen oder Absichten genutzt. \newline 
+Der Alpha-Rhythmus war die erste, von Hans Berger entdeckte, beschriebene EEG-Oszillation. Klassischerweise wird er als ausgeprägter posterior dominanter Rhythmus beobachtet, wenn eine Person wach, aber entspannt ist und beispielsweise ihre Augen schließt.\footnote{Vgl. Ebd.} Alpha-Aktivität hat typischerweise ihre maximale Amplitude über dem Okzipitallappen und wird durch das Öffnen der Augen oder mentale Anstrengung abgeschwächt, ein Phänomen, welches als \gls{berger-effekt} bezeichnet wird.\footnote{Vgl. \cite{jensen2010}} Im Wesentlichen zeigt der Alpha-Rhythmus einen ruhigen, erholsamen Zustand an, welcher verschwindet, wenn wir wachsam werden oder uns aktiv mit Gedanken beschäftigen. \newline 
 
 % ANMERKUNG: "Vgl. Ebd." im ersten Satz dieses Absatzes bezieht sich auf die
 % zuletzt zitierte Quelle (\cite{wikipedia_eeg_nyquist} aus 2.4.1) - inhaltlich
@@ -414,12 +414,12 @@ Dazu zählen unter anderem die Steuerung von Fahrzeugen oder Robotern sowie die 
 \section{Fragestellung und Hypothesen}
 Katharina
 
-Unsere Motivation ist es, mit einem portablen System einen Roboter zu bewegen. Wir stellen uns die Frage:\newline
+Die Motivation hinter der Beschäftigung mit einem billigen, portablen EEG-System ist die Bewegegung eines Roboterarms über Gehirnaktivität, mithilfe dieses Systems. Die konkrete Frage lautet:\newline
 Ist die Genauigkeit eines portablen EEG-Systems hinreichend, um bestimmte Bewegungsabläufe eines Roboterarms zu initialisieren?\newline
 
 
 Der erste Schritt zur Beantwortung dieser Frage ist die Validierung der Daten des portablen Gerätes, unabhängig vom Roboterarm. Die Validierung findet durch den Vergleich mit einem Profi-System aus der Forschung statt, dessen Daten Grundlage für andere Arbeiten sind, die Erkenntnisse liefern. Es wird deshalb davon ausgegangen, dass die Daten des Profi-Systems valide genug sind, um den Roboterarm zu steuern.
-Wird festgestellt, dass die Daten des portablen Systems vergleichsweise sehr schlecht, also durch Rauschen und Artefakten so strak verfälscht, dass die Daten nicht mehr analysiert werden können, sind, kann die Fragestellung beneint werden. Ist dies nicht der Fall, kann auf Grundlage dieser Arbeit weitere Forschung in Hinsicht auf die Verbindung zum und Steuerung des Roboterarm durchgeführt werden.\newline
+Wird festgestellt, dass die Daten des portablen Systems vergleichsweise sehr schlecht, also durch Rauschen und Artefakten so strak verfälscht, dass die Daten nicht mehr analysiert werden können, sind, kann die Fragestellung verneint werden. Ist dies nicht der Fall, kann auf Grundlage dieser Arbeit weitere Forschung in Hinsicht auf die Verbindung zum und Steuerung des Roboterarm durchgeführt werden.\newline
 Die Forschungsfrage, mit der sich diese Arbeit also im Speziellen beschäftigt, ist:\newline
 Ist die Qualität der Daten des portablen System ansatzweise mit denen des Profi-Systems vergleichbar?\newline
 
