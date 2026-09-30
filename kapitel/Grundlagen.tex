@@ -239,8 +239,8 @@ Sophie \newline
 
 \subsection{Zwei verschiedene Perspektiven der EEG-Analyse}
 
-Um EEG-Daten zu verstehen und zu interpretieren, können die Signale in zwei sich ergänzende Perspektiven unterteilt werden.\footnote{Vgl. \cite{wikipedia_eeg_nyquist}} 
-Es wird erstens in spontane EEG-Rhythmen unterschieden, welche als kontinuierliche Oszillationen in verschiedenen Frequenzbereichen beobachtet werden können, und zweitens in ERPs (aus dem Englischen \emph{event-related potentials}, \glqq ereignisbezogene Potenziale\grqq, Mehrzahl ERPs), welche als zeitlich gebundene Spannungsänderungen in Reaktion auf bestimmte Ereignisse oder Stimuli erscheinen.\footnote{Vgl. Ebd.} Beide Perspektiven unterscheiden sich also grundlegend in ihrer zeitlichen Struktur: Während EEG-Rhythmen kontinuierlich und ereignisunabhängig sind, sind ERPs kurzzeitig, gebunden an ein konkretes Ereignis und nur durch Mittelung vieler Wiederholungen im Experiment erkennbar. Zusammen erlauben beide Perspektiven die Analyse der EEG-Daten. \newline
+Um EEG-Daten zu verstehen und zu interpretieren, können die Signale in zwei sich ergänzende Perspektiven unterteilt werden.\footnote{Vgl. \cite{wikipedia_eeg_nyquist}} \newline
+Es wird erstens zwischen spontanen EEG-Rhythmen unterschieden, die durch kontinuierliche elektrische Aktivität (in Form von Wellen) in unterschiedlichen Frequenzbereichen gekennzeichnet sind, und zweitens in \acrshort{erps}, welche als zeitlich gebundene Spannungsänderungen in Reaktion auf bestimmte Ereignisse oder Stimuli erscheinen.\footnote{Vgl. Ebd.} Beide Perspektiven unterscheiden sich also grundlegend in ihrer zeitlichen Struktur: Während EEG-Rhythmen kontinuierlich und ereignisunabhängig sind, sind ERPs kurzzeitig, gebunden an ein konkretes Ereignis und nur durch Mittelung vieler Wiederholungen im Experiment erkennbar. Zusammen erlauben beide Perspektiven die Analyse der EEG-Daten. \newline
 
 
 Genau diese eben beschriebenen Perspektiven bilden die methodische Grundlage für die im Rahmen unserer Arbeit durchgeführte Validierungsstudie. Um die Validität des portablen EEG-Systems zu bewerten, müssen deshalb beide Betrachtungsweisen bedacht werden. Aus diesem Grund wird zum einen die \textbf{Alpha-Power} stellvertretend für die spontanen Rhythmen herangezogen, zum anderen die \textbf{P1-Komponente} stellvertretend für die ereignisbezogenen Potenziale. \newline 
@@ -257,7 +257,7 @@ Im Folgenden werden deshalb zunächst die Frequenzbandbereiche (Abschnitt \ref{s
 
 EEG-Signale enthalten rhythmische Oszillationen, welche historisch in verschiedene Frequenzbänder unterteilt wurden, die mit griechischen Buchstaben bezeichnet wurden. Diese inkludieren Delta ($\delta$)-, Theta ($\theta$)-, Alpha ($\alpha$)-, Beta ($\beta$)- und Gamma ($\gamma$)-Bänder sowie spezielle Bänder wie $\mu$ und $\sigma$.\footnote{Vgl. \cite{nayak_waveforms}} Jedes Band wird mit bestimmten Gehirnzuständen oder Funktionen assoziiert. In der Praxis können diese Bänder von den rohen EEG-Daten durch Spektralanalysetechniken (z.B. Fourier-Transformationen oder Welch-Verfahren) extrahiert werden, was oft als quantitative EEG-Analyse bezeichnet wird. \footnote{Vgl. \cite{wikipedia_eeg_nyquist}} \newline
 
-Unter einem Frequenzband wird dabei ein definierter Frequenzbereich verstanden, in dem charakteristische EEG-Aktivität auftritt. Die elektrische Aktivität selbst beschreibt die im EEG gemessenen Signale, während regelmäßig auftretende, strukturierte Muster dieser Aktivität als Rhythmen bezeichnet werden.
+Unter einem Frequenzband wird dabei ein definierter Frequenzbereich verstanden, in dem charakteristische EEG-Aktivität auftritt. Die elektrische Aktivität selbst beschreibt die im EEG gemessenen Signale, während regelmäßig auftretende, strukturierte Muster, zum Beispiel in Wellen ähnlicher Frequenz und Amplitude, dieser Aktivität als Rhythmen bezeichnet werden.
 
 \subsubsection{Abgrenzung der Frequenzbänder voneinander}
 \label{sec:frequenzbaender_kurz}
@@ -279,8 +279,7 @@ Gamma ($\boldsymbol{\gamma}$) & $> 30$     & Sehr niedrig  & Kognitive Verarbeit
 \bottomrule
 \end{tabular}
 \end{table}
-
-Bezogen auf die Amplitude lässt sich mit steigender Frequenz eine Verringerung dieser feststellen. Wird die Topographie betrachtet, zeigt sich, dass Delta, Theta und Beta vermehrt frontozentral auftreten und Gamma diffus auftritt, während Alpha posterior und okzipital-dominant ist. 
+Es lässt sich mit steigender Frequenz eine Verringerung der Amplitude feststellen. Wird die Topographie betrachtet, zeigt sich, dass Delta, Theta und Beta vermehrt frontozentral auftreten und Gamma diffus auftritt, während Alpha posterior und okzipital-dominant ist. 
 Werden die assoziierten mentalen und physiologischen Zustände betrachtet, lässt sich feststellen, dass niedrige Frequenzen wie Delta-Wellen vor allem in tiefen Schlafphasen dominieren, während höhere Frequenzen wie Beta- und Gamma-Wellen mit aktiver kognitiver Verarbeitung und Aufmerksamkeit assoziiert sind. Es ist jedoch zu beachten, dass diese Zuordnungen keine eindeutigen Zustände darstellen, da im Gehirn meist mehrere Frequenzbereiche gleichzeitig aktiv sind und sich überlagern.
 
 \subsection{Der Alpha-Rhythmus (\textbf{\textasciitilde 8--13 Hz})}
@@ -299,7 +298,7 @@ Die korrekte Abbildung des Alpha-Rhythmus eignet sich besonders gut als Kriteriu
 
 \subsection{Bedeutung und Anwendungen der Frequenzbänder in BCI-Systemen}
 
-Die Frequenzbandanalyse ist auch für viele Anwendungen von besonderer Bedeutung. Im klinischen Kontext werden EEG-Rhythmen genutzt, um Anomalien zu identifizieren und BCI-Forscher entwickeln Systeme zur gezielten Modulation bestimmter Bänder. Eine klassische Applikation ist das Nutzen der Alpha- oder Beta-Rhythmusmodulation für die BCI-Steuerung, wie beispielsweise, wenn eine Person lernt, ihre Alpha-Leistung zu steigern, um einen Befehl auszuführen, oder die Mu-/Beta-Suppression nutzt, um eine Prothese zu steuern. Studien zeigten, dass eine einfache binäre Kontrolle durch die Erkennung von Veränderungen im EEG erreicht werden kann. In einer frühen Demonstration erlernte ein gelähmter Patient, Beta-Aktivität zu nutzen, um einen Schalter zu bedienen, welcher einen Computer-Cursor bewegte und zusätzlich elektrische Stimulatoren für seine Hand aktivierte. Dadurch konnte der Patient ein gewisses Maß an Bewegungsfreiheit zurückgewinnen.\footnote{Vgl. \cite{uchida1991}} 
+Die Frequenzbandanalyse ist auch für viele Anwendungen von besonderer Bedeutung. Im klinischen Kontext werden EEG-Rhythmen genutzt, um Anomalien zu identifizieren und BCI-Forscher entwickeln Systeme zur gezielten Modulation bestimmter Bänder. Eine klassische Applikation ist das Nutzen der Alpha- oder Beta-Rhythmusmodulation für die BCI-Steuerung. Beispielsweise, lernt eine Person, ihre Alpha-Leistung zu steigern, um einen Befehl auszuführen, oder um eine Prothese zu steuern. Studien zeigten, dass eine einfache binäre Kontrolle durch die Erkennung von Veränderungen im EEG erreicht werden kann. In einer frühen Demonstration erlernte ein gelähmter Patient, Beta-Aktivität zu nutzen, um einen Schalter zu bedienen, welcher einen Computer-Cursor bewegte und zusätzlich elektrische Stimulatoren für seine Hand aktivierte. Dadurch konnte der Patient ein gewisses Maß an Bewegungsfreiheit zurückgewinnen.\footnote{Vgl. \cite{uchida1991}} 
 
 
 \subsection{Ereignisbezogene Potenziale (ERPs)}
@@ -307,7 +306,7 @@ Die Frequenzbandanalyse ist auch für viele Anwendungen von besonderer Bedeutung
 
 \subsubsection{Grundprinzip und Abgrenzung zu spontanen Rhythmen}
 
-Während EEG-Rhythmen den generellen Zustand des Gehirns widerspiegeln, sind ERPs neuronale Reaktionen, welche mit bestimmten sensorischen, kognitiven oder motorischen Ereignissen verbunden sind und aus dem gesamten EEG extrahiert werden können.\footnote{Vgl. \cite{luck2005}, S. 4} Da jede ereignisausgelöste neuronale Reaktion sich klein im Vergleich zu EEG-Schwankungen verhält, werden in den meisten EEG-Experimenten ERP-Wellen durch verschiedene Signalmittelungen von zufälligem Hintergrundrauschen isoliert.\footnote{Vgl. Ebd., S. 56}
+Während EEG-Rhythmen den generellen Zustand des Gehirns widerspiegeln, sind ERPs neuronale Reaktionen, welche mit bestimmten sensorischen, kognitiven oder motorischen Ereignissen verbunden sind und aus dem gesamten EEG extrahiert werden können.\footnote{Vgl. \cite{luck2005}, S. 4} Da jede ereignisausgelöste neuronale Reaktion klein im Vergleich zu EEG-Schwankungen ist, werden in den meisten EEG-Experimenten ERP-Wellen durch verschiedene Signalmittelungen von zufälligem Hintergrundrauschen isoliert.\footnote{Vgl. Ebd., S. 56}
 
 \subsubsection{Abgrenzung der ERP-Komponenten voneinander}
 ERP-Komponenten bestehen aus einer Serie von positiven und negativen Spannungsdeflexionen und werden anhand ihrer Polarität (P für positive oder N für negative Spannung relativ zur Basislinie (normale elektrische Gehirnaktivität eines Menschen im Ruhezustand)) sowie ihres typischen Zeitverlaufs gekennzeichnet. Die nachfolgende Tabelle soll einen Überblick über die Unterscheidungsmerkmale wie Latenz und Topographie der vier frühen visuellen ERP-Komponenten geben. \newline

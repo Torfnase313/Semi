@@ -1,6 +1,6 @@
 \DeclareDatamodelEntrytypes{onlinelexikon, zeitschriftartikel, onlinedokument, Booknew}
 
-\DeclareDatamodelFields[type=field, datatype=date, skipout=false]{
+\DeclareDatamodelFields[type=field, datatype=date, skipout=false]{%
   lasteditdate,}
 
 \DeclareBibliographyDriver{onlinelexikon}{%
@@ -13,7 +13,7 @@ In:\addspace\printfield{journaltitle}%
 \addspace%
 \printfield{note}%
 \finentry%
-\newline
+%\newline
 }
 
 \DeclareBibliographyDriver{zeitschriftartikel}{% 
@@ -43,7 +43,7 @@ In:\addspace\printfield{journaltitle}%
 \addspace%
 \printfield{note}%
 \finentry%
-\newline
+%\newline
 }
 
 \DeclareBibliographyDriver{onlinedokument}{%
@@ -64,7 +64,7 @@ In:\addspace\printfield{journaltitle}%
 		\printfield{note}%
 	}%
 	\finentry%
-	\newline
+	%\newline
 }
 
 \DeclareBibliographyDriver{Booknew}{%
@@ -80,5 +80,5 @@ In:\addspace\printfield{journaltitle}%
 	{}
 	{\addspace\printfield{url}\addspace\printfield{note}}%
 	\finentry%
-	\newline%
+	%\newline
 }
