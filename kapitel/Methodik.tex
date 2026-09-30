@@ -151,15 +151,16 @@ Das OpenBCI-System zeichnet pro Elektrode 125 Messwerte pro Sekunde auf, was
 einer \gls{abtastrate} von 125\,Hz entspricht (BioSemi: 512\,Hz). Damit die
 OpenBCI-Daten auf dieselbe Weise wie die BioSemi-Daten mit \gls{mne}
 ausgewertet werden können, werden sie in das \acrshort{bdf}-Format
-umgewandelt, in dem auch die Daten des BioSemi-Systems gespeichert sind. Dabei
-kommt es allerdings zu einem Problem bei der zeitlichen Zuordnung der
-\glspl{trigger}. \gls{brainflow} empfängt die Messwerte nicht einzeln, sondern
-in Paketen von jeweils 60 Messwerten. Da das System 125 Messwerte pro Sekunde
-aufzeichnet, umfasst ein Paket einen Zeitraum von 0,48\,s. Ein \gls{trigger}
-kann so allerdings nicht dem Messzeitpunkt, an dem der \gls{stimulus}
-erscheint, zugeordnet werden, sondern erst dem ersten Messwert des nächsten
-Pakets. Die \glspl{trigger} liegen daher zufällig zwischen 0 und 480\,ms neben
-dem tatsächlichen Stimulusbeginn.\newline
+umgewandelt, in dem auch die Daten des BioSemi-Systems gespeichert sind. Bei
+dieser Umwandlung gehen die \glspl{trigger} verloren, und die Signale werden
+abgeschnitten. Zusätzlich kommt es zu einem Problem bei der zeitlichen
+Zuordnung der \glspl{trigger}. \gls{brainflow} empfängt die Messwerte nicht
+einzeln, sondern in Paketen von jeweils 60 Messwerten. Da das System 125
+Messwerte pro Sekunde aufzeichnet, umfasst ein Paket einen Zeitraum von
+0,48\,s. Ein \gls{trigger} kann so allerdings nicht dem Messzeitpunkt, an dem
+der \gls{stimulus} erscheint, zugeordnet werden, sondern erst dem ersten
+Messwert des nächsten Pakets. Die \glspl{trigger} liegen daher zufällig
+zwischen 0 und 480\,ms neben dem tatsächlichen Stimulusbeginn.
 
 Dies führt zu einem Problem bei der Auswertung der P1. Da die P1 ein kurzer
 Ausschlag von etwa 50\,ms ist, der nur sichtbar wird, wenn viele Epochen genau
@@ -182,7 +183,18 @@ eine Verschiebung gesucht, bei der alle Stimuli einer Messung gleichzeitig in
 das 0,48-s-Fenster fallen. Bei rund 100 Stimuli mit bekannten Abständen kann
 der zeitliche Versatz deshalb sehr genau eingegrenzt werden. Im Median
 verbleibt jedoch eine mögliche Abweichung von 8,6\,ms. Diese ist im Vergleich
-zur Dauer der P1 klein und genügt deshalb für die Auswertung.
+zur Dauer der P1 klein und genügt deshalb für die Auswertung. Als Kontrolle
+werden mit derselben Zuordnung die Zeitpunkte der Tastendrücke vorhergesagt,
+die meist auf 0 bis 9\,ms mit den aufgezeichneten \glspl{trigger}n
+übereinstimmen.
+
+Nach der Rekonstruktion der \glspl{trigger} erfolgt die bereits beschriebene Analyse. Alle Entscheidungen zur Auswertung 
+getroffen, und die Ergebnisse der von \gls{claude-code} erstellten Programme
+werden von uns überprüft. Zusätzlich werden die Ergebnisse von
+Wissenschaftlerinnen und Wissenschaftlern des Instituts für Psychologie
+kontrolliert.
+
+
 
 
 \subsection{Auswertung der Alpha-Power}
