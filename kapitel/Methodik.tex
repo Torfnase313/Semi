@@ -140,6 +140,28 @@ Da einzelne Aktionspotenziale und selbst einzelne ereigniskorrelierte Antworten 
 
 \textbf{Kontrastvergleich:} Der Vergleich der beiden Darbietungsbedingungen ist der eigentliche Beweis dafür, dass die Methode funktioniert. Weil die P1-Antwort bekanntermaßen auf Kontrast und Größe des Reizes reagiert (siehe Abschnitt 2.4.5), wird erwartet, dass sich die Bedingung mit großem und normalem Kontrast von der Bedingung mit kleinem und reduziertem Kontrast in der Amplitude und/oder der Latenz der P1 unterscheidet, egal mit welchem der beiden EEG-Systeme gemessen wird. Wenn bei einem System dieser Unterschied nicht zu erkennen ist oder deutlich schwächer ist als bei dem anderen, bedeutet das, dass dieses System die zugrunde liegende Hirnaktivität weniger gut wiedergibt.
 
+\section {Vorverarbeitung der Rohdaten: Ergänzungen für OpenBCI}
+
+Das \gls{openbci-board} wurde über die Software \gls{brainflow} ausgelesen.
+\gls{brainflow} speichert die Daten als Textdatei (\acrshort{csv}) mit 32
+Spalten. Enthalten sind die Kanäle 1--16, wobei die Spannungen in µV angegeben
+sind. Weitere Spalten enthalten den Zeitstempel des Computers und eine Spalte
+für die \glspl{trigger}. Jede Zeile der Datei entspricht einem Messzeitpunkt.
+Das OpenBCI-System zeichnet pro Elektrode 125 Messwerte pro Sekunde auf, was
+einer \gls{abtastrate} von 125\,Hz entspricht (BioSemi: 512\,Hz). Damit die
+OpenBCI-Daten auf dieselbe Weise wie die BioSemi-Daten mit \gls{mne}
+ausgewertet werden können, werden sie in das \acrshort{bdf}-Format
+umgewandelt, in dem auch die Daten des BioSemi-Systems gespeichert sind. Dabei
+kommt es allerdings zu einem Problem bei der zeitlichen Zuordnung der
+\glspl{marker}. \gls{brainflow} empfängt die Messwerte nicht einzeln, sondern
+in Paketen von jeweils 60 Messwerten. Da das System 125 Messwerte pro Sekunde
+aufzeichnet, umfasst ein Paket einen Zeitraum von 0,48\,s. Ein \gls{marker}
+kann so allerdings nicht dem Messzeitpunkt, an dem der \gls{stimulus}
+erschien, zugeordnet werden, sondern erst dem ersten Messwert des nächsten
+Pakets. Die \glspl{marker} liegen daher zufällig zwischen 0 und 480\,ms neben
+dem tatsächlichen Stimulusbeginn.
+
+
 \subsection{Auswertung der Alpha-Power}
 Lorenz \newline
 Die Auswertung gliedert sich in 2 Ebenen und einzelne Teilschritte. Am Anfang sind die Daten noch ungefiltert. Im darauffolgenden Schritt werden fehlerhafte Elektroden markiert und aussortiert, diese Daten durchlaufen nicht den Auswertungsprozess. Danach wird das Signal bandpassgefiltert. Dieser Bandpassfilter kombiniert einen Hochpassfilter und einen Tiefpassfilter. Dementsprechend lässt er nur Signale in einem bestimmten Frequenzbereich durch. In diesem Fall Frequenzen im Bereich 1-40 Hz. Zusätzlich wird ein Notchfilter (vgl. Abschnitt 3.4.1) angewendet, darauf folgt die Re-Referenzierung. Sofern ein Kanal als fehlerhaft markiert wurden ist, wird er aus den umliegenden Kanälen rekonstruiert, mittels \Gls{spährischer Spline-Interpolation} \footnote{ Vgl. \cite{ferree_spherical}}. Dies wird gemacht, damit alle Probanden die gleiche Anzahl an Kanälen haben. Erst dann ist eine Gruppenmittelung möglich. Bevor jedoch die Analyse auf Gruppenebene beginnen kann, werden erst die Bereiche extrahiert, bei denen der Proband die Augen geöffnet (EO, \glqq eyes open\grqq) hat und wo er die Augen geschlossen (EC, \glqq eyes closed\grqq) hat. Hierbei werden im Gegensatz zu der ERP-Analyse keine kurzen Epochen ausgeschnitten, sondern längere Zusammenhängende Blöcke. \newline
