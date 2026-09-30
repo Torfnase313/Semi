@@ -142,7 +142,7 @@ Da einzelne Aktionspotenziale und selbst einzelne ereigniskorrelierte Antworten 
 
 \section {Vorverarbeitung der Rohdaten: Ergänzungen für OpenBCI}
 
-Das \gls{openbci-board} wurde über die Software \gls{brainflow} ausgelesen.
+Das \gls{openbci-board} wird über die Software \gls{brainflow} ausgelesen.
 \gls{brainflow} speichert die Daten als Textdatei (\acrshort{csv}) mit 32
 Spalten. Enthalten sind die Kanäle 1--16, wobei die Spannungen in µV angegeben
 sind. Weitere Spalten enthalten den Zeitstempel des Computers und eine Spalte
@@ -153,13 +153,36 @@ OpenBCI-Daten auf dieselbe Weise wie die BioSemi-Daten mit \gls{mne}
 ausgewertet werden können, werden sie in das \acrshort{bdf}-Format
 umgewandelt, in dem auch die Daten des BioSemi-Systems gespeichert sind. Dabei
 kommt es allerdings zu einem Problem bei der zeitlichen Zuordnung der
-\glspl{marker}. \gls{brainflow} empfängt die Messwerte nicht einzeln, sondern
+\glspl{trigger}. \gls{brainflow} empfängt die Messwerte nicht einzeln, sondern
 in Paketen von jeweils 60 Messwerten. Da das System 125 Messwerte pro Sekunde
-aufzeichnet, umfasst ein Paket einen Zeitraum von 0,48\,s. Ein \gls{marker}
+aufzeichnet, umfasst ein Paket einen Zeitraum von 0,48\,s. Ein \gls{trigger}
 kann so allerdings nicht dem Messzeitpunkt, an dem der \gls{stimulus}
-erschien, zugeordnet werden, sondern erst dem ersten Messwert des nächsten
-Pakets. Die \glspl{marker} liegen daher zufällig zwischen 0 und 480\,ms neben
-dem tatsächlichen Stimulusbeginn.
+erscheint, zugeordnet werden, sondern erst dem ersten Messwert des nächsten
+Pakets. Die \glspl{trigger} liegen daher zufällig zwischen 0 und 480\,ms neben
+dem tatsächlichen Stimulusbeginn.\newline
+
+Dies führt zu einem Problem bei der Auswertung der P1. Da die P1 ein kurzer
+Ausschlag von etwa 50\,ms ist, der nur sichtbar wird, wenn viele Epochen genau
+zum Stimulusbeginn übereinandergelegt und gemittelt werden, würden die zufällig
+verschobenen \glspl{trigger} dazu führen, dass die P1 bei der Mittelung
+zeitlich verschmiert. Um dieses Problem zu lösen, sind umfangreiche
+Programmierarbeiten in Python nötig, die über unsere eigenen
+Programmierkenntnisse hinausgehen. Deshalb wird der KI-Assistent
+\gls{claude-code} (Anthropic) eingesetzt, um ein Python-Skript zur
+Rekonstruktion des tatsächlichen Stimulusbeginns zu entwickeln. Dies erfolgt
+durch die Kombination zweier Informationen. Zum einen hält das
+Präsentationsprogramm PsychoPy für jeden Durchgang genau fest, zu welchem
+Zeitpunkt der \gls{stimulus} erscheint, woraus sich die Abstände zwischen allen
+Stimuli einer Messung ergeben. Aus der EEG-Aufzeichnung lässt sich dagegen nur
+ablesen, in welchem Zeitraum ein \gls{stimulus} erscheint. Weil der
+\gls{trigger} erst mit dem nächsten Paket gespeichert wird, liegt der
+tatsächliche Stimulusbeginn innerhalb der 0,48\,s davor. Zu klären ist also,
+um wie viel die beiden Zeitachsen gegeneinander verschoben sind. Dafür wird
+eine Verschiebung gesucht, bei der alle Stimuli einer Messung gleichzeitig in
+das 0,48-s-Fenster fallen. Bei rund 100 Stimuli mit bekannten Abständen kann
+der zeitliche Versatz deshalb sehr genau eingegrenzt werden. Im Median
+verbleibt jedoch eine mögliche Abweichung von 8,6\,ms. Diese ist im Vergleich
+zur Dauer der P1 klein und genügt deshalb für die Auswertung.
 
 
 \subsection{Auswertung der Alpha-Power}
