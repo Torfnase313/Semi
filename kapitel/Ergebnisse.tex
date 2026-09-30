@@ -1,4 +1,53 @@
 \chapter{Ergebnisse aus der Messung}
+\subsection{Datengrundlage}
+Die Datengrundlage für die Auswertung des stationären EEG-Systems BioSemi
+ActiveTwo bilden die Daten aller zehn Versuchspersonen. Für das portable
+EEG-System von OpenBCI liegen nur neun auswertbare Datensätze aus
+Versuchsbedingung 1 (außerhalb der Kabine) und sechs aus Versuchsbedingung 2
+(innerhalb der Kabine) vor. Grund dafür ist das Ausschließen einiger
+Datensätze, aufgrund von Elektroden, dessen Signale keine ausreichende Qualität
+aufwiesen. Eine Ursache sind die Trockenelektroden des OpenBCI Systems, welche
+bei einigen Messungen keinen dauerhaft ausreichenden Kontakt zur Kopfhaut
+hatten. Die Signale der betroffenen Elektroden waren dadurch entweder stark
+verrauscht oder übersteuert, das heißt, sie zeigten dauerhaft den maximal
+messbaren Wert an und enthielten keine verwertbare Hirnaktivität mehr. Solch
+übersteuerte Elektroden werden auch als \textit{railed} bezeichnet. Einzelne
+gestörte Elektroden lassen sich zwar aus den benachbarten Elektroden
+rechnerisch durch Interpolation ersetzen (vgl. Abschnitt~3.4.1), sind jedoch
+zu viele Elektroden betroffen, ist dieses Verfahren nicht anwendbar, da die
+Interpolation fehlender Kanäle aus benachbarten Elektroden voraussetzt, dass
+genügend gute Nachbarkanäle vorhanden sind. Folgende Datensätze mussten
+dadurch ausgeschlossen werden: in Versuchsbedingung 1 der Datensatz von
+\glsadd{pt}pt\_06 und in Bedingung 2 die Datensätze von pt\_01, pt\_04,
+pt\_07 und pt\_06. \newline 
+Die Hirnaktivität unterscheidet sich zwischen einzelnen Personen deutlich,
+beispielsweise in der Stärke der Alpha-Aktivität oder in der Amplitude der P1. Würde die Gruppenmittelungen der einzelnen Messungen mit unterschiedlichen
+Versuchspersonen gebilden werden, könnte ein Unterschied zwischen den Messungen allein
+darauf zurückzuführen sein, dass jeweils andere Personen in die Mittelung eingehen, und
+nicht auf dem verwendeten EEG-System oder der Versuchsbedingung. Deshalb wurden für den Vergleich der Messungen nur Versuchspersonen herangezogen, die 
+die in beiden Messungen gültige Daten aufweisen. 
+
 \section{Verhaltensergebnisse}
+Zur Erfassung der Verhaltensdaten wurden pro Versuchsperson im Kartendeck acht
+Könige gezeigt, auf welche mit dem Drücken der Leertaste reagiert werden
+sollte. Dies sollte die Aufmerksamkeit der Proband/innen sicherstellen. Als
+Reaktionszeit wurde die Zeit zwischen dem Erscheinen eines Königs und dem
+Drücken der Leertaste bestimmt. Anschließend wurde der Median der
+Reaktionszeiten berechnet und dieser Wert über alle Versuchspersonen gemittelt.
+
+Die Aufgabe wurde in allen Messungen nahezu fehlerfrei gelöst, sprich auf alle
+Könige wurde mit Drücken der Leertaste reagiert. Von 80 Königen pro Messung
+wurden in Bedingung~1 und bei BioSemi alle, in Bedingung~2 79 Könige erkannt.
+Die Reaktionszeit (Mittelwert $\pm$ Standardabweichung der individuellen
+Mediane) betrug in Bedingung~1 $550 \pm 68$\,ms, in Bedingung~2
+$589 \pm 79$\,ms und bei BioSemi $591 \pm 70$\,ms. Die Messungen
+unterschieden sich damit in der Reaktionszeit. In Bedingung~2 reagierten alle
+zehn Versuchspersonen langsamer als in Bedingung~1, während sich Bedingung~2
+und BioSemi bezüglich des Verhaltens nicht unterschieden. Ordnet man die
+Messungen nach ihrer Position im zeitlichen Abfolge, war bei allen zehn
+Versuchspersonen die jeweils erste Messung die schnellste. Die Reaktionszeit
+verlängert sich also nach der ersten Messung um etwa 40\,ms und bleibt danach
+konstant.
+
 \section{Ergebnisse der Frequenzbandanalyse}
 \section{Gegenüberstellung der Daten anhand von Performanzkriterien}
