@@ -71,4 +71,50 @@ Für das BioSemi-System wurde untersucht, ob die P1 von der Darbietungsform (gro
 Tabelle~\ref{tab:p1_amplituden} zeigt die mittleren P1-Amplituden für beide Darbietungsformen in allen drei Versuchsbedingungen. 
 
 
-\section{Ergebnisse der Frequenzbandanalyse}
+\section{Ergebnisse für das Alpha-Paradigma}
+Katharina \newline
+
+\subsection{Ergebnisse der Frequenzbandanalyse}
+
+Für die Analyse wurden ausschließlich die hinteren Elektroden über dem Okzipitallappen betrachtet (okzipitaler Cluster), da der Hans-Berger-Effekt, also die Zunahme der Alpha-Aktivität bei geschlossenen Augen, dort am stärksten ausgeprägt ist. Abbildung \ref{frequenzbandanalyse} zeigt die  \acrshort{psd} dieses Clusters als Mittelwert über alle Teilnehmenden, getrennt für die drei Versuchsbedingungen. Die PSD beschreibt, wie sich die Leistung des EEG-Signals auf die einzelnen Frequenzen verteilt. Sie wird in $\mu V^2/Hz$ angegeben, weil die Leistung quadratisch von der Amplitude abhängt. Dadurch lässt sich die Alpha-Aktivität (8–12 Hz, grün hinterlegt) direkt ablesen.\newline
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.95\textwidth]{diagramme/occipital_cluster_psd_ohne_kanalangaben.png}
+    \quelle{Eigenabbildung} 
+   \caption{Ergebnis der Frequenzbandanalyse an den okzipitalen Elektroden für alle drei VErsuchsbedingungen}
+    \label{frequenzbandanalyse}
+\end{figure}
+
+In allen drei Messungen zeigt sich im Alpha-Bereich ein deutlicher Unterschied zwischen den Bedingungen: Bei geschlossenen Augen (\acrshort{ec}, rot) ist die Leistung bei etwa 10 Hz klar erhöht gegenüber offenen Augen (\acrshort{eo}, blau). Der Hans-Berger-Effekt ist also mit beiden Systemen nachweisbar. Die OpenBCI-Werte entsprechen dabei in Verlauf und Größenordnung weitgehend denen des BioSemi-Systems.\newline
+
+Überraschenderweise ist der Unterschied zwischen EC und EO bei OpenBCI außerhalb der Kabine (s1, erste Versuchsbedingung) am größten, im Durchlauf innerhalb der Kabine (s2, zweite Versuchsbedingung) dagegen geringer. Eine mögliche Erklärung liegt in der Reihenfolge der Durchläufe: Zuerst wurde s1 aufgezeichnet, dann s2 und zuletzt BioSemi (s3). Die Teilnehmenden mussten jeweils etwa eine halbe Stunde auf einen Bildschirm schauen und nur gelegentlich die Leertaste drücken. Mit der Zeit dürften sie müder und gelangweilter geworden sein, was die Alpha-Power auch bei EO erhöht. Der Abstand zur EC-Bedingung wird dadurch kleiner, und der Hans-Berger-Effekt erscheint abgeschwächt.\newline
+
+In beiden OpenBCI-Durchläufen tritt zusätzlich ein schmaler Peak, also ein Hochpunkt, bei 25 Hz auf, der beim BioSemi-System fehlt. Er ist zu groß, zu regelmäßig und unabhängig von Augenzustand und Bedingung (keine Unterschiede in Amplitude oder Frequenz zwischen EO/EC sowie zwischen s1 und s2), um neuronalen Ursprungs zu sein. Auch ist nach aktuellem Stand kein physiologischer Effekt bekannt, der einen solchen Ausschlag erklären würde. Für eine technische Ursache kommen mehrere Möglichkeiten infrage:\newline
+\begin{itemize}
+  \item Netzbrummen scheidet aus, da der Peak nicht bei 50 Hz liegt und sich in der Kabine keine Netzteile befinden. Gegenüber dem BioSemi-Durchlauf kam lediglich der Laptop hinzu.
+  \item Bildschirmflackern: Bei Pixel-Inversion oder Frame Rate Control entsteht ein Flackern mit der halben Bildwiederholrate, bei einem 60-Hz-Monitor also bei 30 Hz %(Quelle: flickersense.org/background/led-screens). Das erklärt einen Peak bei 25 Hz nicht direkt.
+  \item Das Cyton-Board könnte aus anderen Gründen ein elektromagnetisches Feld mit 25 Hz abstrahlen.
+\end{itemize}
+
+Mit Sicherheit lässt sich die Ursache auf Basis der vorliegenden Daten nicht bestimmen. Am wahrscheinlichsten ist ein Einfluss des Boards, möglicherweise auch des Laptops.
+
+Anmkerung:Dieser Teil ist noch unfertig, es wird noch der Mittelwert aus dem grün gekennzeichnet Bereich gebildet und so Zahlen direkt miteinander verglichen
+
+\subsection{Alpha-Suppression}
+
+Als Alpha-Suppression bezeichnet man das Verhältnis der mittleren Alpha-Power bei EC zu der bei EO. Ein Wert von 9 bedeutet entsprechend, dass bei EC neunmal mehr Alpha-Power gemessen wird als bei EO. Ab einem Verhältnis von etwa 2 wird angenommen, dass die Unterschiede nicht mehr allein auf zufällige Artefakte zurückzuführen sind, sondern den Hans-Berger-Effekt abbilden. Abbildung \ref{alpha_suppression} zeigt die Alpha-Suppression für die Cluster Okzipital, Parietal, Frontal und Zentral (Gruppenmittel, n = 6) für s3, s1 und s2.\newline
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.95\textwidth]{diagramme/alpha_suppression_by_electrode_cluster_ohne_kanalangaben.png}
+    \quelle{Eigenabbildung} 
+   \caption{Alpha-Suppression an den okzipitalen Elektroden für alle drei Versuchsbedingungen}
+    \label{alpha_suppression}
+\end{figure}
+
+Bei allen drei Messungen ist die Alpha-Suppression über dem Hinterkopf am stärksten, also über okzipitalen und parietalen Elektroden, während sie frontal und zentral deutlich geringer ausfällt. Alle Werte liegen über der Schwelle von 2, der Effekt ist also in jedem Cluster nachweisbar, nur unterschiedlich stark. Am deutlichsten ist der Unterschied zwischen den vorne und hinten liegenden Clustern beim BioSemi-System: Der okzipitale Wert (9,76) ist mehr als doppelt so hoch wie der zentrale (3,76) und fast doppelt so hoch wie der frontale (5,26). Bei s2 ist die Abstufung am geringsten, der Unterschied zwischen okzipital (4,58) und frontal (2,74) ist relativ gesehen kleiner. Dies passt zur oben diskutierten Erklärung, dass die Probanden im Verlauf der Messung müder wurden und dadurch die Alpha-Power bei offenen Augen zunahm.\newline
+
+Mit einer Alpha-Suppression von 9,76 liegt BioSemi nahe an einem Verhältnis von 10. Auch mit OpenBCI wird bei wachen Probandinnen und Probanden außerhalb der Kabine mit 8,39 ein guter und nur wenig abweichender Wert erreicht. Das ist ein klarer Beleg für den Hans-Berger-Effekt. Zudem spricht die räumliche Verteilung gegen einen äußeren Störeinfluss, da ein solcher alle Cluster gleich stark betreffen würde. Stattdessen ist die Suppression systematisch dort am größten, wo der Berger-Effekt physiologisch zu erwarten ist.\newline
+
+
