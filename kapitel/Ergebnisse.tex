@@ -88,9 +88,30 @@ Für die Analyse wurden ausschließlich die hinteren Elektroden über dem Okzipi
 
 In allen drei Messungen zeigt sich im Alpha-Bereich ein deutlicher Unterschied zwischen den Bedingungen: Bei geschlossenen Augen (\acrshort{ec}, rot) ist die Leistung bei etwa 10 Hz klar erhöht gegenüber offenen Augen (\acrshort{eo}, blau). Der Hans-Berger-Effekt ist also mit beiden Systemen nachweisbar. Die OpenBCI-Werte entsprechen dabei in Verlauf und Größenordnung weitgehend denen des BioSemi-Systems.\newline
 
+\begin{table}[htbp]
+    \centering
+  \caption{Mittelwerte Alpha-Power (8--12 Hz) in $\mu V^2/Hz$ und Rang der EC-Bedingung}
+  \label{tab:alpha_power}
+\begin{tabular}{lrrrrrrcccl}
+\toprule
+ & \multicolumn{3}{c}{EO} & \multicolumn{3}{c}{EC} & \multicolumn{3}{c}{Rang EC} & \\
+\cmidrule(lr){2-4} \cmidrule(lr){5-7} \cmidrule(lr){8-10}
+Proband & BioSemi & s1 & s2 & BioSemi & s1 & s2 & BioSemi & s1 & s2 \\
+\midrule
+pt\_02 & $6{,}22$ & $5{,}90$ & $13{,}88$ & $44{,}65$ & $34{,}90$ & $35{,}69$ & 2 & 1 & 1 \\
+pt\_03 & $1{,}36$ & $1{,}32$ & $1{,}80$  & $23{,}79$ & $11{,}31$ & $9{,}10$  & 3 & 5 & 6 \\
+pt\_05 & $3{,}19$ & $2{,}43$ & $3{,}25$  & $16{,}70$ & $24{,}79$ & $19{,}42$ & 6 & 3 & 4 \\
+pt\_08 & $6{,}73$ & $4{,}96$ & $5{,}22$  & $55{,}26$ & $28{,}83$ & $33{,}30$ & 1 & 2 & 2 \\
+pt\_09 & $3{,}06$ & $1{,}79$ & $5{,}34$  & $20{,}12$ & $12{,}79$ & $21{,}78$ & 5 & 4 & 3 \\
+pt\_10 & $1{,}00$ & $0{,}83$ & $2{,}04$  & $22{,}73$ & $11{,}10$ & $18{,}51$ & 4 & 6 & 5 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
 Überraschenderweise ist der Unterschied zwischen EC und EO bei OpenBCI außerhalb der Kabine (s1, erste Versuchsbedingung) am größten, im Durchlauf innerhalb der Kabine (s2, zweite Versuchsbedingung) dagegen geringer. Eine mögliche Erklärung liegt in der Reihenfolge der Durchläufe: Zuerst wurde s1 aufgezeichnet, dann s2 und zuletzt BioSemi (s3). Die Teilnehmenden mussten jeweils etwa eine halbe Stunde auf einen Bildschirm schauen und nur gelegentlich die Leertaste drücken. Mit der Zeit dürften sie müder und gelangweilter geworden sein, was die Alpha-Power auch bei EO erhöht. Der Abstand zur EC-Bedingung wird dadurch kleiner, und der Hans-Berger-Effekt erscheint abgeschwächt.\newline
 
-In beiden OpenBCI-Durchläufen tritt zusätzlich ein schmaler Peak, also ein Hochpunkt, bei 25 Hz auf, der beim BioSemi-System fehlt. Er ist zu groß, zu regelmäßig und unabhängig von Augenzustand und Bedingung (keine Unterschiede in Amplitude oder Frequenz zwischen EO/EC sowie zwischen s1 und s2), um neuronalen Ursprungs zu sein. Auch ist nach aktuellem Stand kein physiologischer Effekt bekannt, der einen solchen Ausschlag erklären würde. Für eine technische Ursache kommen mehrere Möglichkeiten infrage:\newline
+In beiden OpenBCI-Durchläufen tritt zusätzlich ein schmaler Peak, also ein Hochpunkt, bei 25 Hz auf, der beim BioSemi-System fehlt (in Abbildung \ref{frequenzbandanalyse} zu sehen). Er ist zu groß, zu regelmäßig und unabhängig von Augenzustand und Bedingung (keine Unterschiede in Amplitude oder Frequenz zwischen EO/EC sowie zwischen s1 und s2), um neuronalen Ursprungs zu sein. Auch ist nach aktuellem Stand kein physiologischer Effekt bekannt, der einen solchen Ausschlag erklären würde. Für eine technische Ursache kommen mehrere Möglichkeiten infrage:\newline
 \begin{itemize}
   \item Netzbrummen scheidet aus, da der Peak nicht bei 50 Hz liegt und sich in der Kabine keine Netzteile befinden. Gegenüber dem BioSemi-Durchlauf kam lediglich der Laptop hinzu.
   \item Bildschirmflackern: Bei Pixel-Inversion oder Frame Rate Control entsteht ein Flackern mit der halben Bildwiederholrate, bei einem 60-Hz-Monitor also bei 30 Hz %(Quelle: flickersense.org/background/led-screens). Das erklärt einen Peak bei 25 Hz nicht direkt.
@@ -98,8 +119,6 @@ In beiden OpenBCI-Durchläufen tritt zusätzlich ein schmaler Peak, also ein Hoc
 \end{itemize}
 
 Mit Sicherheit lässt sich die Ursache auf Basis der vorliegenden Daten nicht bestimmen. Am wahrscheinlichsten ist ein Einfluss des Boards, möglicherweise auch des Laptops.
-
-Anmkerung:Dieser Teil ist noch unfertig, es wird noch der Mittelwert aus dem grün gekennzeichnet Bereich gebildet und so Zahlen direkt miteinander verglichen
 
 \subsection{Alpha-Suppression}
 
