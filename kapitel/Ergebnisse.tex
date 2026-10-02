@@ -49,17 +49,25 @@ Versuchspersonen die jeweils erste Messung die schnellste. Die Reaktionszeit
 verlängert sich also nach der ersten Messung um etwa 40\,ms und bleibt danach
 konstant.
 \section{Ergebnisse der ERP-Analyse}
-Ausgewertet wurde die mittlere P1-Amplitude im Zeitfenster von 80--200\,ms an den okzipitalen Elektroden O1 und O2. Das Fenster wurde gewählt, da die Latenz der P1 je nach Paradigma und Stimuluseigenschaften variieren kann und der P1-Gipfel in den vorliegenden Daten später auftrat als in der Literatur beschrieben (vgl. Abschnitt 2.4.5). Um zu prüfen, ob sich die P1 zwischen den Bedingungen unterscheidet, wurde eine \gls{varianzanalyse} mit \gls{messwiederholung} berechnet.
 
-Für das BioSemi-System wurde untersucht, ob die P1 von der Darbietungsform (groß und normalkontrastiert oder klein und kontrastreduziert) abhängt. Für das OpenBCI-System wurde zusätzlich geprüft, ob die Versuchsbedingung (Kabine geöffnet oder geschlossen) einen Einfluss auf die P1 hat. Anschließend wurden einzelne Bedingungen mit gepaarten t-Tests direkt miteinander verglichen, zum Beispiel große mit kleinen Stimuli. Im Folgenden werden nur die Ergebnisse berichtet, die für die Fragestellung relevant sind. Nicht berichtet wird, ob die P1 insgesamt auf der linken oder rechten Kopfseite größer war.
+Die P1-Komponente wird für das BioSemi-System in zwei Darbietungsformen
+beschrieben (groß und kontrastreich gegenüber klein und kontrastreduziert).
+Für das OpenBCI-System werden zusätzlich die zwei Versuchsbedingungen
+betrachtet (geschlossene versus offene Kabine). Die Auswertung erfolgt dabei
+beschreibend anhand von Mittelwerten und Standardabweichungen. Auf
+inferenzstatistische Tests wurde aufgrund des Rahmens dieser Arbeit
+verzichtet. Nicht berichtet wird, ob die P1 auf der linken oder rechten
+Kopfseite größer war.
 
 \begin{table}[htbp]
   \centering
-  \caption{Mittlere P1-Amplitude (80--200\,ms) in \textmu V, Mittelwert $\pm$ Standardabweichung}
+  \caption{Mittlere P1-Amplituden der beiden Darbietungsformen für das
+  BioSemi- und das OpenBCI-System (Zeitfenster 80--200\,ms, Angaben in
+  \textmu V als Mittelwert $\pm$ Standardabweichung)}
   \label{tab:p1_amplituden}
   \begin{tabular}{llccc}
     \hline
-    System & Versuchsbedingung & $n$ & groß & klein, kontrastreduziert \\
+    System & Versuchsbedingung & $n$ & groß, kontrastreich & klein, kontrastreduziert \\
     \hline
     BioSemi & VB 3 & 10 & 4,70 $\pm$ 3,19 & 3,91 $\pm$ 1,91 \\
     OpenBCI & VB 2 (Kabine geschlossen) & 6 & 2,37 $\pm$ 0,85 & 1,99 $\pm$ 1,10 \\
@@ -67,10 +75,6 @@ Für das BioSemi-System wurde untersucht, ob die P1 von der Darbietungsform (gro
     \hline
   \end{tabular}
 \end{table}
-
-Tabelle~\ref{tab:p1_amplituden} zeigt die mittleren P1-Amplituden für beide Darbietungsformen in allen drei Versuchsbedingungen. 
-
-
 \section{Ergebnisse für das Alpha-Paradigma}
 Katharina \newline
 
