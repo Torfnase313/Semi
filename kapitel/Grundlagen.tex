@@ -239,6 +239,7 @@ Dort werden die Signale nach Mustern durchsucht. Aus den erkannten und klassifiz
 \autor{Sophie Kleppe}
 
 \subsection{Zwei verschiedene Perspektiven der EEG-Analyse}
+\label{sec:perspektiven}
 
 Um \acrshort{eeg}-Daten zu verstehen und zu interpretieren, können die Signale in zwei sich ergänzende Perspektiven unterteilt werden.\footnote{Vgl. \cite{biasiucci2019}} \newline
 Es wird erstens zwischen spontanen \acrshort{eeg}-Rhythmen unterschieden, die durch kontinuierliche elektrische Aktivität (in Form von Wellen) in unterschiedlichen Frequenzbereichen gekennzeichnet sind, und zweitens \acrshortpl{erp}, welche als zeitlich gebundene Spannungsänderungen in Reaktion auf bestimmte Ereignisse oder Stimuli erscheinen.\footnote{Vgl. \cite{biasiucci2019,sur2009}} Beide Perspektiven unterscheiden sich also grundlegend in ihrer zeitlichen Struktur: Während \acrshort{eeg}-Rhythmen kontinuierlich und ereignisunabhängig sind, sind \acrshortpl{erp} kurzzeitig, gebunden an ein konkretes Ereignis und in der Regel erst durch Mittelung vieler Wiederholungen im Experiment erkennbar.\footnote{Vgl. \cite{biasiucci2019}} \newline
@@ -427,7 +428,25 @@ Für beide Ziele bietet sich daher ein kostengünstiges, portables \acrshort{eeg
 \end{quote}
 
 
-Als Paradigmen für den direkten Vergleich wurden die \acrshort{erp}-Komponente P1 und das Alpha-Frequenzband gewählt.
+Um die Fragestellung beantworten zu können, müssen zunächst Begriffe, die nicht direkt messbar sind, operationalisiert, das heißt in messbare Größen übersetzt werden. Dazu muss für die zentralen Aspekte der Fragestellung geklärt werden, woran eine vergleichbare Datenqualität erkennbar ist, wie eine alltagsnahe Umgebung im Experiment umgesetzt werden kann und wann die Daten als Grundlage für die Steuerung des Roboterarms genügen.\newline
+
+\textbf{Datenqualität:} Die Datenqualität kann als vergleichbar angenommen werden, wenn sich bekannte Eigenschaften von \acrshort{eeg}-Signalen aus der Literatur in beiden Systemen klar erkennen lassen. Diese Eigenschaften müssen dabei beide Perspektiven der \acrshort{eeg}-Analyse abdecken, also sowohl spontane Rhythmen als auch \acrshortpl{erp} (vgl. Abschnitt~\ref{sec:perspektiven}). Daher wird aus jeder Perspektive ein Signal als Paradigma herangezogen, der Alpha-Rhythmus für die spontanen Rhythmen und die P1-Komponente für die \acrshortpl{erp}. Beide eignen sich, da ihr Verhalten gut vorhersagbar ist. Beim Alpha-Rhythmus steigt die Alpha-Power durch den \gls{berger-effekt} beim Schließen der Augen deutlich an, und die P1-Komponente ist stark abhängig von Kontrast und Größe des Reizes (vgl. Abschnitte~\ref{sec:alpha} und~\ref{sec:erp}). Dadurch lässt sich vorab festlegen, welches Ergebnis ein System liefern muss, das die Hirnaktivität korrekt erfasst. Damit überprüfbar ist, wann diese Eigenschaften klar erkennbar sind, wird für jede ein Kriterium festgelegt.
+
+Für das Alpha-Paradigma gelten folgende Kriterien:
+\begin{itemize}
+    \item Der Berger-Effekt muss nachweisbar sein, das heißt, das Verhältnis der Alpha-Power bei geschlossenen zu geöffneten Augen (Alpha-Suppression) ist bei jeder Versuchsperson größer als 1.
+    \item Die größte Alpha-Suppression liegt über den okzipital oder parietal liegenden Elektroden.
+    \item Die Rangfolge der Versuchspersonen nach ihrer Alpha-Power stimmt zwischen den Versuchsbedingungen stark überein, das heißt, die Rangkorrelation nach Spearman beträgt mindestens 0,5.\footnote{Vgl. \cite{cohen1988}}
+\end{itemize}
+
+Für das P1-Paradigma gelten folgende Kriterien:
+\begin{itemize}
+    \item Die mittlere Amplitude der P1 ist für große, kontrastreiche Stimuli größer als für kleine, kontrastreduzierte Stimuli.
+    \item Die P1 hebt sich vom Hintergrundrauschen ab, das \gls{snrgl} (\acrshort{snr}) ist also größer als 1.
+\end{itemize}
+% TODO Sophie: Auswertbarkeit, Verweis auf 3.4, Einschränkung (vergleichbar != identisch), Verneinung
+% TODO Sophie: Absätze "Alltagsnahe Umgebung" und "Grundlage für den Roboterarm"
+
 Bezüglich dieser Paradigmen wurden folgende Hypothesen aufgestellt:
 
 \underline{P1-Paradigma}
@@ -445,7 +464,7 @@ Bezüglich dieser Paradigmen wurden folgende Hypothesen aufgestellt:
 \underline{Allgemein}
 \begin{itemize}
     \item Bei dem Alpha-Paradigma wird eine höhere Ähnlichkeit der Daten zwischen den Systemen erkennbar sein als bei dem P1-Paradigma. Es sollte das Alpha-Paradigma genutzt werden, um den Roboterarm zu steuern.
-    \item Bei dem OpenBCI-System ist das \gls{snrgl} (\acrshort{snr}) deutlich geringer. Das bedeutet, dass die Störungen im Verhältnis zu dem tatsächlichen Signal größer sind.
+    \item Bei dem OpenBCI-System ist das \acrshort{snr} deutlich geringer. Das bedeutet, dass die Störungen im Verhältnis zu dem tatsächlichen Signal größer sind.
 \end{itemize}
 
 
