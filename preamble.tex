@@ -35,6 +35,10 @@
 %Absätze werden über parskip geregelt. Die Werte sind parskip=true/false/half
 %(muss vor geometry stehen, sonst werden die Seitenränder überschrieben)
 \KOMAoptions{parskip=half}
+%Abbildungs- und Tabellenverzeichnis im Inhaltsverzeichnis aufführen
+\KOMAoptions{listof=totoc}
+%Inhaltsverzeichnis nur bis zur nummerierten Ebene 3 (x.x.x)
+\setcounter{tocdepth}{2}
 
 %anpassung seitenränder (CZG: oben, links, rechts 2,5 cm; unten 2,0 cm)
 \usepackage[

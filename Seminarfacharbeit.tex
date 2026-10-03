@@ -9,6 +9,9 @@
 \input{titelseite.tex}
 %für römische Nummerierung der Seite(n) des Inhaltsverzeichnis
 \pagenumbering{roman}
+%CZG-Reihenfolge: Titelblatt, Abkürzungsverzeichnis, Inhaltsverzeichnis, Einleitung,
+%Hauptteil, Zusammenfassung mit Ausblick, Glossar, Anhang, Quellenverzeichnis, Erklärung
+\printglossary[type=\acronymtype, title=Abkürzungsverzeichnis, style=acrostyle]
 \tableofcontents
 
 %Das erste Kapitel muss mit \pagenumbering{arabic} beginnen.
@@ -30,21 +33,17 @@
 
 \input{kapitel/Diskussion}
 
+\input{kapitel/Zusammenfassung}
+
 \printglossary
-\printglossary[type=\acronymtype, title=Abkürzungsverzeichnis, style=acrostyle]
 
 \input{kapitel/Anhang.tex}
 
-\defbibfilter{internet}{type=onlinedokument or type=onlinelexikon}
-
-\defbibfilter{literat}{type=zeitschriftartikel or type=buch}
-
-
-\printbibliography[filter = literat, heading=bibliography, title={Literaturverzeichnis}]
-
-\printbibliography[filter = internet, heading=bibliography, title={Internetquellen}]
+%Ein gemeinsames, alphabetisches Quellenverzeichnis ohne Unterteilung (CZG-Vorgabe)
+\printbibliography[heading=bibintoc, title={Quellenverzeichnis}]
 
 \listoffigures %Abbildungsverzeichnis
+\listoftables %Tabellenverzeichnis
 
 \begin{comment}%Verwendung siehe Präamble
 \bibliography{literatur}
