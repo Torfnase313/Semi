@@ -118,14 +118,14 @@ Elektroden, die vor oder während der Messung als defekt oder stark verrauscht a
 \autor{Sophie Kleppe}
 
 Das \gls{openbci-board} wurde über die Software \gls{brainflow} ausgelesen.
-BrainFlow speichert die Daten als Textdatei im Format Comma-Separated Values (\acrshort{csv}) mit 32
+BrainFlow speichert die Daten als Textdatei im Format Comma-Separated Values mit 32
 Spalten. Enthalten sind die Kanäle 1--16, wobei die Spannungen in \textmu V angegeben
 sind. Weitere Spalten enthalten den Zeitstempel des Computers und eine Spalte
 für die \glspl{trigger}. Jede Zeile der Datei entspricht einem Messzeitpunkt.
 Das OpenBCI-System zeichnet pro Elektrode 125 Messwerte pro Sekunde auf, was
 einer \gls{abtastrate} von 125\,Hz entspricht (BioSemi: 512\,Hz). Damit die
 OpenBCI-Daten auf dieselbe Weise wie die BioSemi-Daten mit \gls{mne}
-ausgewertet werden können, wurden sie in das BioSemi Data Format (\acrshort{bdf})
+ausgewertet werden können, wurden sie in das BioSemi Data Format
 umgewandelt, in dem auch die Daten des BioSemi-Systems gespeichert sind. Bei
 dieser Umwandlung gingen die Trigger verloren, und die Signale wurden
 abgeschnitten. Zusätzlich kam es zu einem Problem bei der zeitlichen
