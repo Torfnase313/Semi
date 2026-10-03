@@ -451,24 +451,29 @@ Für beide Paradigmen wird zudem der Anteil der auswertbaren Datensätze je Vers
 \paragraph{Grundlage für den Roboterarm} Ein Steuersignal für den Roboterarm muss willentlich erzeugt werden können und in kurzen Abschnitten von wenigen Sekunden erkennbar sein. Der \gls{berger-effekt} erfüllt diese Anforderungen, da das Schließen der Augen von jeder Person ohne Training ausgelöst werden kann. Zur Umsetzung werden die Alpha-Blöcke in Abschnitte von 2\,s zerlegt. Für jeden Abschnitt wird anhand der Alpha-Power entschieden, ob die Augen geöffnet oder geschlossen waren, und gezählt, wie oft diese Entscheidung richtig ist (Trefferquote). Die Daten gelten als Grundlage für die Steuerung, wenn die Trefferquote sicher über dem Zufallsniveau von 50\,\% liegt. Bei rund 60 Abschnitten pro Versuchsperson ist dies ab einer Trefferquote von etwa 62\,\% der Fall.\footnote{Vgl. \cite{muellerputz2008}} Grundlage bedeutet dabei, dass sich das Steuersignal in den aufgezeichneten Daten nachweisen lässt. Ob die Steuerung auch in Echtzeit funktioniert, wird in dieser Arbeit nicht untersucht.\newline
 
 
-Bezüglich dieser Paradigmen wurden die folgenden Hypothesen aufgestellt.
+Bezüglich dieser Paradigmen wurden die folgenden Hypothesen aufgestellt:
 
-\underline{P1-Paradigma}
-\begin{itemize}
-    \item Die Spannungsdeflexion der P1-Komponente ist unterschiedlich groß, je nachdem, ob ein großer, kontrastreicher oder ein kleiner, kontrastreduzierter Stimulus präsentiert wird. Dies ist bei beiden Systemen zu erwarten.
-    \item Bei dem OpenBCI-System sind entweder gar keine oder nur sehr frühe Komponenten der \acrshortpl{erp}, wozu die P1-Komponente gehört, zu erkennen.
-\end{itemize}
+Alpha-Paradigma:
+\begin{enumerate}[label=H\arabic*]
+    \item Bei beiden Systemen ist die Alpha-Power bei geschlossenen Augen bei jeder Versuchsperson größer als bei geöffneten Augen (Alpha-Suppression \acrshort{ec}/\acrshort{eo} > 1).
+    \item Bei beiden Systemen ist die Alpha-Suppression okzipital oder parietal am größten.
+    \item Die Rangfolge der Versuchspersonen nach ihrer Alpha-Power stimmt zwischen den Versuchsbedingungen stark überein ($\rho \geq 0{,}5$).
+\end{enumerate}
+Der \gls{berger-effekt} ist ein gegenüber Störungen robustes Phänomen. Er sollte selbst bei geringem \acrshort{snr} erkennbar sein.
+% TODO Sophie: Begründungen H1-H3 ausbauen (Stichpunkte)
 
-\underline{Alpha-Paradigma}
-\begin{itemize}
-    \item Sortiert man die Versuchspersonen bezüglich ihrer gemessenen Alpha-Power, so ist die Rangfolge in beiden Systemen ähnlich. Es wird Abweichungen geben, aber große Teile der Folge sollten übereinstimmen.
-    \item Der \gls{berger-effekt} ist bei beiden Systemen vor allem in den okzipitalen und parietalen Regionen zu beobachten.
-\end{itemize}
+P1-Paradigma:
+\begin{enumerate}[label=H\arabic*, resume]
+    \item Bei beiden Systemen ist die mittlere P1-Amplitude für große, kontrastreiche Stimuli größer als für kleine, kontrastreduzierte Stimuli. Dabei ist der Unterschied beim BioSemi-System größer als beim OpenBCI-System.
+    \item Die P1 hebt sich bei beiden Systemen vom Rauschen ab (\acrshort{snr} > 1), das \acrshort{snr} ist beim OpenBCI-System aber geringer als beim BioSemi-System.
+\end{enumerate}
+% TODO Sophie: Begründung H4/H5
 
-\underline{Allgemein}
-\begin{itemize}
-    \item Bei dem Alpha-Paradigma wird eine höhere Ähnlichkeit der Daten zwischen den Systemen erkennbar sein als bei dem P1-Paradigma. Es sollte das Alpha-Paradigma genutzt werden, um den Roboterarm zu steuern.
-    \item Bei dem OpenBCI-System ist das \acrshort{snr} deutlich geringer. Das bedeutet, dass die Störungen im Verhältnis zu dem tatsächlichen Signal größer sind.
-\end{itemize}
+Umgebung und Steuersignal:
+\begin{enumerate}[label=H\arabic*, resume]
+    \item Die Kriterien für die Datenqualität sind auch außerhalb der Kabine (s1) erfüllt, die Datenqualität ist innerhalb der Kabine (s2) aber besser.
+    \item Mit dem OpenBCI-System lässt sich in 2-s-Abschnitten erkennen, ob die Augen geöffnet oder geschlossen waren, das heißt, die Trefferquote liegt in allen Versuchsbedingungen über der Zufallsgrenze.
+\end{enumerate}
+% TODO Sophie: Begründung H6/H7
 
 
