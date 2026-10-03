@@ -6,7 +6,7 @@
 
 
 \section{Beschreibung der Messapparatur}
-Katharina \newline
+\autor{Katharina Ensslen}
 
 Die Geräte, die miteinander verglichen werden, nutzen beide nicht-invasive Elektroden und schicken die gemessenen Daten digital an einen Rechner. Die Geräte werden zur Forschung genutzt. Die gleiche Einteilung der genutzten Geräte ermöglicht eine bessere Vergleichbarkeit.\newline
 
@@ -35,12 +35,12 @@ Zusätzlich zu den messenden Elektroden enthält das System zwei Ohrclips, die a
 \end{figure}
 
 \section{Beschreibung der Stichprobe} 
-Lorenz \newline
+\autor{Lorenz Kobylka}
 
 Es nehmen 15--20 Probanden an der Studie von April bis Juni 2026 teil. Sie sind zwischen 16 und 18 Jahren alt und besuchen das Carl-Zeiss-Gymnasium in der elften Klasse. Bevor ein EEG aufgenommen wird, unterschreiben die Teilnehmer eine schriftliche Einverständniserklärung, füllen einen Händigkeitsfragebogen aus und geben demografische Daten, wie Alter und Geschlecht, an. Ein genehmigter Ethik-Antrag unterstützt das Aufnehmen von Daten von Minderjährigen. Die Versuchspersonen absolvieren EEG-Messungen unter drei verschiedenen Bedingungen, die jeweils etwa zehn Minuten dauern. Dabei werden zwei etablierte Formen der Hirnaktivität erfasst: \Romannum{1}. visuelles ERP (auch P1 genannt) und \Romannum{2}. die Alpha-Power.
 
 \section{Experimentalaufbau für die Messung} 
-Lorenz \newline
+\autor{Lorenz Kobylka}
 \subsection{Versuchsbedingungen}
 Unsere Datenerhebung gliedert sich in drei Versuchsbedingungen, die von den Probanden durchlaufen werden. Die Versuchsbedingungen sind dabei folgendermaßen aufgebaut: \\
 \begin{tabularx}{\textwidth}{@{}lX@{}}
@@ -66,7 +66,7 @@ Zur Erhebung der EEG-Daten durchlaufen die Probanden den bereits in Abschnitt 3.
   
 
     \subsection{Zeitlicher Ablauf des Experiments} 
-    Lorenz \newline
+\autor{Lorenz Kobylka}
 
 Der geplante Ablauf sieht dabei folgendermaßen aus: 
 
@@ -90,7 +90,7 @@ Der geplante Ablauf sieht dabei folgendermaßen aus:
 
 Für die Datenerhebung mit unseren ProbandInnen planen wir eine Gesamtdauer von etwa 110 Minuten pro Person ein. Diese Zeit umfasst sowohl die eigentliche EEG-Messung als auch die Vor- und Nachbereitung im Labor.
 \section{Auswertungsmethodik}
-Alisa \newline
+\autor{Alisa Fiedler}
 
 Die im vorangegangenen Abschnitt beschriebenen Rohdaten werden für beide Zielgrößen -- die P1-Komponente und die Alpha-Power -- zunächst gemeinsam vorverarbeitet und anschließend in zwei getrennten Auswertungssträngen analysiert. Der grundsätzliche Ablauf ist in der Abbildung \ref{analysis} dargestellt.
 
@@ -110,7 +110,7 @@ Vor der eigentlichen Analyse werden die Rohdaten für jede Versuchsperson bandpa
 Elektroden, die vor oder während der Messung als defekt oder stark verrauscht auffielen, werden markiert und gehen im weiteren Verlauf nicht wie normale Elektroden unverändert in die weiteren Berechnungen ein, sodass diese nicht verfälscht werden. Dagegen werden sie repariert, also aus Nachbarelektroden rechnerisch ersetzt (Interpolation), und anschließend in die weiteren Berechnungen einbezogen. Die Interpolation erfolgt über die 3D-Positionen der Elektroden, die in der Kappe festgelegt sind. Die Positionen werden genutzt, um die Spannungen der Nachbarelektroden zu bewerten und daraus die Spannung der defekten Elektrode zu berechnen. 
 
 \subsection {Vorverarbeitung der Rohdaten: Ergänzungen für OpenBCI}
-Sophie \newline
+\autor{Sophie Kleppe}
 
 Das \gls{openbci-board} wird über die Software \gls{brainflow} ausgelesen.
 BrainFlow speichert die Daten als Textdatei (\acrshort{csv}) mit 32
@@ -166,7 +166,7 @@ kontrolliert.
 
 
 \subsection{Auswertung der P1}
-Alisa \newline
+\autor{Alisa Fiedler}
 
 Da einzelne Aktionspotenziale und selbst einzelne ereigniskorrelierte Antworten im fortlaufenden EEG nicht direkt erkennbar sind, sondern von deutlich größeren Hintergrundschwankungen überlagert werden (vgl. Abschnitt 2.4.6), lässt sich die P1-Komponente nicht aus einer einzelnen Reizsetzung ablesen. Sie muss stattdessen aus vielen gleichartigen Reizwiederholungen herausgemittelt werden. Die Auswertung der P1-Komponente gliedert sich deshalb in mehrere aufeinanderfolgende Schritte, die zunächst pro Versuchsperson und erst am Ende über die gesamte Stichprobe hinweg durchgeführt werden.
 
@@ -200,7 +200,7 @@ Da einzelne Aktionspotenziale und selbst einzelne ereigniskorrelierte Antworten 
 
 
 \subsection{Auswertung der Alpha-Power}
-Lorenz \newline
+\autor{Lorenz Kobylka}
 Die Auswertung gliedert sich in 2 Ebenen und einzelne Teilschritte. Am Anfang sind die Daten noch ungefiltert. Im darauffolgenden Schritt werden fehlerhafte Elektroden markiert und aussortiert, diese Daten durchlaufen nicht den Auswertungsprozess. Danach wird das Signal bandpassgefiltert. Dieser Bandpassfilter kombiniert einen Hochpassfilter und einen Tiefpassfilter. Dementsprechend lässt er nur Signale in einem bestimmten Frequenzbereich durch. In diesem Fall Frequenzen im Bereich 1-40 Hz. Zusätzlich wird ein Notchfilter (vgl. Abschnitt 3.4.1) angewendet, darauf folgt die Re-Referenzierung. Sofern ein Kanal als fehlerhaft markiert wurden ist, wird er aus den umliegenden Kanälen rekonstruiert, mittels \Gls{spährischer Spline-Interpolation} \footnote{ Vgl. \cite{ferree_spherical}}. Dies wird gemacht, damit alle Probanden die gleiche Anzahl an Kanälen haben. Erst dann ist eine Gruppenmittelung möglich. Bevor jedoch die Analyse auf Gruppenebene beginnen kann, werden erst die Bereiche extrahiert, bei denen der Proband die Augen geöffnet (EO, \glqq eyes open\grqq) hat und wo er die Augen geschlossen (EC, \glqq eyes closed\grqq) hat. Hierbei werden im Gegensatz zu der ERP-Analyse keine kurzen Epochen ausgeschnitten, sondern längere Zusammenhängende Blöcke. \newline
 
 Zur genaueren Untersuchung wird nun die \Gls{Power Specral Density} (PSD) mittels der \Gls{Welch-Methode} für jeden Probanden für Augen geöffnet und Augen geschlossen berechnet. Dabei ist wichtig zu erwähnen, dass die PSD über das gesamte Spektrum berechnet wird und nicht nur über das Alpha-Band.  Die PSD gibt dabei an wie viel Signalleistung auf die einzelnen Frequenzen fällt. Dadurch ist es möglich die Stärke der Alpha-Aktivität in diesen Blöcken zu Quantifizieren und somit zu vergleichen. Diese PSDs werden dann über alle Versuchspersonen, frequenzweise und kanalweise gemittelt. Aus diesen gemittelten Spektren wird der Mittelwert im Alpha-Band (8-12Hz) gezogen. Einmal für die Bedingung Augen offen und für die Bedingung Augen geschlossen. Nun wird das Verhältnis EC/EO gebildet. Die Kanäle werden zu Kopfregionen zusammengefasst, deren mittlere Verhältnisse verglichen werden.

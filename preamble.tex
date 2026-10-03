@@ -2,7 +2,8 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[ngerman]{babel}
-\usepackage{lmodern}
+%Times New Roman (CZG-Vorgabe: Times New Roman oder Arial, 12 pt)
+\usepackage{newtxtext}
 \usepackage{romannum} %römische Ziffern in Code: \Romannum{1} (groß) \romannum{1} klein
 \usepackage{tabularx}
 \usepackage{booktabs}
@@ -31,7 +32,11 @@
   \fi%
 }
 
-%anpassung seitenränder
+%Absätze werden über parskip geregelt. Die Werte sind parskip=true/false/half
+%(muss vor geometry stehen, sonst werden die Seitenränder überschrieben)
+\KOMAoptions{parskip=half}
+
+%anpassung seitenränder (CZG: oben, links, rechts 2,5 cm; unten 2,0 cm)
 \usepackage[
     left=25mm,   % linker Rand
     right=25mm,  % rechter Rand
@@ -42,9 +47,20 @@
 %Festlegen des Seitenlayouts
 \usepackage[onehalfspacing]{setspace} %Zeilenabstand
 %alternativ \linespread{1.5}
-%BCOR ist der Binderand, DIV definiert den Satzspiegel (siehe KOMA-script Dokumentation S. 30)
-\KOMAoptions{BCOR=0.5cm, DIV=11, parskip=half}
-%Absätze werden über parskip geregelt. Die Werte sind parskip=true/false/half
+%Kein BCOR/DIV mehr: KOMA würde damit den Satzspiegel neu berechnen und die
+%geometry-Ränder überschreiben.
+
+%Seitenzahlen in der Fußzeile zentriert, keine Kopfzeile
+\usepackage[automark]{scrlayer-scrpage}
+\clearpairofpagestyles
+\cfoot*{\pagemark}
+\pagestyle{scrheadings}
+
+%Fußnoten fortlaufend über die ganze Arbeit nummerieren (nicht pro Kapitel)
+\counterwithout{footnote}{chapter}
+
+%Name der Verfasserin / des Verfassers in kleinerer Schrift unter der Überschrift
+\newcommand{\autor}[1]{\par\noindent{\small\textit{#1}}\par}
 
 %Abstand vor Kapitelbeginn
 \RedeclareSectionCommand[
@@ -88,7 +104,8 @@
 %Alles was das Formelherz begehrt
 \usepackage{amstext} 
 \usepackage{amsmath}
-\usepackage{amssymb}
+%newtxmath (Times-Mathematik) enthält die amssymb-Symbole und muss nach amsmath geladen werden
+\usepackage{newtxmath}
 
 %Für die Literaturverzeichnisse
 \usepackage{csquotes}

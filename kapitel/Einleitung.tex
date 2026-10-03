@@ -1,9 +1,8 @@
 
  
 \chapter{Einleitung}
-Sophie \newline
+\autor{Sophie Kleppe}
  
-\pagenumbering{arabic}
 Die direkte Übersetzung neuronaler Aktivität in Steuersignale für externe Geräte hat sich in den letzten Jahrzehnten von einem theoretischen Konzept zu einer klinischen Anwendung entwickelt. Während Hochberg et al.\ 2012 zeigten, dass Personen mit Tetraplegie (einer Lähmung beider Arme und Beine) einen Roboterarm über ein intrakortikales Implantat steuern konnten\footnote{Vgl. \cite{hochberg2012_roboticarm}}, gelang Meng et al.\ 2016 ein vergleichbares Ergebnis allein auf Basis nicht-invasiver \acrlong{eeg} (\acrshort{eeg}): Probanden steuerten durch die mentale Vorstellung von Bewegungsabläufen (\textit{Motor Imagery}) einen Roboterarm und konnten Objekte in einem dreidimensionalen Raum greifen und bewegen.\footnote{Vgl. \cite{meng2016_eeg_roboticarm}}
 Solche EEG-basierten Systeme setzen bislang jedoch hochspezialisierte und kostspielige Laborausstattung voraus. Open-Source-Plattformen wie OpenBCI bieten dabei eine interessante Alternative. Das Ultracortex~Mark~IV von OpenBCI (16~Kanäle) ist mit einem Anschaffungspreis von ca. 530~€ um ein Vielfaches günstiger als konventionelle Laborsysteme, die je nach Ausstattung Kosten von bis zu 150.000~€ erreichen können.\footnote{Vgl. \cite{openbci_ultracortex_shop, kappenman2018_eeg_lab}} Zusätzlich ist das System portabel, was eine Anwendung außerhalb der Laborumgebung ermöglicht. Dies eröffnet Anwendungsfelder insbesondere im Bereich von Neurofeedback und \gls{brain-computer-interface}-Forschung.
 Diese Möglichkeiten gehen jedoch mit einer zentralen wissenschaftlichen Anforderung einher. EEG-Signale liegen im Mikrovoltbereich und sind in besonderem Maße anfällig für Störfaktoren wie beispielsweise Elektrodenimpedanz, Verstärkerrauschen und die Präzision des Ereignis-Timings. Unterschiede in der Hardwarequalität können somit großen Einfluss auf die Genauigkeit der gemessenen Daten haben. Bevor ein Gerät für forschungsrelevante Aussagen oder BCI-Anwendungen genutzt werden kann, muss daher geprüft werden, ob es die gemessenen Signale mit ausreichender Messgenauigkeit aufzeichnet.
