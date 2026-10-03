@@ -6,225 +6,226 @@
 %makeglossaries Seminarfacharbeit
 %pdflatex Seminarfacharbeit.tex
 %nur dann funktioniert das Glossar auch in der PDF-Datei
+%
+%CZG-Vorgaben: alphabetisch (wird automatisch nach "name" bzw. "sort" sortiert),
+%jede Erklärung 1-2 Sätze. Es erscheinen nur Einträge, die im Text mit \gls{...}
+%verwendet werden. Bei kleingeschriebenen Namen "sort" angeben, sonst landen sie am Ende.
 \begin{comment}
     zum kopieren:
     \newglossaryentry{}
     {}
 \end{comment}
 
-\newglossaryentry{varianzanalyse}{
-  name={Varianzanalyse},
-  description={Statistisches Verfahren, das prüft, ob sich die Mittelwerte mehrerer Bedingungen systematisch unterscheiden. Dazu werden die Unterschiede zwischen den Bedingungen mit den zufälligen Schwankungen innerhalb der Bedingungen verglichen.}
+\newglossaryentry{abtastrate}{
+    name={Abtastrate},
+    first={\textit{Abtastrate}},
+    description={Anzahl der Messwerte, die pro Sekunde und Kanal aufgezeichnet werden. Sie wird in Hertz (Hz) angegeben}
 }
 
-\newglossaryentry{messwiederholung}{
-  name={Messwiederholung},
-  description={Versuchsaufbau, bei dem dieselben Personen alle Bedingungen durchlaufen. Dadurch können Unterschiede zwischen den Personen herausgerechnet und Effekte der Bedingungen zuverlässiger erkannt werden.}
-}
-\newglossaryentry{trigger}{
-  name={Trigger},
-  plural={Trigger},
-  description={Zahlencode, der während der Messung in die EEG-Aufzeichnung
-  geschrieben wird, um festzuhalten, wann ein Ereignis, z.\,B. das Erscheinen
-  eines Stimulus, stattfindet}
-}
-\newglossaryentry{claude-code}{
-  name={Claude Code},
-  description={KI-Assistent des Unternehmens Anthropic, der Programmcode
-  schreiben und ausführen sowie Daten direkt untersuchen kann}
-}
-\newglossaryentry{silber-silberchlorid-elektrode}
-    {
-    name=Silber-Silberchlorid-Elektrode,
-    first={\textit{Silber-Silberchlorid-Elektroden}},
-    description={Die Silber-Silberchlorid-Elektrode ist eine häufig verwendete Elektrode in der Elektroenzephalographie und besteht aus einem Silberdraht, der mit einer Schicht aus Silberchlorid überzogen ist}
-    }
-
-\newglossaryentry{berger-effekt}
-{
-    name=Berger-Effekt,
-    first={\textit{Berger-Effekt}},
-    description={Der Berger-Effekt bezeichnet eine Blockade der Alpha-Wellen im EEG und ist nachweisbar, in dem ein Proband, der wach und entspannt ist, die Augen öffnet. Die normalerweise bei geschlossenen Augen sichtbaren Alpha-Wellen verschwinden und werden durch Beta-Wellen ersetzt. Beim Schließen der Augen kehrt der Alpha-Rhythmus zurück}
-}
-
-\newglossaryentry{brain-computer-interface}
-{
-    name=Brain-Computer-Interface,
-    first={\textit{Brain-Computer-Interface}},
-    description={Brain-Computer-Interfaces, auf deutsch Gehirn-Computer-Schnittstellen sind Systeme, die es ermöglichen, Informationen direkt aus dem Gehirn zu extrahieren und in Befehle für externe Geräte umzuwandeln}
-}
-
-\newglossaryentry{elektrolyt}
-{
-    name=Elektrolyt,
-    first={\textit{Elektrolyt}},
-    description={Ein Elektrolyt ist eine Substanz, die in der Lage ist, elektrische Ladungen zu leiten, wenn sie als Lösung oder im geschmolzenem Zustand vorliegt}
-}
-
-\newglossaryentry{analog-digital-converter}
-    {name=Analog-Digital-Converter,
+\newglossaryentry{analog-digital-converter}{
+    name={Analog-Digital-Converter},
     first={\textit{Analog-Digital-Converter}},
-    description={Ein Analog-Digital-Converter, auf deutsch Analog-Digital-Wandler, ist ein elektronisches Bauteil, das analoge Signale in einen digitalen Datenstrom, der dann weiterverarbeitet oder gespeichert werden kann}
+    description={Ein Analog-Digital-Converter, auf Deutsch Analog-Digital-Wandler, ist ein elektronisches Bauteil, das analoge Signale in einen digitalen Datenstrom umwandelt, der dann weiterverarbeitet oder gespeichert werden kann}
 }
 
-\newglossaryentry{notch}{
-    name=Notch-Filter,
-    first={\textit{Notch-Filter}},
-    description={Filter, der gezielt eine bestimmte Frequenz (z.B. 50 Hz Netzrauschen) unterdrückt}
-}
-
-\newglossaryentry{icalang}{
-    name=Independent Component Analysis,
-    first={\textit{Independent Component Analysis}},
-    description={Independent Component Analysis ist ein mathematisches Verfahren zur Trennung überlagerter Signalquellen im EEG}
+\newglossaryentry{baseline}{
+    name={Basislinie},
+    first={\textit{Basislinie}},
+    description={Auch \textit{Baseline}: Zeitraum direkt vor dem Stimulus, dessen mittlere Spannung als Nullpunkt dient. Bei der Basislinienkorrektur wird dieser Mittelwert von der gesamten Epoche abgezogen}
 }
 
 \newglossaryentry{bandpass}{
-    name=Bandpassfilter,
+    name={Bandpassfilter},
     first={\textit{Bandpassfilter}},
     description={Filter, der nur Signale innerhalb eines bestimmten Frequenzbereichs durchlässt}
 }
 
+\newglossaryentry{berger-effekt}{
+    name={Berger-Effekt},
+    first={\textit{Berger-Effekt}},
+    description={Blockade der Alpha-Wellen im EEG, die auftritt, wenn eine wache und entspannte Person die Augen öffnet; die Alpha-Wellen werden dann durch Beta-Wellen ersetzt. Beim Schließen der Augen kehrt der Alpha-Rhythmus zurück}
+}
+
+\newglossaryentry{brain-computer-interface}{
+    name={Brain-Computer-Interface},
+    first={\textit{Brain-Computer-Interface}},
+    description={Brain-Computer-Interfaces, auf Deutsch Gehirn-Computer-Schnittstellen, sind Systeme, die es ermöglichen, Informationen direkt aus dem Gehirn zu extrahieren und in Befehle für externe Geräte umzuwandeln}
+}
+
+\newglossaryentry{brainflow}{
+    name={BrainFlow},
+    first={\textit{BrainFlow}},
+    description={Frei verfügbare Software-Bibliothek, mit der die Daten verschiedener EEG-Geräte, unter anderem von OpenBCI, aufgezeichnet und verarbeitet werden können}
+}
+
+\newglossaryentry{claude-code}{
+    name={Claude Code},
+    description={KI-Assistent des Unternehmens Anthropic, der Programmcode schreiben und ausführen sowie Daten direkt untersuchen kann}
+}
+
 \newglossaryentry{cutoff}{
-    name=Cut-off-Frequenz,
+    name={Cut-off-Frequenz},
     first={\textit{Cut-off-Frequenz}},
     description={Grenzfrequenz, ab der ein Filter Signale durchlässt oder unterdrückt}
-}
-
-\newglossaryentry{p300}{
-    name=P300,
-    first={\textit{P300}},
-    description={ERP-Komponente, die etwa 300 ms nach einem seltenen oder bedeutsamen Stimulus auftritt}
-}
-
-\newglossaryentry{elektrookulogramm}{
-    name=Elektrookulogramm,
-    first={\textit{Elektrookulogramm}},
-    description={Elektrookulogramme sind Messungen von Augenbewegungen zur Identifikation von Artefakten im EEG}
-}
-
-\newglossaryentry{eventmarker}{
-    name=Ereignismarker,
-    first={\textit{Ereignismarker}},
-    description={Zeitliche Markierung im EEG-Signal zur Kennzeichnung eines Stimulus oder Ereignisses}
-}
-
-\newglossaryentry{oddball}{
-    name=Oddball-Aufgabe,
-    first={\textit{Oddball-Aufgabe}},
-    description={Experimentelles Paradigma, bei dem seltene Zielreize zwischen häufigen Standardreizen präsentiert werden, um ERPs zu untersuchen}
-}
-
-\newglossaryentry{epikrImpulse}{
-    name=Epikriptische Impulse,
-    first={\textit{Epikriptische Impulse}},
-    description={Feine Sinnesreize wie Berührung oder Druck, die präzise wahrgenommen und genau lokalisiert werden können}
-}
-
-\newglossaryentry{ProtoImpulse}{
-    name=Protopathische Impulse,
-    first={\textit{Protopathische Impulse}},
-    description={Grobe Sinnesreize wie Schmerz oder Temperatur, die weniger genau unterschieden werden können}
-}
-
-\newglossaryentry{wernick}{
-    name=Wernicke-Sprachzentrum,
-    first={\textit{Wernicke-Sprachzentrum}},
-    description={Gehirnbereich, der für das Verstehen von gesprochener und geschriebener Sprache zuständig ist}
-}
-
-\newglossaryentry{oligo}{
-    name=Oligodendrozyten,
-    first={\textit{Oligodendrozyten}},
-    description={Spezialisierte Zellen im Nervensystem, die Nervenfasern mit einer schützenden Myelinschicht umhüllen}
-}
-
-
-\newglossaryentry{rückenmark}
-    {
-        name=Rückenmark,
-        first={\textit{Rückenmark}},
-        description={Das Rückenmark ist ein Teil des zentralen Nervensystems, der sich im Wirbelkanal befindet und als Hauptleitung für Nervenimpulse zwischen Gehirn und Körper dient}
-    }
-
-\newglossaryentry{peripheres Nervensystem}
-    {
-        name=peripheres Nervensystem,
-        first={\textit{peripheres Nervensystem}},
-        description={Das periphere Nervensystem umfasst alle Nerven außerhalb des zentralen Nervensystems (Gehirn und Rückenmark) und verbindet diese mit den Organen, Muskeln und Haut}
-    }
-    
-
-\newglossaryentry{spährischer Spline-Interpolation}
-    {
-    name=spährische Spline-Interpolation,
-    first={\textit{spährischer Spline-Interpolation}},
-    description={Die sphärische Spline-Interpolation im EEG ist ein mathematisches Verfahren zur raumbezogenen Schätzung und Glättung von elektrischen Potenzialen auf einer Kugeloberfläche.}
-    }
- 
-    \newglossaryentry{no-switzerland-principle}
-    {
-    name=grand-average,
-    first={\textit{no-switzerland-principle}},
-    description={123456}
-    }
- 
-   \newglossaryentry{grand-average}
-    {
-    name=grand-average,
-    first={\textit{grand-average}},
-    description={123456}
-    }
-
-    \newglossaryentry{Power Specral Density}
-    {
-    name=Power Specral Density,
-    first={\textit{Power Specral Density}},
-    description={Die spektrale Leistungsdichte (PSD) im EEG beschreibt, wie sich die Signalenergie oder -leistung eines Elektroenzephalogramms auf verschiedene Frequenzen verteilt. Sie wandelt rohe, komplexe Zeitreihendaten in den Frequenzbereich um und macht so Grundrhythmen wie Delta-, Theta-, Alpha- und Betawellen sichtbar.}
-    }
-
-    \newglossaryentry{Welch-Methode}
-    {
-    name=Welch-Methode,
-    first={\textit{Welch-Methode}},
-    description={Die Welch-Methode ist ein Verfahren zur Bestimmung der spektralen Leistungsdichte (PSD) eines Signals. Dabei wird das EEG-Signal in überlappende Abschnitte geteilt, deren Spektren berechnet und anschließend gemittelt werden. Dadurch entsteht eine stabilere Darstellung der Frequenzanteile des EEG-Signals.}
-    }
-
-    \newglossaryentry{openbci-board}
-    {
-    name=OpenBCI-Board,
-    first={\textit{OpenBCI-Board}},
-    description={}
-    }
-
-    \newglossaryentry{brainflow}{
-        name = BrainFlow,
-        first={\textit{BrainFlow}},
-        description={}
-        }
-    \newglossaryentry{abtastrate}{
-        name = Abtastrate,
-        first={\textit{Abtastrate}},
-        description={}
-        }
-    
-
-\newglossaryentry{mne}{
-    name={MNE},
-    first={\textit{MNE}},
-    description={}
-}
-
-    \newglossaryentry{stimulus}{
-    name={Stimulus},
-    first={\textit{Stimulus}},
-    description={Ein Stimulus (Mehrzahl Stimuli) ist ein Reiz oder Anreiz, der eine bestimmte körperliche, psychische oder wirtschaftliche Reaktion auslöst.}
 }
 
 \newglossaryentry{elektrodencluster}{
     name={Elektroden-Cluster},
     plural={Elektroden-Clustern},
     first={\textit{Elektroden-Cluster}},
-    description={Ein Elektroden-Cluster ist eine Gruppe von benachbarten Elektroden, die zusammen verwendet werden, um spezifische neuronale Aktivitäten zu messen. Die Cluster werden nach den Hirnregionen, über denen sie liegen, benannt.}
+    description={Gruppe benachbarter Elektroden, die gemeinsam ausgewertet werden, um die Aktivität einer bestimmten Hirnregion zu erfassen. Die Cluster werden nach den Hirnregionen benannt, über denen sie liegen}
 }
-    
+
+\newglossaryentry{elektrolyt}{
+    name={Elektrolyt},
+    first={\textit{Elektrolyt}},
+    description={Ein Elektrolyt ist eine Substanz, die elektrische Ladungen leiten kann, wenn sie als Lösung oder im geschmolzenen Zustand vorliegt}
+}
+
+\newglossaryentry{epikrImpulse}{
+    name={Epikritische Impulse},
+    first={\textit{Epikritische Impulse}},
+    description={Feine Sinnesreize wie Berührung oder Druck, die präzise wahrgenommen und genau lokalisiert werden können}
+}
+
+\newglossaryentry{epoche}{
+    name={Epoche},
+    plural={Epochen},
+    first={\textit{Epoche}},
+    firstplural={\textit{Epochen}},
+    description={Kurzer Ausschnitt der fortlaufenden EEG-Aufzeichnung um ein Ereignis herum, zum Beispiel von kurz vor bis knapp eine Sekunde nach dem Erscheinen eines Stimulus}
+}
+
+\newglossaryentry{eventmarker}{
+    name={Ereignismarker},
+    first={\textit{Ereignismarker}},
+    description={Zeitliche Markierung im EEG-Signal zur Kennzeichnung eines Stimulus oder Ereignisses}
+}
+
+\newglossaryentry{grand-average}{
+    name={Grand Average},
+    first={\textit{Grand Average}},
+    description={Gruppenmittelung: Mittelwert der ERP-Verläufe über mehrere Versuchspersonen, gebildet aus den zuvor für jede Person einzeln gemittelten Verläufen}
+}
+
+\newglossaryentry{mne}{
+    name={MNE},
+    first={\textit{MNE}},
+    description={Frei verfügbare Python-Bibliothek (MNE-Python) zur Verarbeitung und Auswertung von EEG-Daten}
+}
+
+\newglossaryentry{messwiederholung}{
+    name={Messwiederholung},
+    first={\textit{Messwiederholung}},
+    description={Versuchsaufbau, bei dem dieselben Personen alle Bedingungen durchlaufen. Dadurch können Unterschiede zwischen den Personen herausgerechnet und Effekte der Bedingungen zuverlässiger erkannt werden}
+}
+
+\newglossaryentry{no-switzerland-principle}{
+    name={No-Switzerland-Prinzip},
+    first={\textit{No-Switzerland-Prinzip}},
+    description={Bezeichnung dafür, dass es am Körper keinen elektrisch völlig neutralen Ort für eine Referenzelektrode gibt. Jede Wahl der Referenz beeinflusst daher die gemessenen Spannungen}
+}
+
+\newglossaryentry{notch}{
+    name={Notch-Filter},
+    first={\textit{Notch-Filter}},
+    description={Filter, der gezielt eine bestimmte Frequenz (z.\,B. 50 Hz Netzrauschen) unterdrückt}
+}
+
+\newglossaryentry{oligo}{
+    name={Oligodendrozyten},
+    first={\textit{Oligodendrozyten}},
+    description={Spezialisierte Zellen im zentralen Nervensystem, die Nervenfasern mit einer schützenden Myelinschicht umhüllen}
+}
+
+\newglossaryentry{openbci-board}{
+    name={OpenBCI-Board},
+    first={\textit{OpenBCI-Board}},
+    description={Platine von OpenBCI, die die Signale der Elektroden verstärkt, digitalisiert und drahtlos an einen Computer sendet}
+}
+
+\newglossaryentry{p300}{
+    name={P300},
+    first={\textit{P300}},
+    description={ERP-Komponente, die etwa 300 ms nach einem seltenen oder bedeutsamen Stimulus auftritt}
+}
+
+\newglossaryentry{peripheres Nervensystem}{
+    name={peripheres Nervensystem},
+    sort={Peripheres Nervensystem},
+    first={\textit{peripheres Nervensystem}},
+    description={Das periphere Nervensystem umfasst alle Nerven außerhalb des zentralen Nervensystems (Gehirn und Rückenmark) und verbindet diese mit den Organen, Muskeln und der Haut}
+}
+
+\newglossaryentry{ProtoImpulse}{
+    name={Protopathische Impulse},
+    first={\textit{Protopathische Impulse}},
+    description={Grobe Sinnesreize wie Schmerz oder Temperatur, die weniger genau unterschieden werden können}
+}
+
+\newglossaryentry{rückenmark}{
+    name={Rückenmark},
+    first={\textit{Rückenmark}},
+    description={Teil des zentralen Nervensystems, der im Wirbelkanal liegt und als Hauptleitung für Nervenimpulse zwischen Gehirn und Körper dient}
+}
+
+\newglossaryentry{snrgl}{
+    name={Signal-Rausch-Verhältnis},
+    first={\textit{Signal-Rausch-Verhältnis}},
+    description={Verhältnis der Stärke des gesuchten Signals zur Stärke der Störungen (des Rauschens). Je größer der Wert, desto deutlicher hebt sich das Signal vom Rauschen ab}
+}
+
+\newglossaryentry{silber-silberchlorid-elektrode}{
+    name={Silber-Silberchlorid-Elektrode},
+    plural={Silber-Silberchlorid-Elektroden},
+    first={\textit{Silber-Silberchlorid-Elektroden}},
+    description={Häufig in der Elektroenzephalographie verwendete Elektrode aus einem Silberdraht, der mit einer Schicht aus Silberchlorid überzogen ist}
+}
+
+\newglossaryentry{psdgl}{
+    name={Spektrale Leistungsdichte},
+    first={\textit{spektrale Leistungsdichte}},
+    description={Beschreibt, wie sich die Leistung eines EEG-Signals auf die verschiedenen Frequenzen verteilt. Dadurch werden Rhythmen wie Delta-, Theta-, Alpha- und Beta-Wellen sichtbar}
+}
+
+\newglossaryentry{spline}{
+    name={Sphärische Spline-Interpolation},
+    first={\textit{sphärischer Spline-Interpolation}},
+    description={Mathematisches Verfahren, das die Spannung an einer fehlenden Elektrode aus den Spannungen der übrigen Elektroden auf einer kugelförmigen Kopfoberfläche schätzt}
+}
+
+\newglossaryentry{standardabweichung}{
+    name={Standardabweichung},
+    first={\textit{Standardabweichung}},
+    description={Maß für die Streuung von Messwerten um ihren Mittelwert. Je größer sie ist, desto stärker weichen die einzelnen Werte voneinander ab}
+}
+
+\newglossaryentry{stimulus}{
+    name={Stimulus},
+    first={\textit{Stimulus}},
+    description={Ein Stimulus (Mehrzahl Stimuli) ist ein Reiz, der eine bestimmte körperliche oder psychische Reaktion auslöst}
+}
+
+\newglossaryentry{trigger}{
+    name={Trigger},
+    plural={Trigger},
+    description={Zahlencode, der während der Messung in die EEG-Aufzeichnung geschrieben wird, um festzuhalten, wann ein Ereignis, z.\,B. das Erscheinen eines Stimulus, stattfindet}
+}
+
+\newglossaryentry{varianzanalyse}{
+    name={Varianzanalyse},
+    first={\textit{Varianzanalyse}},
+    description={Statistisches Verfahren, das prüft, ob sich die Mittelwerte mehrerer Bedingungen systematisch unterscheiden. Dazu werden die Unterschiede zwischen den Bedingungen mit den zufälligen Schwankungen innerhalb der Bedingungen verglichen}
+}
+
+\newglossaryentry{wernick}{
+    name={Wernicke-Sprachzentrum},
+    first={\textit{Wernicke-Sprachzentrum}},
+    description={Gehirnbereich, der für das Verstehen von gesprochener und geschriebener Sprache zuständig ist}
+}
+
+\newglossaryentry{welch}{
+    name={Welch-Methode},
+    first={\textit{Welch-Methode}},
+    description={Verfahren zur Bestimmung der spektralen Leistungsdichte, bei dem das Signal in überlappende Abschnitte geteilt wird, deren Spektren berechnet und anschließend gemittelt werden. Dadurch entsteht eine stabilere Darstellung der Frequenzanteile}
+}
