@@ -209,7 +209,17 @@
 \renewcommand*{\multicitedelim}{\addsemicolon\space}
 
 %3-5 Autor:innen: beim ersten Zitat alle Namen, danach "et al."
-\AtEveryCitekey{\ifciteseen{\defcounter{maxnames}{2}}{\defcounter{maxnames}{5}}}
+%Endet die Autorenliste im Literatureintrag mit "and others" (mehr Autor:innen als
+%eingetragen), steht von Anfang an "Erstautor et al."
+\AtEveryCitekey{\ifciteseen{\defcounter{maxnames}{2}}{\defcounter{maxnames}{5}}%
+  \ifandothers{labelname}{\defcounter{maxnames}{1}}{}}
+
+%Datum ohne Leerzeichen: TT.MM.JJJJ
+\DefineBibliographyExtras{ngerman}{%
+  \protected\def\mkbibdateshort#1#2#3{%
+    \iffieldundef{#3}{}{\mkdayzeros{\thefield{#3}}.}%
+    \iffieldundef{#2}{}{\mkmonthzeros{\thefield{#2}}.}%
+    \iffieldundef{#1}{}{\mkyearzeros{\thefield{#1}}}}}
 
 %\DeclareFieldFormat{note}{\mkbibbrackets{\bibstring{urlseen}\addcolon\space#1}}
 
