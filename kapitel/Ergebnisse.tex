@@ -1,8 +1,8 @@
 \chapter{Ergebnisse aus der Messung}
 \section{Datengrundlage}
-Die Datengrundlage für die Auswertung des stationären EEG-Systems BioSemi
+Die Datengrundlage für die Auswertung des stationären \acrshort{eeg}-Systems BioSemi
 ActiveTwo bilden die Daten aller zehn Versuchspersonen. Für das portable
-EEG-System von OpenBCI liegen nur neun auswertbare Datensätze aus
+\acrshort{eeg}-System von OpenBCI liegen nur neun auswertbare Datensätze aus
 Versuchsbedingung 1 (außerhalb der Kabine) und sechs aus Versuchsbedingung 2
 (innerhalb der Kabine) vor. Grund dafür ist das Ausschließen einiger
 Datensätze, aufgrund von Elektroden, dessen Signale keine ausreichende Qualität
@@ -24,7 +24,7 @@ Die Hirnaktivität unterscheidet sich zwischen einzelnen Personen deutlich,
 beispielsweise in der Stärke der Alpha-Aktivität oder in der Amplitude der P1. Würde die Gruppenmittelungen der einzelnen Messungen mit unterschiedlichen
 Versuchspersonen gebilden werden, könnte ein Unterschied zwischen den Messungen allein
 darauf zurückzuführen sein, dass jeweils andere Personen in die Mittelung eingehen, und
-nicht auf dem verwendeten EEG-System oder der Versuchsbedingung. Deshalb wurden für den Vergleich der Messungen nur Versuchspersonen herangezogen, die 
+nicht auf dem verwendeten \acrshort{eeg}-System oder der Versuchsbedingung. Deshalb wurden für den Vergleich der Messungen nur Versuchspersonen herangezogen, die 
 die in beiden Messungen gültige Daten aufweisen. 
 
 \section{Verhaltensergebnisse}
@@ -91,7 +91,7 @@ Tabelle~\ref{tab:p1_amplituden} zeigt die mittleren P1-Amplituden beider Darbiet
 
 
 Abbildung~\ref{fig:erp_vergleich} zeigt die über alle Versuchspersonen gemittelten Kurvenverläufe. In allen drei Bedingungen folgte auf die P1 eine Negativität um etwa 200\,ms und eine breitere Positivität zwischen etwa 300 und 350\,ms. Der grundsätzliche Verlauf stimmte damit zwischen den Systemen überein. Im Zeitraum vor dem Stimulus schwankten die OpenBCI-Kurven stärker als die BioSemi-Kurve. Ab etwa 400\,ms fielen sie zudem unter die Nulllinie ab, während das BioSemi-Signal positiv blieb. \newline 
-Zur Abschätzung des Grundrauschens wurde die Standardabweichung im Basislinienintervall ($-$200 bis 0\,ms) bestimmt, als Signal-Rausch-Verhältnis (SNR) das Verhältnis aus mittlerer P1-Amplitude und dieser Standardabweichung. Das Grundrauschen lag beim OpenBCI-System um etwa 15 bis 36\,\% höher als beim BioSemi-System. Das SNR war beim BioSemi-System bei großen Stimuli etwa 2,6- bis 3,3-mal und bei kleinen Stimuli etwa 1,4- bis 2-mal so hoch wie beim OpenBCI-System.
+Zur Abschätzung des Grundrauschens wurde die Standardabweichung im Basislinienintervall ($-$200 bis 0\,ms) bestimmt, als Signal-Rausch-Verhältnis (\acrshort{snr}) das Verhältnis aus mittlerer P1-Amplitude und dieser Standardabweichung. Das Grundrauschen lag beim OpenBCI-System um etwa 15 bis 36\,\% höher als beim BioSemi-System. Das \acrshort{snr} war beim BioSemi-System bei großen Stimuli etwa 2,6- bis 3,3-mal und bei kleinen Stimuli etwa 1,4- bis 2-mal so hoch wie beim OpenBCI-System.
 
 \section{Ergebnisse für das Alpha-Paradigma}
 \autor{Katharina Ensslen}
@@ -106,7 +106,7 @@ Zur Abschätzung des Grundrauschens wurde die Standardabweichung im Basislinieni
     \label{frequenzbandanalyse}
 \end{figure}
 
-Für die Analyse wurden ausschließlich die hinteren Elektroden über dem Okzipitallappen betrachtet (okzipitaler Cluster), da der Hans-Berger-Effekt, also die Zunahme der Alpha-Aktivität bei geschlossenen Augen, dort am stärksten ausgeprägt ist. Abbildung \ref{frequenzbandanalyse} zeigt die  \acrshort{psd} dieses Clusters als Mittelwert über alle Teilnehmenden, getrennt für die drei Versuchsbedingungen. Die PSD beschreibt, wie sich die Leistung des EEG-Signals auf die einzelnen Frequenzen verteilt. Sie wird in $\mu V^2/Hz$ angegeben, weil die Leistung quadratisch von der Amplitude abhängt. Dadurch lässt sich die Alpha-Aktivität (8–12 Hz, grün hinterlegt) direkt ablesen.\newline
+Für die Analyse wurden ausschließlich die hinteren Elektroden über dem Okzipitallappen betrachtet (okzipitaler Cluster), da der Hans-Berger-Effekt, also die Zunahme der Alpha-Aktivität bei geschlossenen Augen, dort am stärksten ausgeprägt ist. Abbildung \ref{frequenzbandanalyse} zeigt die  \acrshort{psd} dieses Clusters als Mittelwert über alle Teilnehmenden, getrennt für die drei Versuchsbedingungen. Die \acrshort{psd} beschreibt, wie sich die Leistung des \acrshort{eeg}-Signals auf die einzelnen Frequenzen verteilt. Sie wird in $\mu V^2/Hz$ angegeben, weil die Leistung quadratisch von der Amplitude abhängt. Dadurch lässt sich die Alpha-Aktivität (8–12 Hz, grün hinterlegt) direkt ablesen.\newline
 
 \begin{table}[htbp]
     \centering
@@ -152,7 +152,7 @@ In allen drei Messungen zeigt sich im Alpha-Bereich ein deutlicher Unterschied z
 
 blabla rangfolge\newline
 
-In beiden OpenBCI-Durchläufen tritt zusätzlich ein schmaler Peak, also ein Hochpunkt, bei 25 Hz auf, der beim BioSemi-System fehlt (in Abbildung \ref{frequenzbandanalyse} zu sehen). Er ist zu groß, zu regelmäßig und unabhängig von Augenzustand und Bedingung (keine Unterschiede in Amplitude oder Frequenz zwischen EO/EC sowie zwischen s1 und s2), um neuronalen Ursprungs zu sein. Auch ist nach aktuellem Stand kein physiologischer Effekt bekannt, der einen solchen Ausschlag erklären würde. Für eine technische Ursache kommen mehrere Möglichkeiten infrage:\newline
+In beiden OpenBCI-Durchläufen tritt zusätzlich ein schmaler Peak, also ein Hochpunkt, bei 25 Hz auf, der beim BioSemi-System fehlt (in Abbildung \ref{frequenzbandanalyse} zu sehen). Er ist zu groß, zu regelmäßig und unabhängig von Augenzustand und Bedingung (keine Unterschiede in Amplitude oder Frequenz zwischen \acrshort{eo}/\acrshort{ec} sowie zwischen s1 und s2), um neuronalen Ursprungs zu sein. Auch ist nach aktuellem Stand kein physiologischer Effekt bekannt, der einen solchen Ausschlag erklären würde. Für eine technische Ursache kommen mehrere Möglichkeiten infrage:\newline
 \begin{itemize}
   \item Netzbrummen scheidet aus, da der Peak nicht bei 50 Hz liegt und sich in der Kabine keine Netzteile befinden. Gegenüber dem BioSemi-Durchlauf kam lediglich der Laptop hinzu.
   \item Bildschirmflackern: Bei Pixel-Inversion oder Frame Rate Control entsteht ein Flackern mit der halben Bildwiederholrate, bei einem 60-Hz-Monitor also bei 30 Hz %(Quelle: flickersense.org/background/led-screens). Das erklärt einen Peak bei 25 Hz nicht direkt.
@@ -163,7 +163,7 @@ Mit Sicherheit lässt sich die Ursache auf Basis der vorliegenden Daten nicht be
 
 \subsection{Alpha-Suppression}
 
-Als Alpha-Suppression bezeichnet man das Verhältnis der mittleren Alpha-Power bei EC zu der bei EO. Ein Wert von 9 bedeutet entsprechend, dass bei EC neunmal mehr Alpha-Power gemessen wird als bei EO. Ab einem Verhältnis von etwa 2 wird angenommen, dass die Unterschiede nicht mehr allein auf zufällige Artefakte zurückzuführen sind, sondern den Hans-Berger-Effekt abbilden. Abbildung \ref{alpha_suppression} zeigt die Alpha-Suppression für die Cluster Okzipital, Parietal, Frontal und Zentral (Gruppenmittel, n = 6) für s3, s1 und s2.\newline
+Als Alpha-Suppression bezeichnet man das Verhältnis der mittleren Alpha-Power bei \acrshort{ec} zu der bei \acrshort{eo}. Ein Wert von 9 bedeutet entsprechend, dass bei \acrshort{ec} neunmal mehr Alpha-Power gemessen wird als bei \acrshort{eo}. Ab einem Verhältnis von etwa 2 wird angenommen, dass die Unterschiede nicht mehr allein auf zufällige Artefakte zurückzuführen sind, sondern den Hans-Berger-Effekt abbilden. Abbildung \ref{alpha_suppression} zeigt die Alpha-Suppression für die Cluster Okzipital, Parietal, Frontal und Zentral (Gruppenmittel, n = 6) für s3, s1 und s2.\newline
 
 \begin{figure}[h]
 	\centering
