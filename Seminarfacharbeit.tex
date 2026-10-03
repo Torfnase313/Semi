@@ -9,9 +9,14 @@
 \input{titelseite.tex}
 %für römische Nummerierung der Seite(n) des Inhaltsverzeichnis
 \pagenumbering{roman}
+%CZG-Reihenfolge: Titelblatt, Abkürzungsverzeichnis, Inhaltsverzeichnis, Einleitung,
+%Hauptteil, Zusammenfassung mit Ausblick, Glossar, Anhang, Quellenverzeichnis, Erklärung
+\printglossary[type=\acronymtype, title=Abkürzungsverzeichnis, style=acrostyle]
 \tableofcontents
 
 %Das erste Kapitel muss mit \pagenumbering{arabic} beginnen.
+\cleardoublepage
+\pagenumbering{arabic}
 
 %\input{nutzungsBeispiel.tex}
 
@@ -28,21 +33,17 @@
 
 \input{kapitel/Diskussion}
 
+\input{kapitel/Zusammenfassung}
+
 \printglossary
-\printglossary[type=\acronymtype, title=Abkürzungsverzeichnis, style=acrostyle]
 
 \input{kapitel/Anhang.tex}
 
-\defbibfilter{internet}{type=onlinedokument or type=onlinelexikon}
-
-\defbibfilter{literat}{type=zeitschriftartikel or type=buch}
-
-
-\printbibliography[filter = literat, heading=bibliography, title={Literaturverzeichnis}]
-
-\printbibliography[filter = internet, heading=bibliography, title={Internetquellen}]
+%Ein gemeinsames, alphabetisches Quellenverzeichnis ohne Unterteilung (CZG-Vorgabe)
+\printbibliography[heading=bibintoc, title={Quellenverzeichnis}]
 
 \listoffigures %Abbildungsverzeichnis
+\listoftables %Tabellenverzeichnis
 
 \begin{comment}%Verwendung siehe Präamble
 \bibliography{literatur}
@@ -58,14 +59,16 @@
 %\chapter*{Danksagung}
 %Kann auch als Kapitel angelegt werden.
 
-\chapter*{Eidesstattliche Erklärung}
+%Selbstständigkeitserklärung nach CZG-Dokumentenvorlage
+\chapter*{Selbstständigkeitserklärung}
+\addcontentsline{toc}{chapter}{Selbstständigkeitserklärung}
 Wir erklären, dass wir die vorliegende Arbeit mit dem Titel \qt{Validierungsstudie eines portablen EEG-Gerätes von OpenBCI} selbstständig, ohne unzulässige fremde Hilfe angefertigt und nur unter Verwendung der angegebenen Literatur und Hilfsmittel verfasst haben. 
 Sämtliche Stellen, die wörtlich oder inhaltlich anderen Werken entnommen sind, wurden unter Angabe der Quellen als Entlehnung kenntlich gemacht. 
 Dies trifft besonders auch auf Quellen aus dem Internet zu. Gleichzeitig geben wir das Einverständnis, unsere Arbeit mittels einer Plagiatssoftware durch die Schule überprüfen zu lassen.
 
 \vspace{0.3cm}
 \noindent
-Jena, den 01. April 2026
+Jena, den \makebox[4cm]{\hrulefill}
 
 \vfill
 
@@ -75,6 +78,7 @@ Katharina Ensslen& Alisa Fiedler\\[8ex]
 \makebox[2.5in]{\hrulefill} & \makebox[2.5in]{\hrulefill}\\
 Sophie Kleppe & Lorenz Kobylka\\
 \end{tabular}
+
 %Bei Drei Personen die Felder für Person Vier mit Leerzeichen ersetzen.
 
 

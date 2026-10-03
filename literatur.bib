@@ -6,7 +6,8 @@ onlinelexikon für einträge aus lexika wie brockhaus, doccheck, wikipedia
 onlinedokument für online-dokumente -----> unterscheidung zw es gibt einen autor mit namen (dann zu mit autor) und es wird basically die website angegeben wie kenhub ( dann  ohne autor, kenhub aber trotzdem an die author-stelle schreiben, damit das angezeigt wird)
 
 letztes Abrufdatum über
-note = {(Abgerufen am tt.mm.jjjj)} und nicht anders!
+urldate = {jjjj-mm-tt} und nicht anders! (wird als [Abrufdatum tt.mm.jjjj] ausgegeben)
+note nur noch für Zusätze wie "In: StatPearls. StatPearls Publishing"
 
 \end{comment}
     
@@ -23,8 +24,9 @@ note = {(Abgerufen am tt.mm.jjjj)} und nicht anders!
 
 @Booknew{hescheler2010,
 	author    = {Hescheler, J. and Deetjen, P. and Speckmann, E.-J.},
-	title     = {Repetitorium Psychologie},
-	publisher = {Elsevier Urban \& Fischer},
+	title     = {Repetitorium Physiologie},
+	publisher = {Elsevier, Urban \& Fischer},
+	address   = {München; Jena},
 	year      = {2010}
 }
 
@@ -37,9 +39,10 @@ note = {(Abgerufen am tt.mm.jjjj)} und nicht anders!
 }
 
 @Booknew{jadeja2021,
-	author    = {Jadeja, N. M.},
+	author    = {Jadeja, Neville M.},
 	title     = {How to Read an EEG},
-	publisher = {Cambridge Academic},
+	publisher = {Cambridge University Press},
+	address   = {Cambridge},
 	year      = {2021}
 }
 
@@ -55,25 +58,135 @@ note = {(Abgerufen am tt.mm.jjjj)} und nicht anders!
 @Booknew{luck2005,
   author    = {Luck, Steven J.},
   title     = {An Introduction to the Event-Related Potential Technique},
-  edition  = {2},
   publisher = {MIT Press},
   address   = {Cambridge, MA},
   year      = {2005},
 }
 
 @Booknew{studyflix_epsp_ipsp,
-    author    = {Purves, Dale and Augustine, George J. and Fitzpatrick, David and others},
-    title     = {Excitatory and Inhibitory Postsynaptic Potentials},
+    editor    = {Purves, Dale and Augustine, George J. and Fitzpatrick, David and Katz, Lawrence C. and LaMantia, Anthony-Samuel and McNamara, James O. and Williams, S. Mark},
+    title     = {Neuroscience},
+    subtitle  = {Kapitel: Excitatory and Inhibitory Postsynaptic Potentials},
     edition   = {2},
     publisher = {Sinauer Associates},
     address   = {Sunderland (MA)},
     year      = {2001},
     url       = {https://www.ncbi.nlm.nih.gov/books/NBK11117/},
-    note      = {(Abgerufen am 17.12.2025)}
+    urldate = {2025-12-17}
 }
 
 
 %%%% Zeitschriftenartikel %%%%%
+
+@zeitschriftartikel{biasiucci2019,
+    author  = {Biasiucci, Andrea and Franceschiello, Benedetta and Murray, Micah M.},
+    title   = {Electroencephalography},
+    journal = {Current Biology},
+    year    = {2019},
+    volume  = {29},
+    number  = {3},
+    pages   = {R80--R85},
+    url     = {https://doi.org/10.1016/j.cub.2018.11.052}
+}
+
+@zeitschriftartikel{dirusso2002,
+    author  = {Di Russo, Francesco and Martínez, Antígona and Sereno, Martin I. and Pitzalis, Sabrina and Hillyard, Steven A.},
+    title   = {Cortical sources of the early components of the visual evoked potential},
+    journal = {Human Brain Mapping},
+    year    = {2002},
+    volume  = {15},
+    number  = {2},
+    pages   = {95--111},
+    url     = {https://doi.org/10.1002/hbm.10010}
+}
+
+@zeitschriftartikel{jiang2019,
+    author  = {Jiang, Xiao and Bian, Gui-Bin and Tian, Zean},
+    title   = {Removal of Artifacts from {EEG} Signals: A Review},
+    journal = {Sensors},
+    year    = {2019},
+    volume  = {19},
+    number  = {5},
+    pages   = {987},
+    url     = {https://doi.org/10.3390/s19050987}
+}
+
+@zeitschriftartikel{kappenman2010,
+    author  = {Kappenman, Emily S. and Luck, Steven J.},
+    title   = {The effects of electrode impedance on data quality and statistical significance in {ERP} recordings},
+    journal = {Psychophysiology},
+    year    = {2010},
+    volume  = {47},
+    number  = {5},
+    pages   = {888--904},
+    url     = {https://doi.org/10.1111/j.1469-8986.2010.01009.x}
+}
+
+@zeitschriftartikel{wolpaw2002,
+    author  = {Wolpaw, Jonathan R. and Birbaumer, Niels and McFarland, Dennis J. and Pfurtscheller, Gert and Vaughan, Theresa M.},
+    title   = {Brain-computer interfaces for communication and control},
+    journal = {Clinical Neurophysiology},
+    year    = {2002},
+    volume  = {113},
+    number  = {6},
+    pages   = {767--791},
+    url     = {https://doi.org/10.1016/S1388-2457(02)00057-3}
+}
+
+@zeitschriftartikel{wolpaw2004,
+    author  = {Wolpaw, Jonathan R. and McFarland, Dennis J.},
+    title   = {Control of a two-dimensional movement signal by a noninvasive brain-computer interface in humans},
+    journal = {Proceedings of the National Academy of Sciences},
+    year    = {2004},
+    volume  = {101},
+    number  = {51},
+    pages   = {17849--17854},
+    url     = {https://doi.org/10.1073/pnas.0403504101}
+}
+
+@zeitschriftartikel{pfurtscheller2003,
+    author  = {Pfurtscheller, Gert and Müller, Gernot R. and Pfurtscheller, Jörg and Gerner, Hans Jürgen and Rupp, Rüdiger},
+    title   = {\glqq Thought\grqq{} -- control of functional electrical stimulation to restore hand grasp in a patient with tetraplegia},
+    journal = {Neuroscience Letters},
+    year    = {2003},
+    volume  = {351},
+    number  = {1},
+    pages   = {33--36},
+    url     = {https://doi.org/10.1016/S0304-3940(03)00947-9}
+}
+
+@zeitschriftartikel{barry2007,
+    author  = {Barry, Robert J. and Clarke, Adam R. and Johnstone, Stuart J. and Magee, Christopher A. and Rushby, Jacqueline A.},
+    title   = {{EEG} differences between eyes-closed and eyes-open resting conditions},
+    journal = {Clinical Neurophysiology},
+    year    = {2007},
+    volume  = {118},
+    number  = {12},
+    pages   = {2765--2773},
+    url     = {https://doi.org/10.1016/j.clinph.2007.07.028}
+}
+
+@zeitschriftartikel{welch1967,
+    author  = {Welch, Peter D.},
+    title   = {The use of fast Fourier transform for the estimation of power spectra: A method based on time averaging over short, modified periodograms},
+    journal = {IEEE Transactions on Audio and Electroacoustics},
+    year    = {1967},
+    volume  = {15},
+    number  = {2},
+    pages   = {70--73},
+    url     = {https://doi.org/10.1109/TAU.1967.1161901}
+}
+
+@zeitschriftartikel{sur2009,
+    author  = {Sur, Shravani and Sinha, Vinod Kumar},
+    title   = {Event-related potential: An overview},
+    journal = {Industrial Psychiatry Journal},
+    year    = {2009},
+    volume  = {18},
+    number  = {1},
+    pages   = {70--73},
+    url     = {https://doi.org/10.4103/0972-6748.57865}
+}
 
 @zeitschriftartikel{wiki_leckstrom,
     author  = {Huang, Shiwei and Hong, Sungho and De Schutter, Erik},
@@ -82,7 +195,7 @@ note = {(Abgerufen am tt.mm.jjjj)} und nicht anders!
     year    = {2015},
     volume  = {9},
     pages   = {432},
-    url     = {https://www.nature.com/articles/nature11076}
+    url     = {https://www.frontiersin.org/journals/cellular-neuroscience/articles/10.3389/fncel.2015.00432/full}
 }
 
 @zeitschriftartikel{wikipedia_eeg_highpass,
@@ -93,7 +206,7 @@ note = {(Abgerufen am tt.mm.jjjj)} und nicht anders!
     year    = {2015},
     volume  = {52},
     number  = {8},
-    pages   = {997 \addspace - \addspace 1009},
+    pages   = {997--1009},
     url     = {https://onlinelibrary.wiley.com/doi/10.1111/psyp.12437}
 }
 
@@ -104,7 +217,7 @@ note = {(Abgerufen am tt.mm.jjjj)} und nicht anders!
     journal = {Journal of Neuroscience Methods},
     year    = {2015},
     volume  = {250},
-    pages   = {34 \addspace - \addspace 46},
+    pages   = {34--46},
     url     = {https://www.sciencedirect.com/science/article/pii/S0165027014002866?via%3Dihub}
 }
 
@@ -120,17 +233,25 @@ note = {(Abgerufen am tt.mm.jjjj)} und nicht anders!
 }
 
 @zeitschriftartikel{damico2026_cyton_brainamp,
-    author  = {D'Amico, Emanuele and de Sa, Virginia R.},
-    title   = {Simultaneous Scalp {EEG} Comparison Between {OpenBCI} {Cyton} and {Brain Products} {BrainAmp}},
-    journal = {Journal of Neural Engineering},
+    author  = {D'Amico, Alessandro and de Sa, Virginia R.},
+    title   = {Comparing Simultaneous Scalp {EEG} Recordings from the {OpenBCI} {Cyton} and {Brain Products} {BrainAmp}},
+    journal = {Sensors},
     year    = {2026},
+    volume  = {26},
+    number  = {4},
+    pages   = {1153},
+    url     = {https://www.mdpi.com/1424-8220/26/4/1153}
 }
 
-@zeitschriftartikel{lee2024_consumer_eeg,
-    author  = {Lee, Kyuhwa},
-    title   = {Consumer-Grade {EEG} Devices: A Review of Performance and Applications},
-    journal = {Journal of Neural Engineering},
+@zeitschriftartikel{sabio2024,
+    author  = {Sabio, Joshua and Williams, Nikolas S. and McArthur, Genevieve M. and Badcock, Nicholas A.},
+    title   = {A scoping review on the use of consumer-grade {EEG} devices for research},
+    journal = {PLOS ONE},
     year    = {2024},
+    volume  = {19},
+    number  = {3},
+    pages   = {e0291186},
+    url     = {https://doi.org/10.1371/journal.pone.0291186}
 }
 
 @zeitschriftartikel{meng2016_eeg_roboticarm,
@@ -142,7 +263,7 @@ note = {(Abgerufen am tt.mm.jjjj)} und nicht anders!
     year    = {2016},
     volume  = {6},
     pages   = {38565},
-    url     = {https://www.frontiersin.org/journals/cellular-neuroscience/articles/10.3389/fncel.2015.00432/full10.1038/srep38565}
+    url     = {https://www.nature.com/articles/srep38565}
 }
 
 @zeitschriftartikel{hochberg2012_roboticarm,
@@ -157,45 +278,52 @@ note = {(Abgerufen am tt.mm.jjjj)} und nicht anders!
     year    = {2012},
     volume  = {485},
     number  = {7398},
-    pages   = {372 \addspace - \addspace 375},
+    pages   = {372--375},
     url     = {https://www.nature.com/articles/nature11076}
 }
 
 
 
 @zeitschriftartikel{qin2023,
-	author  = {Qin, Y. and Zhang, Y. and Zhang, Y. and Liu, S. and Guo, X.},
+	author  = {Qin, Yong and Zhang, Yanpeng and Zhang, Yan and Liu, Sheng and Guo, Xiaogang},
 	title   = {Application and Development of EEG Acquisition and Feedback Technology: A Review},
 	journal = {Biosensors},
 	year    = {2023},
 	volume  = {13},
+	number  = {10},
+	pages   = {930},
 	url     = {https://www.mdpi.com/2079-6374/13/10/930}
 }
 
 
 @zeitschriftartikel{liu2025,
-	author  = {Liu, Xiu-Yun and Wang, Wen-Long and Liu, Miao and Chen, Ming-Yi et al.},
+	author  = {Liu, Xiu-Yun and Wang, Wen-Long and Liu, Miao and Chen, Ming-Yi and Pereira, Tânia and Doda, Desta Yakob and Ke, Yu-Feng and Wang, Shou-Yan and Wen, Dong and Tong, Xiao-Guang and Li, Wei-Guang and Yang, Yi and Han, Xiao-Di and Sun, Yu-Lin and Song, Xin and Hao, Cong-Ying and Zhang, Zi-Hua and Liu, Xin-Yang and Li, Chun-Yang and Peng, Rui and Song, Xiao-Xin and Yasi, Abi and Pang, Mei-Jun and Zhang, Kuo and He, Run-Nan and Wu, Le and Chen, Shu-Geng and Chen, Wen-Jin and Chao, Yan-Gong and Hu, Cheng-Gong and Zhang, Heng and Zhou, Min and Wang, Kun and Liu, Peng-Fei and Chen, Chen and Geng, Xin-Yi and Qin, Yun and Gao, Dong-Rui and Song, En-Ming and Cheng, Long-Long and Chen, Xun and Ming, Dong},
 	title   = {Recent applications of EEG-based brain-computer-interface in the medical field},
 	journal = {Military Medical Research},
 	year    = {2025},
 	volume  = {12},
-	number  = {1},
+	pages   = {14},
 	url     = {https://link.springer.com/article/10.1186/s40779-025-00598-z}
 }
 
-@zeitschriftartikel{stlouis2016,
-	author  = {St Louis, Erik K. and Frey, Lauren C. and Britton, Jeffrey W. et al.},
-	title   = {The Scientific Basis of EEG: Neurophysiology of EEG Generation in the Brain},
-	journal = {NCBI Bookshelf},
-	year    = {2016},
-	url = {https://www.ncbi.nlm.nih.gov/books/NBK390351/}
+@Booknew{stlouis2016,
+	author    = {Britton, Jeffrey W. and Frey, Lauren C. and Hopp, Jennifer L. and Korb, Pearce and Koubeissi, Mohamad Z. and Lievens, William E. and Pestana-Knight, Elia M. and St. Louis, Erik K.},
+	title     = {Appendix 1. The Scientific Basis of EEG: Neurophysiology of EEG Generation in the Brain},
+	editor    = {St. Louis, Erik K. and Frey, Lauren C.},
+	booktitle = {Electroencephalography (EEG): An Introductory Text and Atlas of Normal and Abnormal Findings in Adults, Children, and Infants},
+	publisher = {American Epilepsy Society},
+	address   = {Chicago},
+	year      = {2016},
+	url       = {https://www.ncbi.nlm.nih.gov/books/NBK390351/}
 }
 
 @zeitschriftartikel{jensen2010,
 	author  = {Jensen, Ole and Mazaheri, Ali},
-	title   = {Shaping Functional Architecture by Oscillatory Alpha Activity},
+	title   = {Shaping Functional Architecture by Oscillatory Alpha Activity: Gating by Inhibition},
 	journal = {Frontiers in Human Neuroscience},
 	year    = {2010},
+	volume  = {4},
+	pages   = {186},
 	url     = {https://www.frontiersin.org/journals/human-neuroscience/articles/10.3389/fnhum.2010.00186/full}
 }
 
@@ -208,10 +336,13 @@ note = {(Abgerufen am tt.mm.jjjj)} und nicht anders!
 }
 
 @zeitschriftartikel{lee2022,
-	author  = {Lee, Sang Heon and Thunemann, Martin and Lee, Keundong et al.},
-	title   = {Scalable Thousand Channel Penetrating Microneedle Arrays on Flex for Multimodal Brain--Machine Interfaces},
+	author  = {Lee, Sang Heon and Thunemann, Martin and Lee, Keundong and Cleary, Daniel R. and Tonsfeldt, Karen J. and Oh, Hongseok and Azzazy, Farid and Tchoe, Youngbin and Bourhis, Andrew M. and Hossain, Lorraine and Ro, Yun Goo and Tanaka, Atsunori and Kılıç, Kıvılcım and Devor, Anna and Dayeh, Shadi A.},
+	title   = {Scalable Thousand Channel Penetrating Microneedle Arrays on Flex for Multimodal and Large Area Coverage Brain-Machine Interfaces},
 	journal = {Advanced Functional Materials},
 	year    = {2022},
+	volume  = {32},
+	number  = {25},
+	pages   = {2112045},
 	url     = {https://advanced.onlinelibrary.wiley.com/doi/10.1002/adfm.202112045}
 }
 
@@ -221,7 +352,9 @@ note = {(Abgerufen am tt.mm.jjjj)} und nicht anders!
 	journal = {Current Protocols in Neuroscience},
 	volume = {52},
 	number = {1},
-	year = {2010}
+	pages = {6.25.1--6.25.24},
+	year = {2010},
+	url = {https://doi.org/10.1002/0471142301.ns0625s52}
 }
 
 @zeitschriftartikel{uchida1991,
@@ -230,7 +363,7 @@ note = {(Abgerufen am tt.mm.jjjj)} und nicht anders!
 	journal = {Brain Research Bulletin},
 	volume = {27},
 	number = {1},
-	pages = {93\space --\space 96},
+	pages   = {93--96},
 	year = {1991}
 }
 
@@ -240,7 +373,7 @@ note = {(Abgerufen am tt.mm.jjjj)} und nicht anders!
 	journal = {Neuropharmacology},
 	volume = {47},
 	number = {2},
-	pages = {163\space--\space 174},
+	pages   = {163--174},
 	year = {2004}
 }
 
@@ -251,11 +384,11 @@ note = {(Abgerufen am tt.mm.jjjj)} und nicht anders!
 	year = {1986},
 	volume = {38},
 	number = {2},
-	publisher = {JSTOR}
+	pages = {71--76}
 }
 
 @zeitschriftartikel{xing2018,
-  author  = {Xing, Xiao and Wang, Yijun and Pei, Weihua and Guo, Xuhong and Liu, Zhiduo and Wang, Fei and Ming, Gege and Zhao, Hongze and Gui, Qiang and Chen, Hongda and et al.},
+  author  = {Xing, Xiao and Wang, Yijun and Pei, Weihua and Guo, Xuhong and Liu, Zhiduo and Wang, Fei and Ming, Gege and Zhao, Hongze and Gui, Qiang and Chen, Hongda},
   title   = {A High-Speed SSVEP-Based BCI using dry EEG electrodes},
   journal = {Scientific Reports},
   year    = {2018},
@@ -283,7 +416,7 @@ note = {(Abgerufen am tt.mm.jjjj)} und nicht anders!
   year    = {2000},
   volume  = {37},
   number  = {2},
-  pages   = {163 \addspace - \addspace 178},
+  pages   = {163--178},
   url     = {https://onlinelibrary.wiley.com/doi/10.1111/1469-8986.3720163}
 }
 
@@ -294,7 +427,7 @@ note = {(Abgerufen am tt.mm.jjjj)} und nicht anders!
   year    = {2004},
   volume  = {134},
   number  = {1},
-  pages   = {9 \addspace - \addspace 21},
+  pages   = {9--21},
   url     = {https://pubmed.ncbi.nlm.nih.gov/15102499/}
 }
 
@@ -305,7 +438,7 @@ note = {(Abgerufen am tt.mm.jjjj)} und nicht anders!
   year    = {1998},
   volume  = {30},
   number  = {1},
-  pages   = {34 \addspace - \addspace 43},
+  pages   = {34--43},
   url     = {https://link.springer.com/article/10.3758/BF03209414}
 }
 
@@ -316,7 +449,7 @@ note = {(Abgerufen am tt.mm.jjjj)} und nicht anders!
   year    = {2009},
   volume  = {120},
   number  = {11},
-  pages   = {1883 \addspace - \addspace 1908},
+  pages   = {1883--1908},
   url     = {https://pubmed.ncbi.nlm.nih.gov/19640258/}
 }
 
@@ -327,7 +460,7 @@ note = {(Abgerufen am tt.mm.jjjj)} und nicht anders!
   year    = {2007},
   volume  = {118},
   number  = {10},
-  pages   = {2128 \addspace - \addspace 2148},
+  pages   = {2128--2148},
   url     = {https://pubmed.ncbi.nlm.nih.gov/17573239/}
 }
 
@@ -339,10 +472,10 @@ note = {(Abgerufen am tt.mm.jjjj)} und nicht anders!
     journal      = {Brain Topography},
     volume       = {19},
     number       = {1-2},
-    pages        = {43-52},
+    pages   = {43--52},
     doi          = {10.1007/s10548-006-0011-0},
     url          = {https://doi.org/10.1007/s10548-006-0011-0},
-    note         = {Abgerufen am 28.03.2026}
+    urldate = {2026-03-28}
 
 }
 
@@ -355,7 +488,7 @@ note = {(Abgerufen am tt.mm.jjjj)} und nicht anders!
 	journaltitle = {DocCheck Flexikon},
 	title = {Synapse},
 	url ={https://flexikon.doccheck.com/de/Synapse},
-	note = {(Abgerufen am 11.08.2025)},
+	urldate = {2025-08-11},
     lasteditdate = {2026-01-29}
 }
 
@@ -363,7 +496,7 @@ note = {(Abgerufen am tt.mm.jjjj)} und nicht anders!
 	journaltitle = {DocCheck Flexikon},
 	title = {10-20-System},
 	url ={https://flexikon.doccheck.com/de/10-20-System},
-	note = {(Abgerufen am 27.08.2025)},
+	urldate = {2025-08-27},
     lasteditdate = {2025-08-27}
 }
 
@@ -371,7 +504,7 @@ note = {(Abgerufen am tt.mm.jjjj)} und nicht anders!
 	journaltitle = {DocCheck Flexikon},
 	title = {Nasion},
 	url ={https://flexikon.doccheck.com/de/Nasion},
-	note = {(Abgerufen am 07.01.2025)},
+	urldate = {2025-01-07},
     lasteditdate = {2024-03-21}
 }
 
@@ -379,7 +512,7 @@ note = {(Abgerufen am tt.mm.jjjj)} und nicht anders!
 	journaltitle = {DocCheck Flexikon},
 	title = {Inion},
 	url ={https://flexikon.doccheck.com/de/Inion},
-	note = {(Abgerufen am 07.01.2025)},
+	urldate = {2025-01-07},
     lasteditdate = {2024-03-21}
 }
 
@@ -387,7 +520,7 @@ note = {(Abgerufen am tt.mm.jjjj)} und nicht anders!
 	journaltitle = {DocCheck Flexikon},
 	title = {Wernicke-Areal},
 	url ={https://flexikon.doccheck.com/de/Wernicke-Areal},
-	note = {(Abgerufen am 07.01.2025)},
+	urldate = {2025-01-07},
     lasteditdate = {2024-01-30}
 }
 
@@ -396,7 +529,7 @@ note = {(Abgerufen am tt.mm.jjjj)} und nicht anders!
     journaltitle       = {DocCheck Flexikon},
     title        = {Summation},
     url ={https://flexikon.doccheck.com/de/Summation},
-    note         = {(Abgerufen am 28.03.2026)},
+    urldate = {2026-03-28},
     lasteditdate = {2024-08-19}
 }
 
@@ -405,21 +538,21 @@ note = {(Abgerufen am tt.mm.jjjj)} und nicht anders!
     journaltitle       = {{Brockhaus}},
     title        = {Gehirn},
     url ={https://brockhaus.de/ecs/enzy/article/gehirn},
-    note         = {(Abgerufen am 07.01.2026)},
+    urldate = {2026-01-07},
 }
 
 @onlinelexikon{wiki_nervenzelle,
     journaltitle       = {{Brockhaus}},
     title        = {Nervenzelle},
     url ={https://brockhaus.de/ecs/enzy/article/nervenzelle},
-    note         = {(Abgerufen am 07.01.2026)},
+    urldate = {2026-01-07},
 }
 
 @onlinelexikon{wiki_aktionspotential,
     journaltitle       = {{Brockhaus}},
     title        = {Aktionspotenzial},
     url ={https://brockhaus.de/ecs/enzy/article/aktionspotenzial},
-    note         = {(Abgerufen am 07.01.2026)},
+    urldate = {2026-01-07},
 }
 
 
@@ -427,28 +560,28 @@ note = {(Abgerufen am tt.mm.jjjj)} und nicht anders!
     journaltitle       = {{Brockhaus}},
     title        = {Elektroenzephalografie},
     url ={https://brockhaus.de/ecs/enzy/article/elektroenzephalografie},
-    note         = {(Abgerufen am 26.12.2025)},
+    urldate = {2025-12-26},
 }
 
 @onlinelexikon{wiki_bci,
     journaltitle       = {{Brockhaus}},
     title        = {Brain-Computer-Interface},
     url ={https://brockhaus.de/ecs/enzy/article/brain-computer-interface},
-    note         = {(Abgerufen am 26.12.2025)},
+    urldate = {2025-12-26},
 }
 
 @onlinelexikon{wiki_neurodegenerativ,
     journaltitle       = {{Brockhaus}},
     title        = {Neurodegenerative Erkrankung},
     url ={https://brockhaus.de/ecs/enzy/article/neurodegenerative-erkrankung},
-    note         = {(Abgerufen am 26.12.2025)},
+    urldate = {2025-12-26},
 }
 
 @onlinelexikon{doccheck_grosshirn,
 	journaltitle       = {{DocCheck Flexikon}},
 	title        = {Großhirn},
 	url ={https://flexikon.doccheck.com/de/Gro%C3%9Fhirn?utm_source=www.doccheck.com&utm_medium=DC%2520Search&utm_campaign=DC%2520Search%2520content_type%253Aall&utm_content=DC%2520Search%2520gro%25C3%259Fhirn},
-	note         = {(Abgerufen am 01.01.2026)},
+	urldate = {2026-01-01},
     lasteditdate = {2024-03-21}
 }
 
@@ -456,7 +589,7 @@ note = {(Abgerufen am tt.mm.jjjj)} und nicht anders!
 	journaltitle       = {{DocCheck Flexikon}},
 	title        = {Frontallappen},
 	url ={https://flexikon.doccheck.com/de/Frontallappen},
-	note         = {(Abgerufen am 02.01.2026)},
+	urldate = {2026-01-02},
     lasteditdate = {2025-09-11}
 }
 
@@ -464,41 +597,34 @@ note = {(Abgerufen am tt.mm.jjjj)} und nicht anders!
     journaltitle       = {{Brockhaus}},
     title        = {Markscheide},
     url ={https://brockhaus.de/ecs/enzy/article/markscheide-anatomie},
-    note         = {(Abgerufen am 25.03.2026)},
+    urldate = {2026-03-25},
 }
 
 @onlinelexikon{doccheck_saltatorisch,
     journaltitle       = {{Brockhaus}},
     title        = {Saltatorische Erregungsleitung},
     url ={https://brockhaus.de/ecs/enzy/article/saltatorische-erregungsleitung-physiologie},
-    note         = {(Abgerufen am 15.03.2026)},
+    urldate = {2026-03-15},
 }
 
 
 %%%%% online-dokument mit Autor %%%%%
 
-@onlinedokument{statpearls_eeg,
-    author       = {Nayak, Chetan S. and Anilkumar, Arayamparambil C.},
-    title        = {Normal {EEG} Waveforms},
-    year         = {2025},
-    url ={https://www.ncbi.nlm.nih.gov/books/NBK539805/},
-    note         = {(Abgerufen am 07.01.2026)}
-}
 
 @onlinedokument{nayak_waveforms,
 	author = {Nayak, Chetan S. and Anilkumar, Arayamparambil C.},
 	title = {Normal EEG waveforms},
 	year = {2025},
 	url ={https://www.ncbi.nlm.nih.gov/books/NBK539805/},
-	note         = {(Abgerufen am 07.01.2026)}
+	urldate = {2026-01-07}
 }
 
 @onlinedokument{anchuang_elektrodenkappe,
-	author = {Changzhou Anchuang Intelligente Ausrüstung Co., Ltd.},
+	author = {{Changzhou Anchuang Intelligente Ausrüstung Co., Ltd.}},
 	title = {Was ist der Unterschied zwischen einer trockenen und einer nassen Elektrodenkappe? - Blog},
 	year = {2025},
 	url ={https://de.ac-welding.com/blog/what-is-the-difference-between-a-dry-and-wet-electrode-cap-1439787.html},
-	note = {(Abgerufen am 31.12.2025)}
+	urldate = {2025-12-31}
 }
 
 @onlinedokument{kappenman2018_eeg_lab,
@@ -510,30 +636,21 @@ note = {(Abgerufen am tt.mm.jjjj)} und nicht anders!
     year         = {2018}
 }
 
-@onlinedokument{kappenman2018_eeg_lab,
-    author       = {Kappenman, Emily S. and Farrens, Jaclyn L.
-                    and Luck, Steven J. and Proudfit, Greg Hajcak},
-    title        = {Recommendations for Developing an {EEG} Laboratory
-                    at a Primarily Undergraduate Institution},
-    url ={https://pmc.ncbi.nlm.nih.gov/articles/PMC6312138/},
-    year         = {2018},
-    note         = {(32 \addspace - \addspace 128 Kanäle)}
-}
 
 @onlinedokument{studyflix_ruhepotential,
     author       = {Chrysafides, Steven M. and Bordes, Stephen J. and Sharma, Sandeep},
     title        = {Physiology, Resting Potential},
     year         = {2023},
     url          = {https://www.ncbi.nlm.nih.gov/books/NBK538338/},
-    note         = {In: StatPearls. StatPearls Publishing. (Abgerufen am 17.12.2025)}
+    note = {In: StatPearls. StatPearls Publishing},
+    urldate = {2025-12-17}
 }
 
 @onlinedokument{studyflix_Abbildung,
     author       = {Studyflix},
     title        = {Ruhepotential},
-    year         = {o. D.},
-    url          = {https://studyflix.de/biologie/ruhepotential-2461},
-    note         = {Abgerufen am 17.12.2025}
+    url          = {https://studyflix.de/biologie/ruhepotential-2740},
+    urldate = {2025-12-17}
 }
 
 @onlinedokument{studyflix_synapse,
@@ -541,7 +658,8 @@ note = {(Abgerufen am tt.mm.jjjj)} und nicht anders!
     title        = {Physiology, Synapse},
     year         = {2023},
     url ={https://www.ncbi.nlm.nih.gov/books/NBK526047/},
-    note         = {In: StatPearls. StatPearls Publishing. (Abgerufen am 17.12.2025)}
+    note = {In: StatPearls. StatPearls Publishing},
+    urldate = {2025-12-17}
 }
 
 @onlinedokument{tu_darmstadt2022,
@@ -549,39 +667,34 @@ note = {(Abgerufen am tt.mm.jjjj)} und nicht anders!
     title        = {Electroencephalogram},
     year         = {2022},
     url ={https://www.ncbi.nlm.nih.gov/books/NBK563295/},
-    note         = {In: StatPearls. StatPearls Publishing. (Abgerufen am 14.01.2026)}
-}
+    note = {In: StatPearls. StatPearls Publishing},
+    urldate = {2026-01-14}
 }
 @onlinedokument{studyflix_erregungsleitung,
     author       = {Chen, Isaac and Lui, Forshing},
     title        = {Neuroanatomy, Neuron Action Potential},
     year         = {2023},
     url ={https://www.ncbi.nlm.nih.gov/books/NBK546639/},
-    note         = {In: StatPearls. StatPearls Publishing. (Abgerufen am 25.03.2026)}
+    note = {In: StatPearls. StatPearls Publishing},
+    urldate = {2026-03-25}
 }
 
-@misc{heuer2015,
-  author       = {Heuer, Carsten M.},
-  title        = {Das Fraunhofer-Institut für Naturwissenschaftlich-Technische Trendanalysen berichtet über neue Technologien: Brain-Computer-Interfaces},
-  year         = {2015},
-  howpublished = {\\ \url{https://publica-rest.fraunhofer.de/server/api/core/bitstreams/51ffa0bf-99b9-4d90-a776-beb14f6a69fc/content}},
-  note         = {(Abgerufen am 28.03.2026)}
-}
 
 @onlinedokument{studyflix_refraktaerzeit,
     author       = {Grider, Michael H. and Jessu, Rishita and Kabir, Rian},
     title        = {Physiology, Action Potential},
     year         = {2023},
     url ={https://www.ncbi.nlm.nih.gov/books/NBK538143/},
-    note         = {In: StatPearls. StatPearls Publishing. (Abgerufen am 25.03.2026)}
+    note = {In: StatPearls. StatPearls Publishing},
+    urldate = {2026-03-25}
 }
 
-@misc{arduino_braccio,
+@onlinedokument{arduino_braccio,
   author       = {{Arduino S.r.l.}},
   title        = {TinkerKit Braccio Robot},
   year         = {2026},
-  howpublished = {\url{https://store.arduino.cc/products/tinkerkit-braccio-robot}},
-  note         = {Produktseite eines Arduino-gesteuerten Roboterarms mit modularer Bauweise und vielfältigen Einsatzmöglichkeiten (abgerufen am 29.03.2026)}
+  url = {https://store.arduino.cc/products/tinkerkit-braccio-robot},
+    urldate = {2026-03-29}
 }
 
 @onlinedokument{heuer2015,
@@ -589,7 +702,7 @@ note = {(Abgerufen am tt.mm.jjjj)} und nicht anders!
   title        = {Das Fraunhofer-Institut für Naturwissenschaftlich-Technische Trendanalysen berichtet über neue Technologien: Brain-Computer-Interfaces},
   year         = {2015},
   url ={https://publica-rest.fraunhofer.de/server/api/core/bitstreams/51ffa0bf-99b9-4d90-a776-beb14f6a69fc/content},
-  note         = {(Abgerufen am 28.03.2026)}
+  urldate = {2026-03-28}
 }
 
 
@@ -598,75 +711,82 @@ note = {(Abgerufen am tt.mm.jjjj)} und nicht anders!
 %%%%% online-dokumente ohne autor %%%%%
 
 @onlinedokument{medi_parietallappen,
+    shorttitle   = {Parietallappen},
 	author       = {{Medi-Karriere}},
 	title        = {Parietallappen -- Anatomie und Funktion},
 	year         = {2025},
 	url ={https://www.medi-karriere.de/wiki/parietallappen/},
-	note         = {(Abgerufen am 02.01.2026)}
+	urldate = {2026-01-02}
 }
 
 @onlinedokument{medi_okzipitallappen,
+    shorttitle   = {Okzipitallappen},
 	author       = {{Medi-Karriere}},
 	title        = {Okzipitallappen -- Aufbau, Anatomie und Funktion},
 	year         = {2025},
 	url ={https://www.medi-karriere.de/wiki/okzipitallappen/},
-	note         = {(Abgerufen am 02.01.2026)}
+	urldate = {2026-01-02}
 }
 
 @onlinedokument{medi_frontallappen,
-	author = {Medi-Karriere},
+    shorttitle   = {Frontallappen},
+	author = {{Medi-Karriere}},
 	title = {Frontallappen: Definition, Aufbau und Funktion},
 	year = {2025},
 	url ={https://www.medi-karriere.de/wiki/frontallappen-lobus-frontalis/},
-	note = {(Abgerufen am 02.01.2026)}
+	urldate = {2026-01-02}
 }
 
 @onlinedokument{medi_cortex,
+    shorttitle   = {Präfrontaler Cortex},
   author       = {{Medi-Karriere}},
   title        = {Pr{\"a}frontaler Cortex: Anatomie und Klinik},
   year         = {2025},
   url ={https://www.medi-karriere.de/wiki/praefrontaler-cortex/},
-  note         = {(Abgerufen am 10.10.2025)}
+  urldate = {2025-10-10}
 }
 
 
 @onlinedokument{kenhub_aktionspotential,
+    shorttitle   = {Aktionspotential},
 	author = {{Kenhub}},
 	title = {Aktionspotential},
 	year = {2023},
 	url ={https://www.kenhub.com/de/library/physiologie/aktionspotential},
-	note = {(Abgerufen am 03.01.2026)}
+	urldate = {2026-01-03}
 }
 
 
 @onlinedokument{kenhub_temporallappen,
+    shorttitle   = {Temporallappen},
 	author       = {{Kenhub}},
 	title        = {Temporallappen},
 	year         = {2023},
 	url ={https://www.kenhub.com/de/library/anatomie/temporallappen-schlafenlappen},
-	note         = {(Abgerufen am 03.01.2026)}
+	urldate = {2026-01-03}
 }
 
 @onlinedokument{biopac_reference_ground,
 	author       = {{BIOPAC}},
 	title        = {What is the difference between ground and reference in EEG recording?},
 	url ={https://www.biopac.com/knowledge-base/ground-vs-reference-for-eeg-recording/},
-	note         = {(Abgerufen am 31.12.2025)}
+	urldate = {2025-12-31}
 }
 
 
 @onlinedokument{biosemi_systems,
+    shorttitle   = {Amplifier systems},
   author       = {{BioSemi}},
   title        = {EEG ECG EMG BSPM NEURO amplifiers systems},
   url ={https://www.biosemi.com/faq/cms&drl.htm},
-  note         = {(29.03.2026)}
+  urldate = {2026-03-29}
 }
 
 @onlinedokument{iac_eeg_kabine,
   author       = {{IAC GmbH}},
   title        = {EEG geschirmte Schallschutzkabinen},
   url ={https://www.iac-gmbh.de/de/eeg-kabine.html},
-  note         = {(29.03.2026)}
+  urldate = {2026-03-29}
 }
 
 
@@ -674,14 +794,14 @@ note = {(Abgerufen am tt.mm.jjjj)} und nicht anders!
     author       = {{Deutsches Zentrum für Luft- und Raumfahrt}},
     title        = {{DLR} -- Startseite},
     url ={https://www.dlr.de},
-    note         = {(Abgerufen am 28.03.2026)}
+    urldate = {2026-03-28}
 }
 
 @onlinedokument{openbci_ultracortex_shop,
     author       = {{OpenBCI}},
     title        = {Ultracortex ``Mark {IV}'' {EEG} Headset},
     url ={https://shop.openbci.com/products/ultracortex-mark-iv},
-    note         = {(Abgerufen am 28.03.2026)}
+    urldate = {2026-03-28}
 }
 
 
@@ -689,21 +809,22 @@ note = {(Abgerufen am tt.mm.jjjj)} und nicht anders!
   author       = {{OpenBCI Shop}},
   title        = {Dry EEG Comb Electrodes (Pack of 30)},
   url ={https://shop.openbci.com/collections/frontpage/products/5-mm-spike-electrode-pack-of-30?variant=8120433606670},
-  note         = {(Abgerufen am 29.03.2026)}
+  urldate = {2026-03-29}
 }
 
 @onlinedokument{biosemi_active_electrodes,
+    shorttitle   = {Active electrodes},
   author       = {{BioSemi}},
   title        = {Active electrodes PIN-type, FLAT-type, Headcaps, BSPM panels},
   url ={https://www.biosemi.com/active_electrode.htm},
-  note         = {(Abgerufen am 29.03.2026)}
+  urldate = {2026-03-29}
 }
 
 @onlinedokument{uzh_eeg,
   author       = {{Psychologisches Institut -- UZH}},
   title        = {EEG},
   url ={https://www.psychologie.uzh.ch/de/bereiche/dev/devpsy/Weltentdecker/Studien/EEG.html},
-  note         = {(Abgerufen am 29.03.2026)}
+  urldate = {2026-03-29}
 }
 
 @onlinedokument{heinen_elektronik_elektroden,
@@ -711,7 +832,7 @@ note = {(Abgerufen am tt.mm.jjjj)} und nicht anders!
   title        = {Was sind Elektroden? Einfach erkl{\"a}rt | Funktion \& Anwendung},
   year         = {2023},
   url ={https://heinen-elektronik.de/glossar/elektroden/},
-  note         = {(Abgerufen am 29.03.2026)}
+  urldate = {2026-03-29}
 }
 
 
@@ -721,7 +842,7 @@ note = {(Abgerufen am tt.mm.jjjj)} und nicht anders!
                     Clinical Electroencephalography},
     year         = {2016},
     url ={https://www.acns.org/UserFiles/file/EEGGuideline1Tech.pdf},
-    note         = {(Abgerufen am 13.01.2026)}
+    urldate = {2026-01-13}
 }
 
 @onlinedokument{acns_guideline2,
@@ -729,23 +850,24 @@ note = {(Abgerufen am tt.mm.jjjj)} und nicht anders!
     title        = {Guideline 2: Guidelines for Standard Electrode Position Nomenclature},
     year         = {2016},
     url ={https://www.acns.org/UserFiles/file/EEGGuideline2ElectrodeNomen.pdf},
-    note         = {(Abgerufen am 13.01.2026)}
+    urldate = {2026-01-13}
 }
 
 
 @onlinedokument{examio_summation,
-    author       = {Examio GmbH},
+    author       = {{Examio GmbH}},
     title        = {Informationsverarbeitung II: Räumliche und zeitliche Summation und präsynaptische Hemmung},
     url ={https://www.abiweb.de/biologie-neurobiologie/neurobiologie-allgemein/ionen-und-erregungsleitung/informationsverarbeitung-i-art-des-postsynaptischen-potentials/informationsverarbeitung-ii-raeumliche-und-zeitliche-summation-und-praesynaptische-hemmung.html},
-    note         = {Abgerufen am 28.03.2026}
+    urldate = {2026-03-28}
 }
 
 @onlinedokument{kenhub_psp,
+    shorttitle   = {Postsynaptische Potentiale},
     author       = {{Kenhub}},
     title        = {Postsynaptische Potentiale},
     year         = {2025},
     url ={https://www.kenhub.com/de/library/physiologie/postsynaptische-potentiale},
-    note         = {Abgerufen am 28.03.2026}
+    urldate = {2026-03-28}
 }
 
 @online{emotiv_psd,
@@ -754,6 +876,6 @@ note = {(Abgerufen am tt.mm.jjjj)} und nicht anders!
     title        = {Ein Leitfaden zur spektralen Leistungsdichte im EEG},
     year         = {2026},
     url          = {https://www.emotiv.com/de/neuroscience/power-spectral-density},
-    note         = {Abgerufen am 28.03.2026}
+    urldate = {2026-03-28}
 
 }

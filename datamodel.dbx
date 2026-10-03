@@ -3,82 +3,71 @@
 \DeclareDatamodelFields[type=field, datatype=date, skipout=false]{%
   lasteditdate,}
 
-\DeclareBibliographyDriver{onlinelexikon}{%
-\printfield{title}%
-\addspace%
-\printlasteditdate\adddot\addspace%
-In:\addspace\printfield{journaltitle}%
-\adddot\addspace%
-\printfield{url}%
-\addspace%
-\printfield{note}%
-\finentry%
-%\newline
-}
+%Ausgabe im Quellenverzeichnis nach CZG-Vorgabe ("Hinweise zum Erstellen der
+%Seminarfacharbeit", März 2024):
+%  Buch:        Familienname, Vorname (Jahr): Titel. Untertitel. 2. Aufl. Ort: Verlag.
+%  Zeitschrift: Familienname, Vorname / Familienname, Vorname (Jahr): Titel. In: Zeitschrift, Jg.Heft, S. x–y.
+%  Online:      Familienname, Vorname (Jahr): Titel. URL [Abrufdatum TT.MM.JJJJ].
+%               Institution. Titel. URL [Abrufdatum TT.MM.JJJJ].
+%  Lexikon:     Stichwort (Datum der letzten Änderung). In: Lexikon. URL [Abrufdatum TT.MM.JJJJ].
 
-\DeclareBibliographyDriver{zeitschriftartikel}{% 
-\printnames{author}% 
-\addspace%
-\printfield{year}%
-\addcolon\addspace%
-\printfield{title}% 
-\adddot\addspace%
-In:\addspace\printfield{journaltitle}% 
-\addcomma\addspace%
-\printfield{volume}%
-\iffieldundef{issue}
-{}{
-	\adddot\printfield{issue}%
-}
-\iffieldundef{pages}{%
-	% keine Seitenangabe: Punkt nach Issue
-	\adddot\addspace%
-}{%
-	% Seiten vorhanden: Komma, dann Seiten und Schlusspunkt
-	\addcomma\addspace%
-	\printfield{pages}%
-	\adddot\addspace%
-}%
-\printfield{url}% 
-\addspace%
-\printfield{note}%
-\finentry%
-%\newline
-}
+\DeclareBibliographyDriver{onlinelexikon}{%
+  \usebibmacro{bibindex}%
+  \printfield{title}%
+  \setunit{\addspace}\printlasteditdate%
+  \setunit{\adddot\space}\printtext{In:}%
+  \setunit{\space}\printfield{journaltitle}%
+  \setunit{\adddot\space}\printfield{url}%
+  \setunit{\addspace}\printurldate%
+  \finentry}
+
+\DeclareBibliographyDriver{zeitschriftartikel}{%
+  \usebibmacro{bibindex}%
+  \printnames{author}%
+  \setunit{\addspace}\printfield{year}%
+  \setunit{\addcolon\space}\printfield{title}%
+  \setunit{\adddot\space}\printtext{In:}%
+  \setunit{\space}\printfield{journaltitle}%
+  \setunit{\addcomma\space}%
+  \iffieldundef{volume}{}{\printtext{\thefield{volume}\iffieldundef{number}{}{.\thefield{number}}}}%
+  \setunit{\addcomma\space}\printfield{pages}%
+  \setunit{\adddot\space}\printfield{url}%
+  \setunit{\addspace}\printurldate%
+  \finentry}
 
 \DeclareBibliographyDriver{onlinedokument}{%
-	\iffieldundef{year}
-	{
-		\printnames{author}\adddot\addspace%
-		\printfield{title}\adddot\addspace%
-		\printfield{subtitle}\adddot\addspace%
-		\printfield{url}\addspace%
-		\printfield{note}%
-	}
-	{
-		\printnames{author}\adddot\addspace%
-		\printfield{year}\addcolon\addspace%
-		\printfield{title}\adddot\addspace%
-		\printfield{subtitle}\adddot\addspace%
-		\printfield{url}\addspace%
-		\printfield{note}%
-	}%
-	\finentry%
-	%\newline
-}
+  \usebibmacro{bibindex}%
+  \printnames{author}%
+  \iffieldundef{year}
+    {\setunit{\adddot\space}}
+    {\setunit{\addspace}\printfield{year}\setunit{\addcolon\space}}%
+  \printfield{title}%
+  \setunit{\adddot\space}\printfield{subtitle}%
+  \setunit{\adddot\space}\printfield{note}%
+  \setunit{\adddot\space}\printfield{url}%
+  \setunit{\addspace}\printurldate%
+  \finentry}
 
+%Buch bzw. Beitrag in einem Sammelband (booktitle): CZG "Autor (Jahr): Titel. In: Hrsg. (Hrsg.): Buchtitel. Ort: Verlag."
+%Ohne Autor:innen stehen die Herausgeber:innen mit "(Hrsg.)" vorne.
 \DeclareBibliographyDriver{Booknew}{%
-	\printnames{author}\addspace%
-	\printfield{year}\addcolon\addspace%
-	\printfield{title}\adddot\addspace%
-	\printfield{subtitle}\adddot\addspace%
-	\iffieldundef{edition}
-	{}
-	{\printfield{edition}}
-	\printlist{publisher}\adddot%
-	\iffieldundef{url}
-	{}
-	{\addspace\printfield{url}\addspace\printfield{note}}%
-	\finentry%
-	%\newline
-}
+  \usebibmacro{bibindex}%
+  \ifnameundef{author}
+    {\printnames{editor}\setunit{\addspace}\printtext{(Hrsg.)}}
+    {\printnames{author}}%
+  \setunit{\addspace}\printfield{year}%
+  \setunit{\addcolon\space}\printfield{title}%
+  \setunit{\adddot\space}\printfield{subtitle}%
+  \iffieldundef{booktitle}{}{%
+    \setunit{\adddot\space}\printtext{In:}%
+    \ifboolexpr{test {\ifnameundef{author}} or test {\ifnameundef{editor}}}
+      {\setunit{\space}}
+      {\setunit{\space}\printnames{editor}\setunit{\addspace}\printtext{(Hrsg.):}\setunit{\space}}%
+    \printfield{booktitle}}%
+  \setunit{\adddot\space}\printfield{edition}%
+  \setunit{\adddot\space}\printlist{location}%
+  \iflistundef{location}{\setunit{\adddot\space}}{\setunit{\addcolon\space}}%
+  \printlist{publisher}%
+  \setunit{\adddot\space}\printfield{url}%
+  \setunit{\addspace}\printurldate%
+  \finentry}
