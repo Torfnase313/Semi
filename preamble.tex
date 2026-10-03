@@ -164,7 +164,7 @@
 %bei mehr als 5 Autor:innen von Anfang an "et al.".
 \usepackage[datamodel=datamodel,backend=biber,style=authoryear,autocite=footnote,
   maxbibnames=99,minbibnames=99,maxcitenames=5,mincitenames=1,
-  uniquename=false,uniquelist=false,citetracker=true,
+  uniquename=false,uniquelist=false,citetracker=true,ibidtracker=constrict,pagetracker=true,
   urldate=short,lasteditdate=long,dateabbrev=false]{biblatex}
 \addbibresource{literatur.bib}
 \setlength{\bibitemsep}{1.5em}
@@ -202,11 +202,19 @@
         \setunit{\addspace}\usebibmacro{czg:abrufdatum}}
        {\setunit{\addspace}\printtext[parens]{\printlabeldateextra}}}}
 
+%"Ebd." in Fußnoten, wenn direkt davor dieselbe Quelle allein zitiert wurde,
+%aber nicht in der ersten Fußnote einer Seite (ibidtracker=constrict, pagetracker)
+\newtoggle{czg:ibid}
 \DeclareCiteCommand{\cite}
-  {\usebibmacro{prenote}}
-  {\usebibmacro{citeindex}\usebibmacro{czg:cite}}
+  {\global\togglefalse{czg:ibid}\usebibmacro{prenote}}
+  {\usebibmacro{citeindex}%
+   \ifboolexpr{test {\iffootnote} and test {\ifciteibid} and not test {\iffirstonpage}}
+     {\global\toggletrue{czg:ibid}\printtext{Ebd\adddot}}
+     {\usebibmacro{czg:cite}}}
   {\multicitedelim}
-  {\usebibmacro{postnote}}
+  {\iftoggle{czg:ibid}
+     {\iffieldundef{postnote}{}{\setunit{\addcomma\space}\printfield{postnote}}}
+     {\usebibmacro{postnote}}}
 \DeclareDelimFormat{postnotedelim}{\addcolon\space}
 \DeclareFieldFormat{postnote}{#1}
 \renewcommand*{\multicitedelim}{\addsemicolon\space}
