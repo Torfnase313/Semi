@@ -56,7 +56,7 @@ beschrieben (groß und kontrastreich gegenüber klein und kontrastreduziert).
 Für das OpenBCI-System werden zusätzlich die zwei Versuchsbedingungen
 betrachtet (geschlossene versus offene Kabine). Die Auswertung erfolgt dabei
 beschreibend anhand von Mittelwerten und Standardabweichungen. Auf
-inferenzstatistische Tests wurde aufgrund des Rahmens dieser Arbeit
+\glsdisp{inferenzstatistik}{inferenzstatistische Tests} wurde aufgrund des Rahmens dieser Arbeit
 verzichtet. Nicht berichtet wird, ob die P1 auf der linken oder rechten
 Kopfseite größer war.
 
@@ -106,7 +106,7 @@ Zur Abschätzung des Grundrauschens wurde die Standardabweichung im Basislinieni
     \label{frequenzbandanalyse}
 \end{figure}
 
-Für die Analyse werden ausschließlich die hinteren Elektroden über dem Okzipitallappen betrachtet (okzipitaler Cluster), da der \gls{berger-effekt} (vgl. Abschnitt~\ref{sec:alpha}) dort am stärksten ausgeprägt ist. Abbildung \ref{frequenzbandanalyse} zeigt die  \acrshort{psd} dieses Clusters als Mittelwert über alle Versuchspersonen, getrennt für die drei Versuchsbedingungen. Die \acrshort{psd} (vgl. Abschnitt~\ref{sec:alphaauswertung}) wird in \textmu V$^2$/Hz angegeben, weil die Leistung quadratisch von der Amplitude abhängt. Dadurch lässt sich die Alpha-Aktivität (8–12 Hz, grün hinterlegt) direkt ablesen. \newline
+Für die Analyse werden ausschließlich die hinteren Elektroden über dem Okzipitallappen betrachtet (okzipitaler \gls{elektrodencluster}), da der \gls{berger-effekt} (vgl. Abschnitt~\ref{sec:alpha}) dort am stärksten ausgeprägt ist. Abbildung \ref{frequenzbandanalyse} zeigt die  \acrshort{psd} dieses Clusters als Mittelwert über alle Versuchspersonen, getrennt für die drei Versuchsbedingungen. Die \acrshort{psd} (vgl. Abschnitt~\ref{sec:alphaauswertung}) wird in \textmu V$^2$/Hz angegeben, weil die Leistung quadratisch von der Amplitude abhängt. Dadurch lässt sich die Alpha-Aktivität (8–12 Hz, grün hinterlegt) direkt ablesen. \newline
 
 \begin{table}[htbp]
     \centering
@@ -131,19 +131,19 @@ Für die Analyse werden ausschließlich die hinteren Elektroden über dem Okzipi
   \tabquelle{Eigene Darstellung}
 \end{table}
 Aus dem Graphen in Abbildung \ref{frequenzbandanalyse} lässt sich bei allen drei Messungen ein Unterschied des Hochpunkts und des Verlaufs zwischen EO und EC erkennen, die jedoch unterschiedlich stark ausgeprägt sind.\newline
-Die Mittelwerte der Alpha-Power der einzelnen Versuchspersonen sind in Tabelle~\ref{tab:alpha_power} aufgeführt. Diese durchschnittlichen Werte sind bessere Vergleichskriterien als die Höhe des Hochpunkts, da diese besonders anfällig auf Störungen ist. Die Höhe des Peaks kann durch einzelne Artefakte stark beeinflusst werden, während die mittlere Leistung über das gesamte Frequenzband hinweg berechnet wird und dadurch robuster gegenüber Störungen ist.\newline
+Die Mittelwerte der Alpha-Power der einzelnen Versuchspersonen sind in Tabelle~\ref{tab:alpha_power} aufgeführt. Diese durchschnittlichen Werte sind bessere Vergleichskriterien als die Höhe des Hochpunkts, da diese besonders anfällig für Störungen ist. Die Höhe des Peaks kann durch einzelne Artefakte stark beeinflusst werden, während die mittlere Leistung über das gesamte Frequenzband hinweg berechnet wird und dadurch robuster gegenüber Störungen ist.\newline
 
-Die durchschnittlichen Alpha-Werte aller Messungen sind in Tabelle \ref{tab:alpha_power} dargestellt. Der absolute Unterschied zwischen EC und EO ist bei s1 und s2 nahezu identisch ($20{,}62 - 2{,}87 = 17{,}75$ für s1 und $22{,}97 - 5{,}26 = 17{,}71$ für s2) und deutlich geringer als bei s3 ($30{,}54 - 3{,}59 = 26{,}95$). Außerdem zeigt sich, dass die Versuchspersonen bei s2 häufig die höchste Alpha-Power bei EO aufweisen (pt\_02, pt\_03, pt\_05, pt\_09 und pt\_10).\newline
+Die durchschnittlichen Alpha-Werte aller Messungen sind in Tabelle \ref{tab:alpha_power} dargestellt. Der absolute Unterschied zwischen EC und EO war bei s1 und s2 nahezu identisch ($20{,}62 - 2{,}87 = 17{,}75$ für s1 und $22{,}97 - 5{,}26 = 17{,}71$ für s2) und deutlich geringer als bei s3 ($30{,}54 - 3{,}59 = 26{,}95$). Außerdem zeigte sich, dass die Versuchspersonen bei s2 häufig die höchste Alpha-Power bei EO aufwiesen (pt\_02, pt\_03, pt\_05, pt\_09 und pt\_10).\newline
 
 Wichtig für die Beantwortung von Hypothese sechs (Mit dem Alpha-Paradigma kann ein Roboterarm gesteuert werden) ist nicht nur die Betrachtung des durchschnittlichen Alpha-Wertes, sondern die Betrachtung zeitlich kurzer Abschnitte. So kann untersucht werden, ob für die Steuerung das kurze Schließen von Augen ausreicht oder eine Versuchsperson eine halbe Minute die Augen schließen muss, um den Arm anzusteuern.\newline
 In Abbildung~\ref{fig:alpha_schalter_pro_person} im Anhang befindet sich ein Diagramm, in dem der Anteil der richtig EO und EC zugeordneten 2-Sekunden-Abschnitte, abhängig von den Versuchspersonen und den Versuchsbedingungen, dargestellt ist. Zum Einordnen eines Abschnitts wird die in dem Abschnitt durchschnittliche Suppression betrachtet. Ist sie geringer als ??, wird der Abschnitt EO zugeordnet, ist sie größer, EC.\newline
-Ein Anteil von 50\% von richtig zugeordneten Abschnitten entspricht einer zufälligen Entscheidung. Bei allen Durchgängen liegt der Wert bei mindestens 75\%, meist bei mindestens 90\% und in seltenen Fällen sogar bei 100\%. Die Trefferquote ist mit Daten aus dem BioSemi-System durchschnittlich höher (90-95 \%) als mit Daten aus dem OpenBCI-System (75-100\%) und streut weniger.\newline
+Ein Anteil von 50\,\% von richtig zugeordneten Abschnitten entspricht einer zufälligen Entscheidung. Bei allen Durchgängen lag der Wert bei mindestens 75\,\%, meist bei mindestens 90\,\% und in seltenen Fällen sogar bei 100\,\%. Die Trefferquote war mit Daten aus dem BioSemi-System durchschnittlich höher (90--95\,\%) als mit Daten aus dem OpenBCI-System (75--100\,\%) und streute weniger.\newline
 
 Darüber hinaus lagen die absoluten Werte der einzelnen Versuchspersonen in sehr unterschiedlichen Wertebereichen. So bewegte sich die EO-Alpha-Power von pt\_10 zwischen $0{,}83$ und $2{,}04$, die von pt\_02 dagegen zwischen $5{,}90$ und $13{,}88$. Ein Vergleich absoluter Werte ist daher nur eingeschränkt aussagekräftig, da jede Person eine eigene \gls{baseline_alpha} besitzt. Aus diesem Grund werden im Folgenden die Rangfolge der Versuchspersonen, wenn sie nach ihren EO-Werten sortiert werden, und relative Werte (Alpha-Suppression) betrachtet und zwischen den Versuchsbedingungen verglichen.\newline
 
 \subsection{Rangfolge der Versuchspersonen}
 
-Die Rangfolge der Versuchspersonen ist in Tabelle \ref{tab:alpha_rank} dargestellt und wird benötigt, um die dritte Hypothese (Die Rangfolge der Versuchspersonen ist ähnlich) zu beantworten. Sortiert man die Versuchspersonen nach ihrer EO-Alpha-Power, fällt zwischen s1 und s3 eine sehr große Ähnlichkeit auf: Die Platzierungen weichen nur bei Platz eins und zwei voneinander ab. Bei s2 unterscheidet sich die Reihenfolge vor allem im mittleren Bereich (Plätze zwei bis vier). Insgesamt ist die Rangfolge über alle drei Messungen jedoch very ähnlich und die vordersten und hintersten Plätze sind weitgehend gleich besetzt.\newline
+Die Rangfolge der Versuchspersonen ist in Tabelle \ref{tab:alpha_rank} dargestellt und wird benötigt, um die dritte Hypothese (Die Rangfolge der Versuchspersonen ist ähnlich) zu beantworten. Sortiert man die Versuchspersonen nach ihrer EO-Alpha-Power, fällt zwischen s1 und s3 eine sehr große Ähnlichkeit auf: Die Platzierungen weichen nur bei Platz eins und zwei voneinander ab. Bei s2 unterscheidet sich die Reihenfolge vor allem im mittleren Bereich (Plätze zwei bis vier). Insgesamt ist die Rangfolge über alle drei Messungen jedoch sehr ähnlich und die vordersten und hintersten Plätze sind weitgehend gleich besetzt.\newline
 
 \begin{table}[htbp]
     \centering
@@ -172,7 +172,7 @@ Die Alpha-Suppression wurde wie in Abschnitt~\ref{sec:alphaauswertung} beschrieb
 	\centering
 	\includegraphics[width=0.85\textwidth]{diagramme/alpha_suppression_cluster.pdf}
     \quelle{Eigene Abbildung} 
-   \caption{Alpha-Suppression an den \glspl{elektrodencluster} für alle drei Versuchsbedingungen, mit rot ist der Cluster mit größter Suppression markiert, oben s1, mittig s2, unten s3}
+   \caption{Alpha-Suppression an den \glspl{elektrodencluster} für alle drei Versuchsbedingungen, mit Rot ist der Cluster mit größter Suppression markiert, oben s1, mittig s2, unten s3}
     \label{alpha_suppression}
 \end{figure}
 
@@ -180,4 +180,4 @@ Bei allen drei Messungen war die Alpha-Suppression über dem Hinterkopf am stär
 
 Mit einer Alpha-Suppression von 9,76 lag das BioSemi-System nahe an einem Verhältnis von 10. Auch mit dem OpenBCI-System wurde bei wachen Versuchspersonen außerhalb der Kabine mit 8,39 ein guter und nur wenig abweichender Wert erreicht. \newline
 
-In Abbildung~\ref{fig:alpha_suppression_pro_person} im Anhang ist eine ergänzende Grafik zur Alpha-Suppression für jede einzelne Versuchsperson dargestellt. Die Alpha-Suppression ist bei jeder Versuchsperson über 2, streut aber stark zwischen 2,6 und 22,7.
+In Abbildung~\ref{fig:alpha_suppression_pro_person} im Anhang ist eine ergänzende Grafik zur Alpha-Suppression für jede einzelne Versuchsperson dargestellt. Die Alpha-Suppression war bei jeder Versuchsperson über 2, streute aber stark zwischen 2,6 und 22,7.
