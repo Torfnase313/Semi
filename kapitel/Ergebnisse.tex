@@ -104,7 +104,7 @@ Zur Abschätzung des Grundrauschens wurde die Standardabweichung im Basislinieni
 	\centering
 	\includegraphics[width=0.95\textwidth]{diagramme/occipital_cluster_psd_ohne_kanalangaben.png}
     \quelle{Eigene Abbildung} 
-   \caption{Ergebnis der \acrshort{psd} an den okzipitalen Elektroden für alle drei Versuchsbedingungen, links s1, Mitte s2, rechts s3}
+   \caption{Ergebnis der \acrshort{psd} an den okzipitalen Elektroden für alle drei Versuchsbedingungen, links s1, mittig s2, rechts s3}
     \label{frequenzbandanalyse}
 \end{figure}
 
@@ -134,46 +134,47 @@ Diese durchschnittlichen Werte sind bessere Vergleichskriterien als die Höhe de
     \end{tabular}
   \tabquelle{Eigene Darstellung}
 \end{table}
+Aus den Graphen in Abbildung \ref{frequenzbandanalyse} lässt sich bei allen drei Messungen ein Unterschied zwischen EO und EC erkennen, der jedoch unterschiedlich stark ausgeprägt ist. Die durchschnittlichen Alpha-Werte aller Messungen sind in Tabelle \ref{tab:alpha_power} dargestellt. Der absolute Unterschied zwischen EC und EO ist bei s1 und s2 nahezu identisch ($20{,}62 - 2{,}87 = 17{,}75$ für s1 und $22{,}97 - 5{,}26 = 17{,}71$ für s2) und deutlich geringer als bei s3 ($30{,}54 - 3{,}59 = 26{,}95$). Außerdem zeigt sich, dass die Versuchspersonen bei s2 häufig die höchste Alpha-Power bei EO aufwiesen (pt\_02, pt\_03, pt\_05, pt\_09 und pt\_10).\newline
 
-In allen drei Messungen zeigte sich im Alpha-Bereich ein deutlicher Unterschied zwischen den Bedingungen: Bei geschlossenen Augen (\acrshort{ec}, rot) war die Leistung bei etwa 10 Hz klar erhöht gegenüber offenen Augen (\acrshort{eo}, blau). Der \gls{berger-effekt} war also mit beiden Systemen nachweisbar. Die OpenBCI-Werte entsprachen dabei in Verlauf und Größenordnung weitgehend denen des BioSemi-Systems.\newline
+Darüber hinaus liegen die absoluten Werte der einzelnen Versuchspersonen in sehr unterschiedlichen Wertebereichen. So bewegt sich die EO-Alpha-Power von pt\_10 zwischen $0{,}83$ und $2{,}04$, die von pt\_02 dagegen zwischen $5{,}90$ und $13{,}88$. Ein Vergleich absoluter Werte ist daher nur eingeschränkt aussagekräftig, da jede Person eine eigene \gls{baseline_alpha} besitzt. Aus diesem Grund werden im Folgenden die Rangfolge der Versuchspersonen, wenn sie nach ihren EP-Werten sortiert werden, und relative Werte (Alpha-Suppression) betrachtet und zwischen den Versuchsbedingungen verglichen.\newline
+
+\subsection{Rangfolge der Versuchspersonen}
+
+Die Rangfolge der Versuchspersonen ist in Tabelle \ref{tab:alpha_rank} dargestellt. Sortiert man die Versuchspersonen nach ihrer EO-Alpha-Power, fällt zwischen s1 und s3 eine sehr große Ähnlichkeit auf: Die Platzierungen weichen nur bei Platz eins und zwei voneinander ab. Bei s2 unterscheidet sich die Reihenfolge vor allem im mittleren Bereich (Plätze zwei bis vier). Insgesamt ist die Rangfolge über alle drei Messungen jedoch sehr ähnlich und die vordersten und hintersten Plätze sind weitgehend gleich besetzt.\newline
 
 
 \begin{table}[htbp]
     \centering
-    \caption{Rang der Versuchspersonen, sortiert nach der EC-Alpha-Power für alle Versuchsbedingungen}
+    \caption{Rang der Versuchspersonen, sortiert nach der EO-Alpha-Power für alle Versuchsbedingungen}
     \label{tab:alpha_rank}
     \begin{tabular}{lccc}
     \toprule
-    Versuchsperson & s1 & s2 & s3 \\
+    Proband & s1 & s2 & s3 \\
     \midrule
     pt\_02 & 1 & 1 & 2 \\
-    pt\_03 & 5 & 6 & 3 \\
-    pt\_05 & 3 & 4 & 6 \\
-    pt\_08 & 2 & 2 & 1 \\
-    pt\_09 & 4 & 3 & 5 \\
-    pt\_10 & 6 & 5 & 4 \\
+    pt\_03 & 5 & 6 & 5 \\
+    pt\_05 & 3 & 4 & 3 \\
+    pt\_08 & 2 & 3 & 1 \\
+    pt\_09 & 4 & 2 & 4 \\
+    pt\_10 & 6 & 5 & 6 \\
     \bottomrule
     \end{tabular}
-  \tabquelle{Eigene Darstellung}
 \end{table}
-
-blabla rangfolge (Tabelle~\ref{tab:alpha_rank})\newline
 
 
 \subsection{Alpha-Suppression}
 
-Als Alpha-Suppression bezeichnet man das Verhältnis der mittleren Alpha-Power bei \acrshort{ec} zu der bei \acrshort{eo}. Ein Wert von 9 bedeutet entsprechend, dass bei \acrshort{ec} neunmal mehr Alpha-Power gemessen wird als bei \acrshort{eo}. Ab einem Verhältnis von etwa 2 wird angenommen, dass die Unterschiede nicht mehr allein auf zufällige Artefakte zurückzuführen sind, sondern den \gls{berger-effekt} abbilden. Abbildung \ref{alpha_suppression} zeigt die Alpha-Suppression für die Cluster Okzipital, Parietal, Frontal und Zentral (Gruppenmittel, n = 6) für s3, s1 und s2.\newline
+Als Alpha-Suppression bezeichnet man das Verhältnis der mittleren Alpha-Power bei \acrshort{ec} zu der bei \acrshort{eo}, also der Basislinie. Ein Wert von 9 bedeutet entsprechend, dass nach dem Schließen der Augen neunmal mehr Alpha-Power gemessen wird als unter normalen Beindungen. Ab einem Verhältnis von etwa 2 wird angenommen, dass die Unterschiede nicht mehr allein auf zufällige Artefakte zurückzuführen sind, sondern den \gls{berger-effekt} abbilden. Abbildung \ref{alpha_suppression} zeigt die Alpha-Suppression für die Cluster Okzipital, Parietal, Frontal und Zentral (Gruppenmittel, n = 6) für s1, s2 und s3.\newline
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.95\textwidth]{diagramme/alpha_suppression_by_electrode_cluster_ohne_kanalangaben.png}
     \quelle{Eigene Abbildung} 
-   \caption{Alpha-Suppression an den \glspl{elektrodencluster} für alle drei Versuchsbedingungen, mit rot ist der Cluster mit größter Suppression markiert, links s1, Mitte s2, rechts s3}
+   \caption{Alpha-Suppression an den \glspl{elektrodencluster} für alle drei Versuchsbedingungen, mit rot ist der Cluster mit größter Suppression markiert, links s1, mittig s2, rechts s3}
     \label{alpha_suppression}
 \end{figure}
 
 Bei allen drei Messungen war die Alpha-Suppression über dem Hinterkopf am stärksten, also über okzipitalen und parietalen Elektroden, während sie frontal und zentral deutlich geringer ausfiel. Alle Werte lagen über der Schwelle von 2, der Effekt war also in jedem Cluster nachweisbar, nur unterschiedlich stark. Am deutlichsten war der Unterschied zwischen den vorne und hinten liegenden Clustern beim BioSemi-System: Der okzipitale Wert (9,76) war mehr als doppelt so hoch wie der zentrale (3,76) und fast doppelt so hoch wie der frontale (5,26). Bei s2 war die Abstufung am geringsten, der Unterschied zwischen okzipital (4,58) und frontal (2,74) war relativ gesehen kleiner. Dies passt zur oben diskutierten Erklärung, dass die Versuchspersonen im Verlauf der Messung müder wurden und dadurch die Alpha-Power bei offenen Augen zunahm.\newline
 
 Mit einer Alpha-Suppression von 9,76 lag das BioSemi-System nahe an einem Verhältnis von 10. Auch mit dem OpenBCI-System wurde bei wachen Versuchspersonen außerhalb der Kabine mit 8,39 ein guter und nur wenig abweichender Wert erreicht. Das ist ein klarer Beleg für den \gls{berger-effekt}. Zudem spricht die räumliche Verteilung gegen einen äußeren Störeinfluss, da ein solcher alle Cluster gleich stark betreffen würde. Stattdessen war die Suppression systematisch dort am größten, wo der Berger-Effekt physiologisch zu erwarten ist.\newline
-
 
