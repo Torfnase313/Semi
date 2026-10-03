@@ -1,2 +1,60 @@
 \chapter*{Anhang} 
-\addcontentsline{toc}{chapter}{Anhang} 
+\addcontentsline{toc}{chapter}{Anhang}
+%Abschnitte im Anhang mit Buchstaben (A, B, ...), Tabellen als A.1, B.1, ...
+\setcounter{section}{0}
+\renewcommand{\thesection}{\Alph{section}}
+\renewcommand{\thetable}{\thesection.\arabic{table}}
+
+\section{Abgrenzung der Frequenzbänder voneinander}
+\label{app:frequenzbaender}
+\autor{Sophie Kleppe}
+\setcounter{table}{0}
+
+Die verschiedenen Frequenzbänder unterscheiden sich nicht ausschließlich durch ihre Frequenz, auch die Amplitude, die Topographie und der assoziierte mentale und physiologische Zustand sind unterschiedlich. Tabelle~\ref{tab:frequenzbaender} stellt die verschiedenen Frequenzbänder anhand ihrer Unterscheidungsmerkmale gegenüber. \newline
+
+\begin{table}[htbp]
+\centering
+\caption{Übersicht der physiologischen EEG-Frequenzbänder und ihrer Eigenschaften}
+\label{tab:frequenzbaender}
+\begin{tabular}{ll l p{4cm} p{5cm}}
+\toprule
+\textbf{Band} & \textbf{Frequenz (Hz)} & \textbf{Amplitude} &  \textbf{Physiologischer Zustand} \\
+\midrule
+Delta ($\boldsymbol{\delta}$) & 0,5 -- 4   & Sehr hoch  &  Tiefschlaf \\
+Theta ($\boldsymbol{\theta}$) & 4 -- 7     & Hoch       &  Schläfrigkeit, Meditation \\
+Alpha ($\boldsymbol{\alpha}$) & 8 -- 12    & Mittel     &  Entspannung, Wachzustand, geschlossene Augen \\
+Beta ($\boldsymbol{\beta}$)   & 13 -- 30   & Niedrig    &  Mentale Aktivität, Konzentration, Aufmerksamkeit \\
+Gamma ($\boldsymbol{\gamma}$) & $> 30$     & Sehr niedrig  & Kognitive Verarbeitung \\
+\bottomrule
+\end{tabular}
+\tabquelle{Eigene Darstellung nach \cite{nayak_waveforms}}
+\end{table}
+Es lässt sich mit steigender Frequenz eine Verringerung der Amplitude feststellen. Wird die Topographie betrachtet, zeigt sich, dass Delta, Theta und Beta vermehrt frontozentral auftreten und Gamma diffus auftritt, während Alpha posterior und okzipital-dominant ist. 
+Werden die assoziierten mentalen und physiologischen Zustände betrachtet, lässt sich feststellen, dass niedrige Frequenzen wie Delta-Wellen vor allem in tiefen Schlafphasen dominieren, während höhere Frequenzen wie Beta- und Gamma-Wellen mit aktiver kognitiver Verarbeitung und Aufmerksamkeit assoziiert sind. Es ist jedoch zu beachten, dass diese Zuordnungen keine eindeutigen Zustände darstellen, da im Gehirn meist mehrere Frequenzbereiche gleichzeitig aktiv sind und sich überlagern.
+
+\section{Abgrenzung der frühen visuellen ERP-Komponenten voneinander}
+\label{app:erp}
+\autor{Sophie Kleppe}
+\setcounter{table}{0}
+
+\begin{table}[htbp]
+\centering
+\caption{Unterscheidungsmerkmale der frühen visuellen ERP-Komponenten C1, P1, N1 und P2}
+\label{tab:erp}
+\begin{tabular}{ll p{3.2cm} p{3.2cm} p{4.2cm}}
+\toprule
+\textbf{Komp.} & \textbf{Polarität} & \textbf{Latenzfenster} & \textbf{Topographie} & \textbf{Ursprung / Funktion / Sensitivität} \\
+\midrule
+C1 & Variabel & $\approx$ 40--60 ms & Posteriore Mittellinie & Primäre Sehrinde (V1), sensitiv für physikalische Reizmerkmale \\
+\addlinespace
+P1 & Positiv  & Onset: $\approx$ 60--90 ms \newline Peak: $\approx$ 100--130 ms & Lateral okzipital & Frühe visuelle Verarbeitung, sensitiv für Kontrast \& Größe \\
+\addlinespace
+N1 & Negativ  & $\approx$ 100--200 ms \newline (Mehrere Subkomponenten) & Anterior (früh), parietal \newline \& lateral okzipital (spät) & Aufmerksamkeitsbezogene Reizverarbeitung \\
+\addlinespace
+P2 & Positiv  & $\approx$ 150--250 ms & Anterior-zentral & Höhere visuelle Analyse, oft überlappt durch N1/N2 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+Insgesamt zeigt sich, dass die Komponenten in der zeitlichen Abfolge C1, P1, N1 und P2 innerhalb eines Zeitfensters von 40--250 ms nach dem auslösenden Ereignis auftreten. Auffallend ist auch, dass die \acrshort{erp}-Komponenten sich mit fortschreitender Zeit nach dem Ereignis von posterioren Regionen in Richtung anteriorer Regionen des Schädels bewegen. Je später die Latenz, desto schwerer ist auch die Isolation der Komponenten, da sich die elektrischen Signale im Gehirn zunehmend überlappen.\footnote{Vgl. \cite[S.~35]{luck2005}} \newline
