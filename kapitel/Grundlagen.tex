@@ -459,21 +459,20 @@ Alpha-Paradigma:
     \item Bei beiden Systemen ist die Alpha-Suppression okzipital oder parietal am größten.
     \item Die Rangfolge der Versuchspersonen nach ihrer Alpha-Power stimmt zwischen den Versuchsbedingungen stark überein ($\rho \geq 0{,}5$).
 \end{enumerate}
-Der \gls{berger-effekt} ist ein gegenüber Störungen robustes Phänomen. Er sollte selbst bei geringem \acrshort{snr} erkennbar sein.
-% TODO Sophie: Begründungen H1-H3 ausbauen (Stichpunkte)
+Der \gls{berger-effekt} ist ein gegenüber Störungen robustes Phänomen. Er sollte selbst bei geringem \acrshort{snr} erkennbar sein (vgl. Abschnitt~\ref{sec:alpha}).\footnote{Vgl. \cite{barry2007}} Da der Alpha-Rhythmus vor allem über dem Hinterkopf entsteht, wird zudem erwartet, dass die Alpha-Suppression dort am größten ist (H2). Für H3 ist entscheidend, dass sich die Stärke der Alpha-Aktivität zwischen Personen deutlich unterscheidet, bei derselben Person aber über mehrere Wochen weitgehend stabil bleibt.\footnote{Vgl. \cite{salinsky1991}} Schwächen des OpenBCI-Systems, die alle Versuchspersonen gleichermaßen betreffen, verändern deshalb zwar die Höhe der Werte, nicht aber ihre Reihenfolge. Lediglich Fehler, die sich zwischen den Personen unterscheiden, etwa durch einen unterschiedlich guten Elektrodenkontakt, können einzelne Plätze vertauschen. Daher wird eine starke, aber keine vollständige Übereinstimmung erwartet.
 
 P1-Paradigma:
 \begin{enumerate}[label=H\arabic*, resume]
     \item Bei beiden Systemen ist die mittlere P1-Amplitude für große, kontrastreiche Stimuli größer als für kleine, kontrastreduzierte Stimuli. Dabei ist der Unterschied beim BioSemi-System größer als beim OpenBCI-System.
     \item Die P1 hebt sich bei beiden Systemen vom Rauschen ab (\acrshort{snr} > 1), das \acrshort{snr} ist beim OpenBCI-System aber geringer als beim BioSemi-System.
 \end{enumerate}
-% TODO Sophie: Begründung H4/H5
+Die P1-Komponente hängt von Kontrast und Größe des Reizes ab (vgl. Abschnitt~\ref{sec:erp}), weshalb der Unterschied zwischen den Stimuli bei beiden Systemen auftreten sollte. Da die P1 jedoch nur wenige Mikrovolt groß ist, ist sie empfindlich gegenüber Rauschen. Die Trockenelektroden des OpenBCI-Systems haben einen schlechteren Kontakt zur Kopfhaut, wodurch mehr Rauschen entsteht (vgl. Abschnitt~\ref{sec:stoer}).\footnote{Vgl. \cite{kappenman2010}} Beim OpenBCI-System werden daher ein kleinerer Unterschied zwischen den Stimuli (H4) und ein geringeres \acrshort{snr} (H5) erwartet.
 
 Umgebung und Steuersignal:
 \begin{enumerate}[label=H\arabic*, resume]
     \item Die Kriterien für die Datenqualität sind auch außerhalb der Kabine (s1) erfüllt, die Datenqualität ist innerhalb der Kabine (s2) aber besser.
     \item Mit dem OpenBCI-System lässt sich in 2-s-Abschnitten erkennen, ob die Augen geöffnet oder geschlossen waren, das heißt, die Trefferquote liegt in allen Versuchsbedingungen über der Zufallsgrenze.
 \end{enumerate}
-% TODO Sophie: Begründung H6/H7
+Die geschlossene Kabine schirmt elektrische Störungen ab, und die Kinnstütze verringert Bewegungsartefakte (vgl. Abschnitt~\ref{sec:stoer}). Deshalb wird in s2 eine bessere Datenqualität erwartet als in s1. Da die Kriterien jedoch nur prüfen, ob die Effekte erkennbar sind, und nicht, wie groß sie sind, sollten sie auch in s1 erfüllt sein (H6). H7 folgt aus H1: Ist der Berger-Effekt robust und deutlich ausgeprägt, sollte er bereits in kurzen Abschnitten von 2\,s erkennbar sein (vgl. Grundlage für den Roboterarm).
 
 
