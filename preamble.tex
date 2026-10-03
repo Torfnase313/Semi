@@ -155,7 +155,14 @@
 %Formatierung und Import Bibliography
 
 \usepackage[affil-it]{authblk}	
-\usepackage[datamodel=datamodel,backend=biber,style=authoryear,autocite=footnote,maxnames=20,minnames=10]{biblatex}
+%Zitierweise nach CZG: Kurzbeleg in der Fußnote "Vgl. Familienname (Jahr): S. x."
+%Quellenverzeichnis: alle Autor:innen (maxbibnames=99); im Kurzbeleg bei 3-5 Autor:innen
+%beim ersten Zitat alle Namen, danach "Erstautor et al." (siehe \AtEveryCitekey unten);
+%bei mehr als 5 Autor:innen von Anfang an "et al.".
+\usepackage[datamodel=datamodel,backend=biber,style=authoryear,autocite=footnote,
+  maxbibnames=99,minbibnames=99,maxcitenames=5,mincitenames=1,
+  uniquename=false,uniquelist=false,citetracker=true,
+  urldate=short,lasteditdate=long,dateabbrev=false]{biblatex}
 \addbibresource{literatur.bib}
 \setlength{\bibitemsep}{1.5em}
 
@@ -167,12 +174,46 @@
 \DeclareNameAlias{default}{family-given}    
 
 \DefineBibliographyStrings{ngerman}{
-  urlseen = {Abgerufen am }
+  urlseen = {Abrufdatum},
+  andothers = {et\addabbrvspace al\adddot}
 }
+
+%URL ohne vorangestelltes "url:"; Abrufdatum als [Abrufdatum TT.MM.JJJJ]
+\DeclareFieldFormat{url}{\url{#1}}
+\DeclareFieldFormat{pages}{S\adddot\addnbspace#1}
+\DeclareFieldFormat{edition}{\ifinteger{#1}{#1\adddot\addspace Aufl\adddot}{#1}}
+
+%Kurzbeleg (\cite): Druckquellen "Familienname (Jahr)", Internetquellen
+%"Autor/Institution (Abrufdatum)", Lexika "Lexikon: Stichwort (Abrufdatum)".
+%Gibt es von derselben Institution mehrere Seiten mit gleichem Abrufdatum, steht
+%zusätzlich das Feld shorttitle hinter dem Namen.
+\newbibmacro{czg:abrufdatum}{%
+  \printtext[parens]{\mkbibdateshort{urlyear}{urlmonth}{urlday}}}
+\newbibmacro{czg:cite}{%
+  \ifentrytype{onlinelexikon}
+    {\printtext{\thefield{journaltitle}\addcolon\space\thefield{title}}%
+     \setunit{\addspace}\usebibmacro{czg:abrufdatum}}
+    {\printnames{labelname}%
+     \ifboolexpr{test {\ifentrytype{onlinedokument}} and not test {\iffieldundef{urlyear}}}
+       {\iffieldundef{shorttitle}{}{\printtext{\addcolon\space\thefield{shorttitle}}}%
+        \setunit{\addspace}\usebibmacro{czg:abrufdatum}}
+       {\setunit{\addspace}\printtext[parens]{\printlabeldateextra}}}}
+
+\DeclareCiteCommand{\cite}
+  {\usebibmacro{prenote}}
+  {\usebibmacro{citeindex}\usebibmacro{czg:cite}}
+  {\multicitedelim}
+  {\usebibmacro{postnote}}
+\DeclareDelimFormat{postnotedelim}{\addcolon\space}
+\DeclareFieldFormat{postnote}{#1}
+\renewcommand*{\multicitedelim}{\addsemicolon\space}
+
+%3-5 Autor:innen: beim ersten Zitat alle Namen, danach "et al."
+\AtEveryCitekey{\ifciteseen{\defcounter{maxnames}{2}}{\defcounter{maxnames}{5}}}
 
 %\DeclareFieldFormat{note}{\mkbibbrackets{\bibstring{urlseen}\addcolon\space#1}}
 
-\DeclareFieldFormat{urldate}{\mkbibbrackets{\bibstring{urlseen}\addcolon\space#1}}
+\DeclareFieldFormat{urldate}{\mkbibbrackets{\bibstring{urlseen}\space#1}}
 
 \DeclareFieldFormat{lasteditdate}{\mkbibparens{#1}}
 
