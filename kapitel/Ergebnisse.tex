@@ -2,7 +2,7 @@
 \section{Datengrundlage}
 \autor{Sophie Kleppe}
 Die Datengrundlage für die Auswertung des BioSemi-Systems bilden die Daten aller zehn Versuchspersonen. Für das OpenBCI-System liegen nur neun auswertbare Datensätze aus
-S1 (außerhalb der Kabine) und sechs aus S2
+s1 (außerhalb der Kabine) und sechs aus s2
 (innerhalb der Kabine) vor. Grund dafür ist das Ausschließen einiger
 Datensätze aufgrund von Elektroden, deren Signale keine ausreichende Qualität
 aufwiesen. Eine Ursache sind die Trockenelektroden des OpenBCI-Systems, welche
@@ -16,8 +16,8 @@ rechnerisch durch Interpolation ersetzen (vgl. Abschnitt~\ref{sec:vorverarbeitun
 zu viele Elektroden betroffen, ist dieses Verfahren nicht anwendbar, da die
 Interpolation fehlender Kanäle aus benachbarten Elektroden voraussetzt, dass
 genügend gute Nachbarkanäle vorhanden sind. Folgende Datensätze mussten
-dadurch ausgeschlossen werden: in S1 der Datensatz von
-pt\_06 (Versuchsperson 6) und in S2 die Datensätze von pt\_01, pt\_04,
+dadurch ausgeschlossen werden: in s1 der Datensatz von
+pt\_06 (Versuchsperson 6) und in s2 die Datensätze von pt\_01, pt\_04,
 pt\_07 und pt\_06. \newline 
 Die Hirnaktivität unterscheidet sich zwischen einzelnen Personen deutlich,
 beispielsweise in der Stärke der Alpha-Aktivität oder in der Amplitude der P1. Würden die Gruppenmittelungen der einzelnen Messungen mit unterschiedlichen
@@ -37,13 +37,13 @@ Reaktionszeiten berechnet und dieser Wert über alle Versuchspersonen gemittelt.
 
 Die Aufgabe wurde in allen Messungen nahezu fehlerfrei gelöst, sprich auf alle
 Könige wurde mit Drücken der Leertaste reagiert. Von 80 Königen pro Messung
-wurden in S1 und S3 alle, in S2 79 Könige erkannt.
+wurden in s1 und s3 alle, in s2 79 Könige erkannt.
 Die Reaktionszeit (Mittelwert $\pm$ \gls{standardabweichung} der individuellen
-Mediane) betrug in S1 $550 \pm 68$\,ms, in S2
-$589 \pm 79$\,ms und in S3 $591 \pm 70$\,ms. Die Messungen
-unterschieden sich damit in der Reaktionszeit. In S2 reagierten alle
-zehn Versuchspersonen langsamer als in S1, während sich S2
-und S3 bezüglich des Verhaltens nicht unterschieden. Ordnet man die
+Mediane) betrug in s1 $550 \pm 68$\,ms, in s2
+$589 \pm 79$\,ms und in s3 $591 \pm 70$\,ms. Die Messungen
+unterschieden sich damit in der Reaktionszeit. In s2 reagierten alle
+zehn Versuchspersonen langsamer als in s1, während sich s2
+und s3 bezüglich des Verhaltens nicht unterschieden. Ordnet man die
 Messungen nach ihrer Position in der zeitlichen Abfolge, war bei allen zehn
 Versuchspersonen die jeweils erste Messung die schnellste. Die Reaktionszeit
 verlängert sich also nach der ersten Messung um etwa 40\,ms und bleibt danach
@@ -71,15 +71,15 @@ Kopfseite größer war.
     \hline
     System & Bedingung & $n$ & \shortstack{groß,\\kontrastreich [\textmu V]} & \shortstack{klein,\\kontrastreduziert [\textmu V]} \\
     \hline
-    OpenBCI & S1 & 6 & 1,35 $\pm$ 1,11 & 1,20 $\pm$ 1,41 \\
-    OpenBCI & S2 & 6 & 2,37 $\pm$ 0,85 & 1,99 $\pm$ 1,10 \\
-    BioSemi & S3 & 6 & 5,58 $\pm$ 3,24 & 4,53 $\pm$ 2,11 \\
+    OpenBCI & s1 & 6 & 1,35 $\pm$ 1,11 & 1,20 $\pm$ 1,41 \\
+    OpenBCI & s2 & 6 & 2,37 $\pm$ 0,85 & 1,99 $\pm$ 1,10 \\
+    BioSemi & s3 & 6 & 5,58 $\pm$ 3,24 & 4,53 $\pm$ 2,11 \\
     \hline
   \end{tabular}
   \tabquelle{Eigene Darstellung}
 \end{table}
 
-Tabelle~\ref{tab:p1_amplituden} zeigt die mittleren P1-Amplituden beider Darbietungsformen für die drei Bedingungen. In allen drei Bedingungen war die P1 für große, kontrastreiche Stimuli größer als für kleine, kontrastreduzierte Stimuli. Die Höhe der P1 unterschied sich allerdings zwischen den Versuchsbedingungen und nahm von S3 über S2 zu S1 deutlich ab. Der Unterschied der mittleren Amplituden im Zeitfenster von 80--200\,ms zwischen großen, kontrastreichen und kleinen, kontrastreduzierten Stimuli betrug beim BioSemi-System 1,05\,\textmu V, beim OpenBCI-System in S2 0,38\,\textmu V und in S1 nur noch 0,15\,\textmu V. Gemittelt über beide Darbietungsformen erreichte das OpenBCI-System in S2 etwa 43\,\% und in S1 etwa 25\,\% der Amplitude des BioSemi-Systems. Die Standardabweichungen waren in allen Bedingungen groß. Sie betrugen beim BioSemi-System bis zu 3,24\,\textmu V und lagen in S1 mit 1,41\,\textmu V über dem zugehörigen Mittelwert von 1,20\,\textmu V.
+Tabelle~\ref{tab:p1_amplituden} zeigt die mittleren P1-Amplituden beider Darbietungsformen für die drei Bedingungen. In allen drei Bedingungen war die P1 für große, kontrastreiche Stimuli größer als für kleine, kontrastreduzierte Stimuli. Die Höhe der P1 unterschied sich allerdings zwischen den Versuchsbedingungen und nahm von s3 über s2 zu s1 deutlich ab. Der Unterschied der mittleren Amplituden im Zeitfenster von 80--200\,ms zwischen großen, kontrastreichen und kleinen, kontrastreduzierten Stimuli betrug beim BioSemi-System 1,05\,\textmu V, beim OpenBCI-System in s2 0,38\,\textmu V und in s1 nur noch 0,15\,\textmu V. Gemittelt über beide Darbietungsformen erreichte das OpenBCI-System in s2 etwa 43\,\% und in s1 etwa 25\,\% der Amplitude des BioSemi-Systems. Die Standardabweichungen waren in allen Bedingungen groß. Sie betrugen beim BioSemi-System bis zu 3,24\,\textmu V und lagen in s1 mit 1,41\,\textmu V über dem zugehörigen Mittelwert von 1,20\,\textmu V.
 
 
 
@@ -104,11 +104,13 @@ Zur Abschätzung des Grundrauschens wurde die Standardabweichung im Basislinieni
 	\centering
 	\includegraphics[width=0.95\textwidth]{diagramme/occipital_cluster_psd_ohne_kanalangaben.png}
     \quelle{Eigene Abbildung} 
-   \caption{Ergebnis der \acrshort{psd} an den okzipitalen Elektroden für alle drei Versuchsbedingungen, links S1, Mitte S2, rechts S3}
+   \caption{Ergebnis der \acrshort{psd} an den okzipitalen Elektroden für alle drei Versuchsbedingungen, links s1, Mitte s2, rechts s3}
     \label{frequenzbandanalyse}
 \end{figure}
 
 Für die Analyse wurden ausschließlich die hinteren Elektroden über dem Okzipitallappen betrachtet (okzipitaler Cluster), da der \gls{berger-effekt} (vgl. Abschnitt~\ref{sec:alpha}) dort am stärksten ausgeprägt ist. Abbildung \ref{frequenzbandanalyse} zeigt die  \acrshort{psd} dieses Clusters als Mittelwert über alle Versuchspersonen, getrennt für die drei Versuchsbedingungen. Die \acrshort{psd} (vgl. Abschnitt~\ref{sec:alphaauswertung}) wird in \textmu V$^2$/Hz angegeben, weil die Leistung quadratisch von der Amplitude abhängt. Dadurch lässt sich die Alpha-Aktivität (8–12 Hz, grün hinterlegt) direkt ablesen. Die Mittelwerte der Alpha-Power der einzelnen Versuchspersonen sind in Tabelle~\ref{tab:alpha_power} aufgeführt.\newline
+
+Diese durchschnittlichen Werte sind bessere Vergleichskriterien als die Höhe des Hochpunkts, da diese besonders anfällig auf Störungen ist. Die Höhe des Peaks kann durch einzelne Artefakte stark beeinflusst werden, während die mittlere Leistung über das gesamte Frequenzband hinweg berechnet wird und dadurch robuster gegenüber Störungen ist.\newline
 
 \begin{table}[htbp]
     \centering
@@ -118,7 +120,7 @@ Für die Analyse wurden ausschließlich die hinteren Elektroden über dem Okzipi
     \toprule
      & \multicolumn{3}{c}{EO} & \multicolumn{3}{c}{EC} \\
     \cmidrule(lr){2-4} \cmidrule(lr){5-7}
-    Versuchsperson & S1 & S2 & S3 & S1 & S2 & S3 \\
+    Versuchsperson & s1 & s2 & s3 & s1 & s2 & s3 \\
     \midrule
     pt\_02 & $5{,}90$ & $13{,}88$ & $6{,}22$ & $34{,}90$ & $35{,}69$ & $44{,}65$ \\
     pt\_03 & $1{,}32$ & $1{,}80$  & $1{,}36$ & $11{,}31$ & $9{,}10$  & $23{,}79$ \\
@@ -126,13 +128,14 @@ Für die Analyse wurden ausschließlich die hinteren Elektroden über dem Okzipi
     pt\_08 & $4{,}96$ & $5{,}22$  & $6{,}73$ & $28{,}83$ & $33{,}30$ & $55{,}26$ \\
     pt\_09 & $1{,}79$ & $5{,}34$  & $3{,}06$ & $12{,}79$ & $21{,}78$ & $20{,}12$ \\
     pt\_10 & $0{,}83$ & $2{,}04$  & $1{,}00$ & $11{,}10$ & $18{,}51$ & $22{,}73$ \\
+    \midrule
+    Mittelwert & $2{,}87$ & $5{,}26$ & $3{,}59$ & $20{,}62$ & $22{,}97$ & $30{,}54$ \\
     \bottomrule
     \end{tabular}
   \tabquelle{Eigene Darstellung}
 \end{table}
 
-
-In allen drei Messungen zeigte sich im Alpha-Bereich ein deutlicher Unterschied zwischen den Bedingungen: Bei geschlossenen Augen (\acrshort{ec}, rot) war die Leistung bei etwa 10\,Hz klar erhöht gegenüber offenen Augen (\acrshort{eo}, blau). Der \gls{berger-effekt} war also mit beiden Systemen nachweisbar. Die OpenBCI-Werte entsprachen dabei in Verlauf und Größenordnung weitgehend denen des BioSemi-Systems.\newline
+In allen drei Messungen zeigte sich im Alpha-Bereich ein deutlicher Unterschied zwischen den Bedingungen: Bei geschlossenen Augen (\acrshort{ec}, rot) war die Leistung bei etwa 10 Hz klar erhöht gegenüber offenen Augen (\acrshort{eo}, blau). Der \gls{berger-effekt} war also mit beiden Systemen nachweisbar. Die OpenBCI-Werte entsprachen dabei in Verlauf und Größenordnung weitgehend denen des BioSemi-Systems.\newline
 
 
 \begin{table}[htbp]
@@ -141,7 +144,7 @@ In allen drei Messungen zeigte sich im Alpha-Bereich ein deutlicher Unterschied 
     \label{tab:alpha_rank}
     \begin{tabular}{lccc}
     \toprule
-    Versuchsperson & S1 & S2 & S3 \\
+    Versuchsperson & s1 & s2 & s3 \\
     \midrule
     pt\_02 & 1 & 1 & 2 \\
     pt\_03 & 5 & 6 & 3 \\
@@ -156,28 +159,20 @@ In allen drei Messungen zeigte sich im Alpha-Bereich ein deutlicher Unterschied 
 
 blabla rangfolge (Tabelle~\ref{tab:alpha_rank})\newline
 
-In beiden OpenBCI-Durchläufen trat zusätzlich ein schmaler Peak, also ein Hochpunkt, bei 25\,Hz auf, der beim BioSemi-System fehlte (in Abbildung \ref{frequenzbandanalyse} zu sehen). Er ist zu groß, zu regelmäßig und unabhängig von Augenzustand und Bedingung (keine Unterschiede in Amplitude oder Frequenz zwischen \acrshort{eo}/\acrshort{ec} sowie zwischen S1 und S2), um neuronalen Ursprungs zu sein. Auch ist nach aktuellem Stand kein physiologischer Effekt bekannt, der einen solchen Ausschlag erklären würde. Für eine technische Ursache kommen mehrere Möglichkeiten infrage:\newline
-\begin{itemize}
-  \item Netzbrummen scheidet aus, da der Peak nicht bei 50 Hz liegt und sich in der Kabine keine Netzteile befinden. Gegenüber dem BioSemi-Durchlauf kam lediglich der Laptop hinzu.
-  \item Bildschirmflackern: Bei Pixel-Inversion oder Frame Rate Control entsteht ein Flackern mit der halben Bildwiederholrate, bei einem 60-Hz-Monitor also bei 30 Hz %(Quelle: flickersense.org/background/led-screens). Das erklärt einen Peak bei 25 Hz nicht direkt.
-  \item Das Cyton-Board könnte aus anderen Gründen ein elektromagnetisches Feld mit 25 Hz abstrahlen.
-\end{itemize}
-
-Mit Sicherheit lässt sich die Ursache auf Basis der vorliegenden Daten nicht bestimmen. Am wahrscheinlichsten ist ein Einfluss des Boards, möglicherweise auch des Laptops.
 
 \subsection{Alpha-Suppression}
 
-Als Alpha-Suppression bezeichnet man das Verhältnis der mittleren Alpha-Power bei \acrshort{ec} zu der bei \acrshort{eo}. Ein Wert von 9 bedeutet entsprechend, dass bei \acrshort{ec} neunmal mehr Alpha-Power gemessen wird als bei \acrshort{eo}. Ab einem Verhältnis von etwa 2 wird angenommen, dass die Unterschiede nicht mehr allein auf zufällige Artefakte zurückzuführen sind, sondern den \gls{berger-effekt} abbilden. Abbildung \ref{alpha_suppression} zeigt die Alpha-Suppression für die Cluster Okzipital, Parietal, Frontal und Zentral (Gruppenmittel, n = 6) für S3, S1 und S2.\newline
+Als Alpha-Suppression bezeichnet man das Verhältnis der mittleren Alpha-Power bei \acrshort{ec} zu der bei \acrshort{eo}. Ein Wert von 9 bedeutet entsprechend, dass bei \acrshort{ec} neunmal mehr Alpha-Power gemessen wird als bei \acrshort{eo}. Ab einem Verhältnis von etwa 2 wird angenommen, dass die Unterschiede nicht mehr allein auf zufällige Artefakte zurückzuführen sind, sondern den \gls{berger-effekt} abbilden. Abbildung \ref{alpha_suppression} zeigt die Alpha-Suppression für die Cluster Okzipital, Parietal, Frontal und Zentral (Gruppenmittel, n = 6) für s3, s1 und s2.\newline
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.95\textwidth]{diagramme/alpha_suppression_cluster.pdf}
     \quelle{Eigene Abbildung} 
-   \caption{Alpha-Suppression an den \glspl{elektrodencluster} für alle drei Versuchsbedingungen, mit rot ist der Cluster mit größter Suppression markiert, links S1, Mitte S2, rechts S3}
+   \caption{Alpha-Suppression an den \glspl{elektrodencluster} für alle drei Versuchsbedingungen, mit rot ist der Cluster mit größter Suppression markiert, links s1, Mitte s2, rechts s3}
     \label{alpha_suppression}
 \end{figure}
 
-Bei allen drei Messungen war die Alpha-Suppression über dem Hinterkopf am stärksten, also über okzipitalen und parietalen Elektroden, während sie frontal und zentral deutlich geringer ausfiel. Alle Werte lagen über der Schwelle von 2, der Effekt war also in jedem Cluster nachweisbar, nur unterschiedlich stark. Am deutlichsten war der Unterschied zwischen den vorne und hinten liegenden Clustern beim BioSemi-System: Der okzipitale Wert (9,76) war mehr als doppelt so hoch wie der zentrale (3,76) und fast doppelt so hoch wie der frontale (5,26). Bei S2 war die Abstufung am geringsten, der Unterschied zwischen okzipital (4,58) und frontal (2,74) war relativ gesehen kleiner. Dies passt zur oben diskutierten Erklärung, dass die Versuchspersonen im Verlauf der Messung müder wurden und dadurch die Alpha-Power bei offenen Augen zunahm.\newline
+Bei allen drei Messungen war die Alpha-Suppression über dem Hinterkopf am stärksten, also über okzipitalen und parietalen Elektroden, während sie frontal und zentral deutlich geringer ausfiel. Alle Werte lagen über der Schwelle von 2, der Effekt war also in jedem Cluster nachweisbar, nur unterschiedlich stark. Am deutlichsten war der Unterschied zwischen den vorne und hinten liegenden Clustern beim BioSemi-System: Der okzipitale Wert (9,76) war mehr als doppelt so hoch wie der zentrale (3,76) und fast doppelt so hoch wie der frontale (5,26). Bei s2 war die Abstufung am geringsten, der Unterschied zwischen okzipital (4,58) und frontal (2,74) war relativ gesehen kleiner. Dies passt zur oben diskutierten Erklärung, dass die Versuchspersonen im Verlauf der Messung müder wurden und dadurch die Alpha-Power bei offenen Augen zunahm.\newline
 
 Mit einer Alpha-Suppression von 9,76 lag das BioSemi-System nahe an einem Verhältnis von 10. Auch mit dem OpenBCI-System wurde bei wachen Versuchspersonen außerhalb der Kabine mit 8,39 ein guter und nur wenig abweichender Wert erreicht. Das ist ein klarer Beleg für den \gls{berger-effekt}. Zudem spricht die räumliche Verteilung gegen einen äußeren Störeinfluss, da ein solcher alle Cluster gleich stark betreffen würde. Stattdessen war die Suppression systematisch dort am größten, wo der Berger-Effekt physiologisch zu erwarten ist.\newline
 
