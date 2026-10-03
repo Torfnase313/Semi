@@ -153,23 +153,20 @@ Trockene Elektroden bestehen aus einem leitfähigen Material wie Metall und lieg
 \end{figure}
 \end{comment}
 
-\newsavebox{\imgbox}% To store stuff
-
 \begin{figure}[H]
   \centering
-  \begin{minipage}[b]{.45\linewidth}
+  \begin{minipage}[t]{.47\linewidth}
     \centering
-    \global\setbox\imgbox=\hbox{\includegraphics[width=\linewidth]{bilder/finger_electrodes.jpg}}% Save largest image
-    \usebox\imgbox% Print image
-    \par\vspace{0.1cm}\noindent Quelle: \cite{xing2018}\par
+    \includegraphics[height=4.2cm]{bilder/finger_electrodes.jpg}
+    \quelle{\cite{xing2018}}
     \caption{Fingerelektroden}
     \label{Fingerelektroden}
   \end{minipage}
   \hfill
-  \begin{minipage}[b]{.45\linewidth}
+  \begin{minipage}[t]{.47\linewidth}
     \centering
-    \raisebox{\dimexpr0.5\ht\imgbox-0.5\height}{\includegraphics[width=\linewidth]{bilder/spikey_electrodes.jpg}}
-    \par\vspace{0.1cm}\noindent Quelle: \cite{openbci_ultracortex_shop}\par
+    \includegraphics[height=4.2cm]{bilder/spikey_electrodes.jpg}
+    \quelle{\cite{openbci_ultracortex_shop}}
     \caption{Spitze Elektroden}
     \label{Spitze Elektroden}
   \end{minipage}
@@ -199,18 +196,24 @@ Bei der Verwendung nicht-invasiver Elektroden gibt es verschiedene Möglichkeite
 
 Jede Elektrode wird mit einem Buchstaben und einer Ziffer kodiert (in manchen Fällen mit zwei Buchstaben). Die Buchstaben sind Abkürzungen für die darunterliegenden Lappen des Gehirns. Sie orientieren sich an den Gehörgangsöffnungen und an zwei festen Punkten, dem Nasion und Inion. Der Punkt Nasion ist in Abbildung \ref{nasion} markiert und der am weitesten vorne gelegene Punkt der Nahtstelle zwischen Stirnbein und dem linken und rechten Nasenbein. Die horizontale Ebene, auf der dieser Punkt liegt, trennt das Ober- vom Mittelgesicht.\footnote{Vgl. \cite{doccheck_nasion}} Der Punkt, der mit Inion bezeichnet wird, ist der am weitesten vorspringende Punkt des Os occipitale, ein platter Schädelknochen an der hinteren unteren Seite des Schädels, und in Abbildung \ref{inion} markiert.\footnote{Vgl. \cite{doccheck_inion}} \newline
 
-\begin{minipage}{0.5\textwidth}
-	\includegraphics[width=\textwidth]{bilder/nasion.jpg}
+\begin{figure}[H]
+  \centering
+  \begin{minipage}[t]{.47\linewidth}
+    \centering
+    \includegraphics[height=5cm]{bilder/nasion.jpg}
     \quelle{\cite{doccheck_nasion}}
-	\captionof{figure}{Position des Nasions}
+    \caption{Position des Nasions}
     \label{nasion}
-\end{minipage}
-\begin{minipage}{0.5\textwidth}
-	\includegraphics[width=\textwidth]{bilder/inion.jpg}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[t]{.47\linewidth}
+    \centering
+    \includegraphics[height=5cm]{bilder/inion.jpg}
     \quelle{\cite{doccheck_inion}}
-	\captionof{figure}{Position des Inions}
+    \caption{Position des Inions}
     \label{inion}
-\end{minipage}
+  \end{minipage}
+\end{figure}
 
 Die Buchstaben stehen für:
 \begin{itemize}
