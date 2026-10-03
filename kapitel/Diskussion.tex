@@ -1,4 +1,17 @@
 \chapter{Diskussion der Erkenntnisse}
+
+In beiden OpenBCI-Durchläufen trat zusätzlich ein schmaler Peak, also ein Hochpunkt, bei 25\,Hz auf, der beim BioSemi-System fehlte (in Abbildung \ref{frequenzbandanalyse} zu sehen). Er ist zu groß, zu regelmäßig und unabhängig von Augenzustand und Bedingung (keine Unterschiede in Amplitude oder Frequenz zwischen \acrshort{eo}/\acrshort{ec} sowie zwischen s1 und s2), um neuronalen Ursprungs zu sein. Auch ist nach aktuellem Stand kein physiologischer Effekt bekannt, der einen solchen Ausschlag erklären würde. Für eine technische Ursache kommen mehrere Möglichkeiten infrage:\newline
+\begin{itemize}
+  \item Netzbrummen scheidet aus, da der Peak nicht bei 50 Hz liegt und sich in der Kabine keine Netzteile befinden. Gegenüber dem BioSemi-Durchlauf kam lediglich der Laptop hinzu.
+  \item Bildschirmflackern: Bei Pixel-Inversion oder Frame Rate Control entsteht ein Flackern mit der halben Bildwiederholrate, bei einem 60-Hz-Monitor also bei 30 Hz %(Quelle: flickersense.org/background/led-screens). Das erklärt einen Peak bei 25 Hz nicht direkt.
+  \item Das Cyton-Board könnte aus anderen Gründen ein elektromagnetisches Feld mit 25 Hz abstrahlen.
+\end{itemize}
+
+Mit Sicherheit lässt sich die Ursache auf Basis der vorliegenden Daten nicht bestimmen. Am wahrscheinlichsten ist ein Einfluss des Boards, möglicherweise auch des Laptops.
+
 \section{Interpretation der Ergebnisse}
+
+Die Alpha-Suppression war mit dem OpenBCI-System bei allen Versuchspersonen deutlich ausgeprägt, auch außerhalb der Kabine. Das spricht dafür, dass sich das Öffnen und Schließen der Augen grundsätzlich als einfaches Steuersignal für einen Roboterarm eignen könnte. Ob dies auch in Echtzeit zuverlässig gelingt, muss in einer Folgestudie geprüft werden.
+
 \section{Vor- und Nachteile eines tragbaren EEG-Systems}
 \section{Vor- und Nachteile eines stationären EEG-Systems}
