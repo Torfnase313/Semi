@@ -11,7 +11,7 @@ verrauscht oder übersteuert, das heißt, sie zeigten dauerhaft den maximal
 messbaren Wert an und enthielten keine verwertbare Hirnaktivität mehr. Solch
 übersteuerte Elektroden werden auch als \textit{railed} bezeichnet. Einzelne
 gestörte Elektroden lassen sich zwar aus den benachbarten Elektroden
-rechnerisch durch Interpolation ersetzen (vgl. Abschnitt 3.4.1), sind jedoch
+rechnerisch durch Interpolation ersetzen (vgl. Abschnitt~\ref{sec:vorverarbeitung}), sind jedoch
 zu viele Elektroden betroffen, ist dieses Verfahren nicht anwendbar, da die
 Interpolation fehlender Kanäle aus benachbarten Elektroden voraussetzt, dass
 genügend gute Nachbarkanäle vorhanden sind. Folgende Datensätze mussten
@@ -73,6 +73,7 @@ Kopfseite größer war.
     BioSemi & S3 & 6 & 5,58 $\pm$ 3,24 & 4,53 $\pm$ 2,11 \\
     \hline
   \end{tabular}
+  \tabquelle{Eigene Darstellung}
 \end{table}
 
 Tabelle~\ref{tab:p1_amplituden} zeigt die mittleren P1-Amplituden beider Darbietungsformen für die drei Bedingungen. In allen drei Bedingungen war die P1 für große, kontrastreiche Stimuli größer als für kleine, kontrastreduzierte Stimuli. Die Höhe der P1 unterschied sich allerdings zwischen den Versuchsbedingungen und nahm von S3 über S2 zu S1 deutlich ab. Der Unterschied der mittleren Amplituden im Zeitfenster von 80--200\,ms zwischen großen, kontrastreichen und kleinen, kontrastreduzierten Stimuli betrug beim BioSemi-System 1,05\,\textmu V, beim OpenBCI-System in S2 0,38\,\textmu V und in S1 nur noch 0,15\,\textmu V. Gemittelt über beide Darbietungsformen erreichte das OpenBCI-System in S2 etwa 43\,\% und in S1 etwa 25\,\% der Amplitude des BioSemi-Systems. Die Standardabweichungen waren in allen Bedingungen groß. Sie betrugen beim BioSemi-System bis zu 3,24\,\textmu V und lagen in S1 mit 1,41\,\textmu V über dem zugehörigen Mittelwert von 1,20\,\textmu V.
@@ -82,13 +83,13 @@ Tabelle~\ref{tab:p1_amplituden} zeigt die mittleren P1-Amplituden beider Darbiet
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.95\textwidth]{diagramme/4-2_ERP_grand_average_gemeinsame6.pdf}
-    \quelle{Eigenabbildung} 
+    \quelle{Eigene Abbildung} 
    \caption{ERP-Grand-Average, nur Versuchspersonen mit drei gültigen Messungen, oben: groß, kontrastreich, unten: klein, kontrastreduziert}
     \label{erps_ergebnisse}
 \end{figure}
 
 
-Abbildung~\ref{fig:erp_vergleich} zeigt die über alle Versuchspersonen gemittelten Kurvenverläufe. In allen drei Bedingungen folgte auf die P1 eine Negativität um etwa 200\,ms und eine breitere Positivität zwischen etwa 300 und 350\,ms. Der grundsätzliche Verlauf stimmte damit zwischen den Systemen überein. Im Zeitraum vor dem Stimulus schwankten die OpenBCI-Kurven stärker als die BioSemi-Kurve. Ab etwa 400\,ms fielen sie zudem unter die Nulllinie ab, während das BioSemi-Signal positiv blieb. \newline 
+Abbildung~\ref{erps_ergebnisse} zeigt die über alle Versuchspersonen gemittelten Kurvenverläufe. In allen drei Bedingungen folgte auf die P1 eine Negativität um etwa 200\,ms und eine breitere Positivität zwischen etwa 300 und 350\,ms. Der grundsätzliche Verlauf stimmte damit zwischen den Systemen überein. Im Zeitraum vor dem Stimulus schwankten die OpenBCI-Kurven stärker als die BioSemi-Kurve. Ab etwa 400\,ms fielen sie zudem unter die Nulllinie ab, während das BioSemi-Signal positiv blieb. \newline 
 Zur Abschätzung des Grundrauschens wurde die Standardabweichung im Basislinienintervall ($-$200 bis 0\,ms) bestimmt, als \gls{snrgl} (\acrshort{snr}) das Verhältnis aus mittlerer P1-Amplitude und dieser Standardabweichung. Das Grundrauschen lag beim OpenBCI-System um etwa 15 bis 36\,\% höher als beim BioSemi-System. Das \acrshort{snr} war beim BioSemi-System bei großen Stimuli etwa 2,6- bis 3,3-mal und bei kleinen Stimuli etwa 1,4- bis 2-mal so hoch wie beim OpenBCI-System.
 
 \section{Ergebnisse für das Alpha-Paradigma}
@@ -99,12 +100,12 @@ Zur Abschätzung des Grundrauschens wurde die Standardabweichung im Basislinieni
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.95\textwidth]{diagramme/occipital_cluster_psd_ohne_kanalangaben.png}
-    \quelle{Eigenabbildung} 
+    \quelle{Eigene Abbildung} 
    \caption{Ergebnis der \acrshort{psd} an den okzipitalen Elektroden für alle drei Versuchsbedingungen, links S1, Mitte S2, rechts S3}
     \label{frequenzbandanalyse}
 \end{figure}
 
-Für die Analyse wurden ausschließlich die hinteren Elektroden über dem Okzipitallappen betrachtet (okzipitaler Cluster), da der \gls{berger-effekt} (vgl. Abschnitt~\ref{sec:alpha}) dort am stärksten ausgeprägt ist. Abbildung \ref{frequenzbandanalyse} zeigt die  \acrshort{psd} dieses Clusters als Mittelwert über alle Versuchspersonen, getrennt für die drei Versuchsbedingungen. Die \acrshort{psd} (vgl. Abschnitt~\ref{sec:alphaauswertung}) wird in \textmu V$^2$/Hz angegeben, weil die Leistung quadratisch von der Amplitude abhängt. Dadurch lässt sich die Alpha-Aktivität (8–12 Hz, grün hinterlegt) direkt ablesen.\newline
+Für die Analyse wurden ausschließlich die hinteren Elektroden über dem Okzipitallappen betrachtet (okzipitaler Cluster), da der \gls{berger-effekt} (vgl. Abschnitt~\ref{sec:alpha}) dort am stärksten ausgeprägt ist. Abbildung \ref{frequenzbandanalyse} zeigt die  \acrshort{psd} dieses Clusters als Mittelwert über alle Versuchspersonen, getrennt für die drei Versuchsbedingungen. Die \acrshort{psd} (vgl. Abschnitt~\ref{sec:alphaauswertung}) wird in \textmu V$^2$/Hz angegeben, weil die Leistung quadratisch von der Amplitude abhängt. Dadurch lässt sich die Alpha-Aktivität (8–12 Hz, grün hinterlegt) direkt ablesen. Die Mittelwerte der Alpha-Power der einzelnen Versuchspersonen sind in Tabelle~\ref{tab:alpha_power} aufgeführt.\newline
 
 \begin{table}[htbp]
     \centering
@@ -124,6 +125,7 @@ Für die Analyse wurden ausschließlich die hinteren Elektroden über dem Okzipi
     pt\_10 & $0{,}83$ & $2{,}04$  & $1{,}00$ & $11{,}10$ & $18{,}51$ & $22{,}73$ \\
     \bottomrule
     \end{tabular}
+  \tabquelle{Eigene Darstellung}
 \end{table}
 
 
@@ -146,9 +148,10 @@ In allen drei Messungen zeigt sich im Alpha-Bereich ein deutlicher Unterschied z
     pt\_10 & 6 & 5 & 4 \\
     \bottomrule
     \end{tabular}
+  \tabquelle{Eigene Darstellung}
 \end{table}
 
-blabla rangfolge\newline
+blabla rangfolge (Tabelle~\ref{tab:alpha_rank})\newline
 
 In beiden OpenBCI-Durchläufen tritt zusätzlich ein schmaler Peak, also ein Hochpunkt, bei 25 Hz auf, der beim BioSemi-System fehlt (in Abbildung \ref{frequenzbandanalyse} zu sehen). Er ist zu groß, zu regelmäßig und unabhängig von Augenzustand und Bedingung (keine Unterschiede in Amplitude oder Frequenz zwischen \acrshort{eo}/\acrshort{ec} sowie zwischen S1 und S2), um neuronalen Ursprungs zu sein. Auch ist nach aktuellem Stand kein physiologischer Effekt bekannt, der einen solchen Ausschlag erklären würde. Für eine technische Ursache kommen mehrere Möglichkeiten infrage:\newline
 \begin{itemize}
@@ -166,7 +169,7 @@ Als Alpha-Suppression bezeichnet man das Verhältnis der mittleren Alpha-Power b
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.95\textwidth]{diagramme/alpha_suppression_by_electrode_cluster_ohne_kanalangaben.png}
-    \quelle{Eigenabbildung} 
+    \quelle{Eigene Abbildung} 
    \caption{Alpha-Suppression an den \glspl{elektrodencluster} für alle drei Versuchsbedingungen, mit rot ist der Cluster mit größter Suppression markiert, links S1, Mitte S2, rechts S3}
     \label{alpha_suppression}
 \end{figure}
