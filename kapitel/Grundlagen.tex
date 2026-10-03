@@ -444,8 +444,12 @@ Für das P1-Paradigma gelten folgende Kriterien:
     \item Die mittlere Amplitude der P1 ist für große, kontrastreiche Stimuli größer als für kleine, kontrastreduzierte Stimuli.
     \item Die P1 hebt sich vom Hintergrundrauschen ab, das \gls{snrgl} (\acrshort{snr}) ist also größer als 1.
 \end{itemize}
-% TODO Sophie: Auswertbarkeit, Verweis auf 3.4, Einschränkung (vergleichbar != identisch), Verneinung
-% TODO Sophie: Absätze "Alltagsnahe Umgebung" und "Grundlage für den Roboterarm"
+Für beide Paradigmen wird zudem der Anteil der auswertbaren Datensätze je Versuchsbedingung angegeben und mit dem BioSemi-System verglichen. Wie diese Größen berechnet werden, ist in Abschnitt~\ref{sec:auswertung} beschrieben. Dabei ist nicht zu erwarten, dass beide Systeme identische Werte liefern, da sie sich in Elektroden und Verstärkern unterscheiden. Entscheidend ist, dass die genannten Kriterien erfüllt sind. Ist dies beim OpenBCI-System nicht der Fall, kann die Datenqualität nicht als vergleichbar angenommen werden.\newline
+
+\textbf{Alltagsnahe Umgebung:} Als alltagsnah gilt eine Umgebung, die eine Anwendung im School\_Lab und im Alltag ermöglicht, also ohne Kinnstütze und ohne vollständig abgeschirmte Kabine. Um dies umzusetzen, wird das OpenBCI-System in zwei Versuchsbedingungen gemessen: in s1 bei geöffneter Kabine und ohne Kinnstütze, in s2 bei geschlossener Kabine und mit Kinnstütze. Als Referenz dient das BioSemi-System, das unter idealen Bedingungen misst (s3, vgl. Abschnitt~\ref{sec:bedingungen}). Die Kriterien für die Datenqualität werden für jede Versuchsbedingung getrennt geprüft. Sind sie auch in s1 erfüllt, ist das OpenBCI-System auch in einer alltagsnahen Umgebung einsetzbar.\newline
+
+\textbf{Grundlage für den Roboterarm:} Ein Steuersignal für den Roboterarm muss willentlich erzeugt werden können und in kurzen Abschnitten von wenigen Sekunden erkennbar sein. Der \gls{berger-effekt} erfüllt diese Anforderungen, da das Schließen der Augen von jeder Person ohne Training ausgelöst werden kann. Zur Umsetzung werden die Alpha-Blöcke in Abschnitte von 2\,s zerlegt. Für jeden Abschnitt wird anhand der Alpha-Power entschieden, ob die Augen geöffnet oder geschlossen waren, und gezählt, wie oft diese Entscheidung richtig ist (Trefferquote). Die Daten gelten als Grundlage für die Steuerung, wenn die Trefferquote sicher über dem Zufallsniveau von 50\,\% liegt. Bei rund 60 Abschnitten pro Versuchsperson ist dies ab einer Trefferquote von etwa 62\,\% der Fall.\footnote{Vgl. \cite{muellerputz2008}} Grundlage bedeutet dabei, dass sich das Steuersignal in den aufgezeichneten Daten nachweisen lässt. Ob die Steuerung auch in Echtzeit funktioniert, wird in dieser Arbeit nicht untersucht.\newline
+
 
 Bezüglich dieser Paradigmen wurden folgende Hypothesen aufgestellt:
 
