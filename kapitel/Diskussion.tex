@@ -18,11 +18,86 @@ Mit Sicherheit lässt sich die Ursache auf Basis der vorliegenden Daten nicht be
 
 \section{Bezug auf die Hypothesen}
 
-Das ist ein klarer Beleg für den \gls{berger-effekt}. Zudem spricht die räumliche Verteilung gegen einen äußeren Störeinfluss, da ein solcher alle Cluster gleich stark betreffen würde. Stattdessen war die Suppression systematisch dort am größten, wo der Berger-Effekt physiologisch zu erwarten ist.\newline
+\textbf{Alpha-Paradigma}\newline
+Der relative Unterschied zwischen den Messwerten der Alpha-Suppression zwischen OpenBCI und BioSemi-Gerät beträgt 0,86. Dies zeigt, dass das Alpha-Paradigma grundlegend eine gute Grundlage für eine BCI-Anwendung ist. Ob das OpenBCI-Gerät tatsächlich den Hans-Berger-Effekt misst und ob die Grundlage für eine Roboterarm-Anwendung besteht, wird im Folgenden diskutiert.\newline
 
-Die Alpha-Suppression war mit dem OpenBCI-System bei allen Versuchspersonen deutlich ausgeprägt, auch bei offener Kabinentür. Das spricht dafür, dass sich das Öffnen und Schließen der Augen grundsätzlich als einfaches Steuersignal für einen Roboterarm eignen könnte. Ob dies auch in Echtzeit zuverlässig gelingt, muss in einer Folgestudie geprüft werden.
+\textit{1) Bei beiden Systemen ist die Alpha-Power bei geschlossenen Augen bei jeder Versuchsperson größer als bei geöffneten Augen (Alpha-Suppression \acrshort{ec}/\acrshort{eo} $\geq$ 2).}\newline
 
+Die Alpha-Suppression lag bei jedem/jeder ProbandIn und jeder Bedingung über dem Schwellenwert von zwei (siehe Abschnitt \ref{sec:supp}, unten). Die Hypothese ist damit bestätigt. Die Suppressionen schwanken stark zwischen 2,6 und 22,7.\newline
+Diese Unterschiede zwischen den ProbandInnen sind auf die kleine Basislinie mancher ProbandInnen zurückzuführen. Eine kleine Schwankung der Basislinie zwischen den ProbandInnen (zB durch unterschiedliche Haarbedeckung) resultiert in einer großen Schwankung in der Suppression. Verstärkt wird dieser Effekt durch die quadratische Abhängigkeit der Leistung von der Amplitude der Alpha-Wellen.\newline
+Würde ein durchschnittlicher Schwellenwert genutzt werden, könnten ProbandInnen mit geringer Suppression diesen nicht erreichen und der Roboterarm zu empfindlich auf geringe Alpha-Power-Schwankungen bei ProbandInnen mit großer Suppression reagieren. \newline
+Deswegen muss bei der Programmierung eines Roboterarms beachtet werden, dass der Schwellenwert der Alpha-Suppression zur Initiation für eine Bewegung individuell angepasst werden sollte. \newline
 
+\textit{2)Die Rangfolge der Versuchspersonen nach ihrer Alpha-Power stimmt zwischen den Versuchsbedingungen stark überein ($\rho \geq 0{,}5$).}\newline
+
+Die Rangkorrelation zwischen s1 und s3 ist sehr gut und liegt bei $\rho$ = 0,94, also deutlich über dem Schwellenwert von 0,5. Die Korrelation zwischen s2 und s3 liegt nur bei  $\rho$ = 0,66 und ist damit zwar über dem Schwellenwert, ist aber deutlich geringer als 0,94. Die Erklärung für diesen Wert ist bei der Diskussion von Hypothese sechs gegeben.\newline 
+
+\textit{3)Bei beiden Systemen ist die Alpha-Suppression okzipital oder parietal am größten.}\newline
+
+Auch diese Hypothese wird durch die Daten bestätigt (siehe Abschnitt \ref{sec:supp}). Der Unterschied zwischen vorne und hinten liegenden Cluster ist unter den drei Versuchsbedingungen unterschiedlich stark ausgeprägt (3,76 > 2,29>1,67). Bei s2 ist der relative Unterschied der Suppression zwischen dem okzipitalen und frontalen Cluster nur 1,67. Dieser Unterschied ist zwar größer als eins (entspräche keinem Unterschied zwischen den Regionen), kann aber trotzdem nur durch Zufall oder äußere Faktoren entstanden sein. Dies zeigt, dass die Messung unter Versuchsbedingung s2 möglicherweise nicht verwertbar sind, da hier nicht mit Sicherheit gesagt werden kann, dass diese Suppression der Hans-Berger-Effekt, der physiologisch über dem am Hinterkopf zu erwarten ist, ist und nicht ein Störsignal, welches sich auf alle Cluster auswirkt, ist. Die Begründung für diese schlechte Datenqualität bei s2 wird in der Diskussion von Hypothese sechs angebracht.\newline
+Für die anderen beiden Versuchsbedingungen wird jedoch der Hans-Berger-Effekt nachgewiesen. Es ist möglich, über einen 60 Sekunden langen Abschnitt die Alpha-Suppression aufzuzeichnen und damit einen Roboterarm zu steuern.\newline
+
+\textbf{P1-Paradigma}\newline
+Die mittlere P1-Amplitude ist bei den Messungen mit dem OpenBCI-System grundlegend geringer als beim BioSemi-System (s2/s3 = 0,86 und s1/s3 = 0,57). Das zeigt, dass das BioSemi-System ERPs und einzelne ERP-Komponenten stärker erfassen kann als das OpenBCI-System. Das bedeutet weiterhin, dass das OpenBCI-System bei dem P1-Paradigma, auch unabhängig vom Rauschen, schlechtere Werte liefert als das BioSemi-System. Ob das Paradigma trotzdem für eine Anwendung genutzt werden kann, wird im Folgenden untersucht.\newline
+
+\textit{4) Die P1 hebt sich bei beiden Systemen vom Rauschen ab (\acrshort{snr} > 1), die \acrshort{snr} ist beim OpenBCI-System aber geringer als beim BioSemi-System.}\newline
+
+Die SNR ist für beide Systeme in Tabelle \ref{tab:snr} dargestellt. Die SNR ist durchschnittlich für beide Systeme und auch für das OpenBCI-Gerät unter alltagsnahen Bedingungen größer als eins. Es gab jedoch drei Situationen, bei denen ein(e) ProbandIn bei einer Versuchsbedingung eine SNR von unter eins hatte. Da dies einmal der Fall mit dem BioSemi-System war, ist dies nicht besorgniserregend, da es nicht das Ziel ist, bessere Daten als das BioSemi-System zu erzeugen, also es nicht notwendig ist, dass alle Durchläufe eine SNR von über eins haben.\newline
+Die SNR ist für das BioSemi-System größer als für das OpenBCI-System (4,83 > 2,53 > 1,72 und 3,04 > 2,44>1,60). Die Daten bestätigen demnach die Hypothese. Das zeigt, dass das Paradigma ebenfalls für eine Anwendung genutzt werden kann.\newline
+
+\textit{5) Bei beiden Systemen ist die mittlere P1-Amplitude für große, kontrastreiche Stimuli größer als für kleine, kontrastreduzierte Stimuli. Dabei ist der Unterschied beim BioSemi-System größer als beim OpenBCI-System.}\newline
+
+Die Daten zur Einschätzung dieser Hypothese sind in Tabelle \ref{tab:p1_amplituden} und Tabelle \ref{tab:snr} zu finden. Der Unterschied zwischen großen, kontrastreichen und kleinen, kontrastreduzierten Stimuli liegt bei s3, also beim BioSemi-System bei 0,77\textmu V und ist damit mehr als doppelt so groß wie OpenBCI mit geschlossener Kabine (0,34 \textmu V). Der Wert für s1, OpenBCI mit geöffneter Kabine, ist im Vergleich dazu sehr gering (0,05 \textmu V).
+Um zu überprüfen, ob diese Unterschiede außerhalb des Fehlerintervalls liegen, muss der relative Unterschied betrachtet werden, der so berechnet wird:
+
+\begin{equation} \text{relative Amplitudenreduktion} = \frac{\text{P1-Amplitude für große Reize} - \text{P1-Amplitude für kleine Reize}}{\text{P1-Amplitude für große Reize}} 
+\end{equation} 
+
+Aus dem Signal-Rausch-Verhältnis lässt sich ein Richtwert für den Messfehler einer Messung bestimmen. Der exakte Messfehler ist in der Praxis nicht zu errechnen, die Nutzung des relativen Fehlers ist ausreichend. Dabei gilt:
+
+\begin{equation}
+    \text{relativer Messfehler} \approx \frac{1}{\text{SNR}}
+\end{equation}
+
+\begin{table}[htbp]
+    \centering
+    \caption{Relative Amplitudenreduktion der P1, SNR und relativer Messfehler je Versuchsbedingung in Bezug auf große, kontrastreiche Bilder}
+    \label{tab:p1_reduktion}
+    \begin{tabular}{cccc}
+    \toprule
+    Versuchsbedingung & Relative Amplitudenreduktion & SNR & Relativer Fehler \\
+    \midrule
+    s1 & $3{,}3\,\%$  & 1,72 & $58{,}14\,\%$ \\
+    s2 & $14{,}2\,\%$ & 2,53 & $40{,}0\,\%$  \\
+    s3 & $25{,}9\,\%$ & 4,83 & $20{,}7\,\%$  \\
+    \bottomrule
+    \end{tabular}
+    \tabquelle{Eigene Darstellung}
+\end{table}
+
+In Tabelle \ref{tab:p1_reduktion} sind die Werte für alle Versuchsbedinungen zu sehen. Es fällt auf, dass für s1 und s2 die relative Amplitudenreduktion geringer ist als der relative Fehler. Der absolute Unterschied liegt also im Fehlerintervall. \newline
+Es ist außerdem zu sehen, dass die Daten bei Bedingung 1 am wenigsten aussagekräftig sind, da der relative Fehler mehr als zehnmal so groß ist wie der gewünschte Effekt.\newline
+S3 ist die einzige Bedingung, bei der die Amplitudenreduktion außerhalb des Fehlerintervalls liegt. Die Hypothese, es lässt sich ein Unterschied zwischen den Darbietungsformen messen, ist nur für das BioSemi-System zu bestätigen, nicht für das OpenBCI-System, selbst unter Laborbedingungen.\newline
+
+Grund für diese Beobachtung kann ein starkes Rauschen des OpenBCI-Systems sein. Es kann in einer Folgestudie überprüft werden, ob ein größerer Kontrast zwischen den Darbietungsformen für eindeutige Messwerte mit dem OpenBCI-System sorgen würden oder ob ein derart kleiner Unterschied mit dem OpenBCI-System grundlegend nicht messbar ist. Die P1-Grundlage kann zwar für eine Anwendung genutzt werden, allerdings ist der Unterschied zwischen verschiedenen Reizen kein guter Anhaltspunkt, um ein BCI mit dem OpenBCI-System zu erstellen.\newline
+
+\textbf{Umgebung und Steuersignal}\newline
+Hier werden zwei konkrete Aspekte zur Umsetzung eines Roboerarms-BCIs diskutiert: Die Umgebung, in der das System genutzt werden soll, und die Art des Steuersignals. \newline
+
+\textit{6) Die Kriterien für die Datenqualität sind auch bei offener Kabinentür ohne Kinnstütze (s1) erfüllt, die Datenqualität ist bei geschlossener Kabinentür mit Kinnstütze (s2) aber besser.}\newline
+
+Beim Auswerten des Alpha-Paradigmas ist mehrmals aufgefallen, dass die Daten aus s2 wesentlich schlechter sind als die Daten aus s1 (siehe Hypothese 2 und 3). Das ist unerwartet, aber leicht zu erklären: Die Kabinentür war in s2 zwar geschlossen, was elektrische Störungen reduziert, aber dieser Einfluss ist gering. Ein größeren Einfluss hat der Gemütszustand der ProbandInnen. Es ist natürlich, dass sie nach zwanzig Minuten in einem dunklen Raum, wobei sie nahezu nichts tun müssen, müde werden oder sich langweilen. Beides erhöht die Alpha-Power mit geöffneten Augen, hat aber wenig Einfluss auf die Alpha-Aktivität mit geschlossenen Augen, da die ProbandInnen auch nach nur zehn Minuten sich mit geschlossenen Augen sehr entspannen. S1 ist die zuerst durchgeführte Bedingung und liefert theoretisch die aussagekräftigste Alpha-Aktivität bei EO. \newline
+S2 fand danach statt und hat eine höhere Alpha-Aktivität bei EO (wie in Abschnitt \ref{sec:frequenzbandanalyse}, Absatz drei beschrieben), was darin resultiert, dass die Alpha-Suppression im Durchschnitt geringer ist. Die Alpha-Aktivität aufgrund Müdigkeit ist in allen Hirnregionen zu messen, deswegen ist der Unterschied zwischen den Elektroden-Clustern so gering (siehe Hypothese zwei). Die Müdigkeit ist bei jedem Probanden / jeder Probandin unterschiedlich stark ausgeprägt. Das spiegelt sich in der geringen Ähnlichkeit der Probandenlisten wieder (Hypothese drei).\newline
+Nach dieser Argumentation ist zu erwarten, dass die Messwerte unter Bedingung s3 noch stärker durch Müdigkeit beeinflusst sein. Dies ist jedoch nicht der Fall, sie sind sehr ähnlich zu s1 was Rangfolge und Alpha-Suppression betrifft. Das ist mit der Beschaffenheit des BioSemi-Systems zu begründen. Es wird ein kaltes Elektrolyt verwendet, um die Leitfähigkeit zu erhöhen. Dieses Elektrolyt befindet sich direkt auf der Kopfhaut und wirkt der Müdigkeit entgegen. \newline
+
+Die Hypothese wurde hinsichtlich des Alpha-Paradigmas widerlegt. Die Datenqualität ist bei offener Kabinentür besser als bei geschlossener, allerdings liegt es dabei nicht an der Tür, sondern an dem Gemütszustand der ProbandInnen. \newline
+Die Müdigkeit hat jedoch keinen Einfluss auf das P1-Paradigma. Die Verhaltensergebnisse zeigen, dass die ProbandInnen trotz Müdigkeit aktiv an dem Experiment teilnahmen. Bei diesem Paradigma nimmt die Datenqualität wie erwartet in der Reihenfolge s3>s2>s1 ab. Die SNR des des OpenBCI-System bei geschlossener Kabine ist deutlich größer als bei geöffneter Kabine und ohne Kinnstütze (2,53>1,72 und 2,44>1,60).\newline
+Die Hypothese wird für das P1-Paradigma bestätigt. Es kann vermutet werden, dass das Alpha-Paradigma die Hypothese bestätigen würde, wenn die ProbandInnen nicht müde werden würden, aber eine begründete Aussage lässt sich nicht treffen. In Hinsicht auf die Roboterarm-Anwendung ist dies jedoch eine wichtige Erkenntnis: Das OpenBCI-System ist anfällig für Müdigkeit und eine Anwendung sollte anregend sein, um das Auftreten von Müdigkeit zu reduzieren.\newline
+
+\textit{7) Mit dem OpenBCI-System lässt sich in 2-s-Abschnitten erkennen, ob die Augen geöffnet oder geschlossen waren, das heißt, die Trefferquote liegt in allen Versuchsbedingungen nicht nur über dem Zufallsniveau von 50\,\%, sondern auch über der Zufallsgrenze von 62\,\%.}\newline
+
+Diese Hypothese lässt sich deutlich mit den gemessenen Werten, in Abschnitt \ref{sec:frequenzbandanalyse} unten, untermauern. Das OpenBCI-System erzielte eine Trefferquote von über 75\%, also über dem Schwellenwert.\newline
+Darüber hinaus ist die Ähnlichkeit der Daten zwischen OpenBCI und BioSemi bei diesem Analyseaspekt am höchsten (100\%, beziehungsweise 96\% bei geschlossener Kabine und müden ProbandInnen). Daraus ergibt sich, dass ein Roboterarm mit Alpha-Aktivität über das OpenBCI-Gerät grundsätzlich gesteuert werden kann, da nur kurze, einfache menschliche Steuerimpulse notwendig sind, um ein Signal an den Arm zu übermitteln. Ob dies auch in Echtzeit zuverlässig gelingt, muss in einer Folgestudie geprüft werden.
 
 \section{Vor- und Nachteile eines tragbaren EEG-Systems}
 \section{Vor- und Nachteile eines stationären EEG-Systems}
