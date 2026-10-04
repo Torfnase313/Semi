@@ -1,4 +1,5 @@
-\chapter{Bewertung der Datenqualität}
+\chapter{Diskussion}
+\section{Bewertung der Datenqualität}
 Hier sollen Außergewöhnlichkeiten in den Daten sowie Umstände in der Auswertungsmethodik diskutiert werden. Diese können Einfluss auf die Qualität der Messergebnisse haben.\newline
 
 Bei der Auswertung des P1-Paradigmas wird der Mittelwert der Spannung im Bereich 80 - 200 ms nach dem Reiz zwischen den Systemen verglichen. Wie in Abbildung \ref{erps_ergebnisse} zu sehen, fällt die Spannung im unteren Diagramm für das BioSemi-System am Ende des betrachteten Zeitraums schneller ab als die Spannung der OpenBCI-Systeme. Das hat zur Folge, dass bei der Mittlung der Wert für das BioSemi-System geringer ist als die tatsächliche durchschnittliche Amplitude der P1. 
@@ -13,14 +14,9 @@ In beiden OpenBCI-Durchläufen tritt ein schmaler Peak, also ein Hochpunkt, bei 
   \item Das Cyton-Board könnte aus anderen Gründen ein elektromagnetisches Feld mit 25 Hz abstrahlen.
 \end{itemize}
 
-Mit Sicherheit lässt sich die Ursache auf Basis der vorliegenden Daten nicht bestimmen. Am wahrscheinlichsten ist ein Einfluss des Boards, möglicherweise auch des Laptops.
+Mit Sicherheit lässt sich die Ursache auf Basis der vorliegenden Daten nicht bestimmen. Am wahrscheinlichsten ist ein Einfluss des Boards, möglicherweise auch des Laptops. Der Peak hat keinen Einfluss auf die Auswertung der Daten. Bei der Programmierung des Roboterarms ist jedoch zu beachten, dass diese Frequenz von 25 Hz nicht für die Bewegung des Armes genutzt werden sollte.\newline
 
-Ab einem Verhältnis von etwa 2 wird angenommen, dass die Unterschiede nicht mehr allein auf zufällige Artefakte zurückzuführen sind, sondern den \gls{berger-effekt} abbilden.
-
-80 bis 200 ms verzerrt die Werte für durchschnittlichen P1 wert fürs OpenBCI weil das schneller ins negative abfällt also eig etwas besser 
 \section{Bezug auf die Hypothesen}
-
-
 
 Das ist ein klarer Beleg für den \gls{berger-effekt}. Zudem spricht die räumliche Verteilung gegen einen äußeren Störeinfluss, da ein solcher alle Cluster gleich stark betreffen würde. Stattdessen war die Suppression systematisch dort am größten, wo der Berger-Effekt physiologisch zu erwarten ist.\newline
 
