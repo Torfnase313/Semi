@@ -8,7 +8,7 @@ erklären was alpha-power ist - sophie
 
 -aus alpha-suppression der hirnregionen die bildüberschriften entfernen - sophie
 
--akronyme im text erklären mit ki 
+-akronyme im text erklären und vergleich s1/s3 oder s2/s3 also 0,... zahl nicht als prozentzahl mit ki 
 
 
 fragen an h:
