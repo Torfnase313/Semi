@@ -8,6 +8,8 @@ erklären was alpha-power ist - sophie
 
 -aus alpha-suppression der hirnregionen die bildüberschriften entfernen - sophie
 
+-akronyme im text erklären mit ki 
+
 
 fragen an h:
 
