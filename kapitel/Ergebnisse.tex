@@ -91,7 +91,24 @@ Tabelle~\ref{tab:p1_amplituden} zeigt die mittleren P1-Amplituden beider Darbiet
 
 Abbildung~\ref{erps_ergebnisse} zeigt die über alle Versuchspersonen gemittelten Kurvenverläufe. In allen drei Bedingungen folgte auf die P1 eine Negativität um etwa 200\,ms und eine breitere Positivität zwischen etwa 300 und 350\,ms. Der grundsätzliche Verlauf stimmte damit zwischen den Systemen überein. Im Zeitraum vor dem Stimulus schwankten die OpenBCI-Kurven stärker als die BioSemi-Kurve. Ab etwa 400\,ms fielen sie zudem unter die Nulllinie ab und lagen zwischen 450 und 800\,ms im Mittel bei etwa $-$3,4\,\textmu V, während das BioSemi-Signal mit etwa $-$0,6\,\textmu V nur wenig absank. \newline 
 
-Zur Abschätzung des Grundrauschens wurde die Standardabweichung im Basislinienintervall ($-$200 bis 0\,ms) bestimmt, als \gls{snrgl} (\acrshort{snr}) das Verhältnis aus mittlerer P1-Amplitude und dieser Standardabweichung. Das Grundrauschen lag beim OpenBCI-System um etwa 9 bis 46\,\% höher als beim BioSemi-System. Das \acrshort{snr} war beim BioSemi-System bei großen Stimuli etwa 1,9- bis 2,8-mal und bei kleinen Stimuli etwa 1,2- bis 1,9-mal so hoch wie beim OpenBCI-System. In allen drei Bedingungen lag das \acrshort{snr} im Mittel über 1 (BioSemi 4,83 und 3,04, s2 2,53 und 2,44, s1 1,72 und 1,60).
+Grundrauschen und \acrshort{snr} der P1 sind in Tabelle~\ref{tab:snr} zusammengefasst (Berechnung vgl. Abschnitt~\ref{sec:p1auswertung}). Das Grundrauschen lag beim OpenBCI-System um etwa 9 bis 46\,\% höher als beim BioSemi-System. Das \acrshort{snr} war beim BioSemi-System bei großen Stimuli etwa 1,9- bis 2,8-mal und bei kleinen Stimuli etwa 1,2- bis 1,9-mal so hoch wie beim OpenBCI-System. Im Mittel lag das \acrshort{snr} in allen drei Bedingungen über 1. Bei den einzelnen Versuchspersonen war dies beim BioSemi-System in 11, in s2 in 12 und in s1 in 10 von 12 Fällen (sechs Versuchspersonen mit je zwei Darbietungsformen) der Fall. Die Anzahl der gemittelten Epochen war in allen Bedingungen vergleichbar.
+
+\begin{table}[htbp]
+  \centering
+  \caption{Grundrauschen (Standardabweichung der Basislinie) und \acrshort{snr} der P1 für beide Darbietungsformen (Mittelwert $\pm$ Standardabweichung, $n = 6$)}
+  \label{tab:snr}
+  \small
+  \begin{tabular}{llcccc}
+    \hline
+    System & Bedingung & \shortstack{Rauschen groß,\\kontrastreich [\textmu V]} & \shortstack{Rauschen klein,\\kontrastred. [\textmu V]} & \shortstack{\acrshort{snr} groß,\\kontrastreich} & \shortstack{\acrshort{snr} klein,\\kontrastred.} \\
+    \hline
+    OpenBCI & s1 & 0,79 $\pm$ 0,27 & 0,82 $\pm$ 0,39 & 1,72 $\pm$ 1,50 & 1,60 $\pm$ 0,88 \\
+    OpenBCI & s2 & 0,98 $\pm$ 0,39 & 0,84 $\pm$ 0,39 & 2,53 $\pm$ 1,19 & 2,44 $\pm$ 1,21 \\
+    BioSemi & s3 & 0,67 $\pm$ 0,17 & 0,75 $\pm$ 0,24 & 4,83 $\pm$ 4,05 & 3,04 $\pm$ 2,47 \\
+    \hline
+  \end{tabular}
+  \tabquelle{Eigene Darstellung}
+\end{table}
 
 \section{Ergebnisse für das Alpha-Paradigma}
 \autor{Katharina Ensslen}
