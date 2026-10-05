@@ -26,9 +26,6 @@ statistische Tests: am Ende entscheiden, ob noch gemacht werden. Falls nein, in 
 ---------------------------------------------
 DISKUSSION - PUNKTE ZUM ENTSCHEIDEN (Katharina, Stand 05.10.)
 ---------------------------------------------
-Schon korrigiert: Hypothesen-Nummern/Reihenfolge wie in 2.6, Clusterverhältnisse einheitlich okzipital/zentral
-(2,60 / 2,29 / 1,71), 1,00 und 0,97, "mindestens 75 %", "das SNR", Berger-Effekt, Tippfehler.
-
 INHALTLICH OFFEN
 - Hypothese 2 (Diskussion): Zusatz "mindestens zweimal so groß wie vorne liegende Regionen" steht nicht in 2.6
   -> entweder in 2.6 aufnehmen oder hier streichen
@@ -52,13 +49,8 @@ INHALTLICH OFFEN
   (unwissenschaftlich) und im .bib als zeitschriftartikel statt onlinedokument eingetragen.
   "Peak hat keinen Einfluss" gilt für Alpha; bei P1 liegt 25 Hz unter dem 30-Hz-Tiefpass -> Kontrollrechnung mit
   25-Hz-Notch liegt auf dem Stick (4-2_notch25.csv), prüfen
-- Absatz Zeitfenster (Anfang): BioSemi fällt auch bei großen Reizen im Fenster schon ab (ca. -1 µV bei 195 ms);
-  betrifft auch den Kontrastunterschied, nicht nur s1/s3 und s2/s3
 
 FEHLT NOCH
 - Kriterium Auswertbarkeit aus 2.6: s1 9/10, s2 6/10, BioSemi 10/10 auswertbare Datensätze
-- Grenzen: n = 6; s1/s2 unterscheiden sich in Tür UND Kinnstütze; pt_05 andere Reihenfolge (BioSemi zuerst);
-  Trigger-Rekonstruktion; Referenz über unterschiedliche Kanalzahl; ca. 48 Epochen je Reiztyp
+- Grenzen: n = 6; s1/s2 unterscheiden sich in Tür UND Kinnstütze; pt_05 andere Reihenfolge (BioSemi zuerst); Referenz über unterschiedliche Kanalzahl; ca. 48 Epochen je Reiztyp
 - Vergleich mit Literatur (Rashid 2018, Sabio 2024 aus der Einleitung)
-- Antwort auf die Forschungsfrage (2-3 Sätze) - oder im Fazit
-- Hypothesen werden kursiv wörtlich aus 2.6 wiederholt (Doppelung) -> kurzer Verweis würde reichen
