@@ -2,8 +2,8 @@
 \section{Datengrundlage}
 \autor{Sophie Kleppe}
 Die Datengrundlage für die Auswertung des BioSemi-Systems bilden die Daten aller zehn Versuchspersonen. Für das OpenBCI-System liegen nur neun auswertbare Datensätze aus
-s1 (Kabinentür offen) und sechs aus s2
-(Kabinentür geschlossen) vor. Grund dafür ist das Ausschließen einiger
+s1 (Kabinentür offen und keine Kinnstütze) und sechs aus s2
+(Kabinentür geschlossen und Kinnstütze) vor. Grund dafür ist das Ausschließen einiger
 Datensätze aufgrund von Elektroden, deren Signale keine ausreichende Qualität
 aufwiesen. Eine Ursache sind die Trockenelektroden des OpenBCI-Systems, welche
 bei einigen Messungen keinen dauerhaft ausreichenden Kontakt zur Kopfhaut
@@ -84,14 +84,14 @@ Tabelle \ref{tab:p1_amplituden} zeigt die mittleren P1-Amplituden beider Darbiet
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.95\textwidth]{diagramme/4-2_ERP_grand_average_gemeinsame6.pdf}
-    \quelle{Eigene Abbildung} 
+    \quelle{Eigene Abbildung.} 
    \caption{ERP-Grand-Average, nur Versuchspersonen mit drei gültigen Messungen, oben: groß, kontrastreich, unten: klein, kontrastreduziert}
     \label{erps_ergebnisse}
 \end{figure}
 
 Abbildung \ref{erps_ergebnisse} zeigt die über alle Versuchspersonen gemittelten Kurvenverläufe. In allen drei Bedingungen folgte auf die P1 eine Negativität um etwa 200\,ms und eine breitere Positivität zwischen etwa 300 und 350\,ms. Der grundsätzliche Verlauf stimmte damit zwischen den Systemen überein. Im Zeitraum vor dem Stimulus schwankten die OpenBCI-Kurven stärker als die BioSemi-Kurve. Ab etwa 400\,ms fielen sie zudem unter die Nulllinie ab und lagen zwischen 450 und 800\,ms im Mittel bei etwa $-$3,4\,\textmu V, während das BioSemi-Signal mit etwa $-$0,6\,\textmu V nur wenig absank. \newline 
 
-Grundrauschen und \acrshort{snr} der P1 sind in Tabelle~\ref{tab:snr} zusammengefasst (Berechnung vgl. Abschnitt~\ref{sec:p1auswertung}). Das Grundrauschen lag beim OpenBCI-System um etwa 9 bis 46\,\% höher als beim BioSemi-System. Das \acrshort{snr} war beim BioSemi-System bei großen Stimuli etwa 1,9- bis 2,8-mal und bei kleinen Stimuli etwa 1,2- bis 1,9-mal so hoch wie beim OpenBCI-System. Im Mittel lag das \acrshort{snr} in allen drei Bedingungen über 1. Bei den einzelnen Versuchspersonen war dies beim BioSemi-System in 11, in s2 in 12 und in s1 in 10 von 12 Fällen (sechs Versuchspersonen mit je zwei Darbietungsformen) der Fall. Die Anzahl der gemittelten Epochen war in allen Bedingungen vergleichbar.
+Grundrauschen und \acrshort{snr} der P1 sind in Tabelle~\ref{tab:snr} zusammengefasst (Berechnung vgl. Abschnitt~\ref{sec:p1auswertung}). Das Grundrauschen lag beim OpenBCI-System um etwa 1,09 bis 1,46mal höher als beim BioSemi-System. Das \acrshort{snr} war beim BioSemi-System bei großen Stimuli etwa 1,9- bis 2,8-mal und bei kleinen Stimuli etwa 1,2- bis 1,9-mal so hoch wie beim OpenBCI-System. Im Mittel lag das \acrshort{snr} in allen drei Bedingungen über 1. Bei den einzelnen Versuchspersonen war dies beim BioSemi-System in 11, in s2 in 12 und in s1 in 10 von 12 Fällen (sechs Versuchspersonen mit je zwei Darbietungsformen) der Fall. Die Anzahl der gemittelten Epochen war in allen Bedingungen vergleichbar.
 
 \begin{table}[htbp]
   \centering
@@ -119,7 +119,7 @@ Grundrauschen und \acrshort{snr} der P1 sind in Tabelle~\ref{tab:snr} zusammenge
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.85\textwidth]{diagramme/alpha_psd_okzipital.pdf}
-    \quelle{Eigene Abbildung} 
+    \quelle{Eigene Abbildung.} 
    \caption{Ergebnis der \acrshort{psd} an den okzipitalen Elektroden für alle drei Versuchsbedingungen, oben s1, Mitte s2, unten s3}
     \label{frequenzbandanalyse}
 \end{figure}
@@ -153,7 +153,7 @@ Die Mittelwerte der Alpha-Power der einzelnen Versuchspersonen sind in Tabelle~\
 
 Der absolute Unterschied zwischen EC und EO war bei s1 und s2 nahezu identisch ($20{,}62 - 2{,}87 = 17{,}75$ für s1 und $22{,}97 - 5{,}26 = 17{,}71$ für s2) und deutlich geringer als bei s3 ($30{,}54 - 3{,}59 = 26{,}95$). Außerdem zeigte sich, dass die Versuchspersonen bei s2 häufig die höchste Alpha-Power bei EO aufwiesen (pt\_02, pt\_03, pt\_05, pt\_09 und pt\_10).\newline
 
-Wichtig für die Beantwortung von Hypothese 7 (Die Trefferquote der richtigen Entscheidungen über 2-Sekunden-Abschnitte liegt über 62\%) ist nicht nur die Betrachtung des durchschnittlichen Alpha-Wertes, sondern die Betrachtung zeitlich kurzer Abschnitte (siehe Abschnitt \ref{sec:fragestellung}).\newline
+Wichtig für die Beantwortung von Hypothese 7 (Die Trefferquote der richtigen Entscheidungen über 2-Sekunden-Abschnitte liegt über 62 \%) ist nicht nur die Betrachtung des durchschnittlichen Alpha-Wertes, sondern die Betrachtung zeitlich kurzer Abschnitte (siehe Abschnitt \ref{sec:fragestellung}).\newline
 Bei allen Durchgängen lag der Wert bei mindestens 75\,\%, meist bei mindestens 90\,\% und in seltenen Fällen sogar bei 100\,\%. Die Trefferquote war mit Daten aus dem BioSemi-System durchschnittlich höher (90--95\,\%) als mit Daten aus dem OpenBCI-System (75--100\,\%) und streute weniger. Werden die durchschnittlichen Werte zwischen s1 und s3, sowie s2 und s3 verglichen, ergibt sich ein Verhältnis von s1/s3 = \textbf{1,00} und s2/s3 = \textbf{0,96}.\newline
 
 Darüber hinaus lagen die absoluten Werte der einzelnen Versuchspersonen in sehr unterschiedlichen Wertebereichen. So bewegte sich die EO-Alpha-Power von pt\_10 zwischen $0{,}83$ und $2{,}04$, die von pt\_02 dagegen zwischen $5{,}90$ und $13{,}88$. Ein Vergleich absoluter Werte ist daher nur eingeschränkt aussagekräftig, da jede Person eine eigene \gls{baseline_alpha} besitzt. Aus diesem Grund werden im Folgenden die Rangfolge der Versuchspersonen, wenn sie nach ihren EO-Werten sortiert werden, und das Verhältnis der absoluten Werte betrachtet und zwischen den Versuchsbedingungen verglichen.\newline
@@ -184,17 +184,17 @@ Die Rangfolge der Versuchspersonen ist in Tabelle \ref{tab:alpha_rank} dargestel
 \subsection{Alpha-Suppression}
 \label{sec:supp}
 
-Die Alpha-Suppression wurde wie in Abschnitt~\ref{sec:alphaauswertung} beschrieben berechnet. Ein Wert von 9 bedeutet entsprechend, dass bei geschlossenen Augen neunmal mehr Alpha-Power gemessen wird als unter Normalbedingungen (Augen geöffnet). Abbildung \ref{alpha_suppression} zeigt die Alpha-Suppression für die Cluster Okzipital, Parietal, Frontal und Zentral (gemittelt über alle Versuchsperson) für s1, s2 und s3.\newline
+Die Alpha-Suppression wurde wie in Abschnitt~\ref{sec:alphaauswertung} beschrieben berechnet. Ein Wert von 9 bedeutet entsprechend, dass bei geschlossenen Augen neunmal mehr Alpha-Power gemessen wird als unter Normalbedingungen (Augen geöffnet). Abbildung \ref{alpha_suppression} zeigt die über alle Versuchspersonen gemittelteAlpha-Suppression für die Cluster Okzipital, Parietal, Frontal und Zentral für s1, s2 und s3.\newline
 
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.85\textwidth]{diagramme/alpha_suppression_cluster.pdf}
-    \quelle{Eigene Abbildung} 
+    \quelle{Eigene Abbildung.} 
    \caption{Alpha-Suppression an den \glspl{elektrodencluster} für alle drei Versuchsbedingungen, mit Rot ist der Cluster mit größter Suppression markiert, die Linie zeigt das Kriterium Verhältnis = 2, oben s1, mittig s2, unten s3}
     \label{alpha_suppression}
 \end{figure}
 
-Bei allen drei Messungen war die Alpha-Suppression über dem Hinterkopf am stärksten, also über okzipitalen und parietalen Elektroden, während sie frontal und zentral deutlich geringer ausfiel. Alle Werte lagen zwischen 2 und 10. Am deutlichsten war der Unterschied zwischen den vorne und hinten liegenden Clustern beim BioSemi-System: Der okzipitale Wert (9,76) war mehr als doppelt so hoch (okzipital/zentral = 2,6) wie der zentrale (3,76) und fast doppelt so hoch wie der frontale (5,26). Bei s1 liegt das Verhältnis bei 8,39/3,67 = 2,29.Bei s2 war die Abstufung am geringsten, der Unterschied zwischen okzipital (4,58) und frontal (2,74) war relativ gesehen kleiner (okzipital / frontal = 1,67).\newline
+Bei allen drei Messungen war die Alpha-Suppression über dem Hinterkopf am stärksten, also über okzipitalen und parietalen Elektroden, während sie frontal und zentral deutlich geringer ausfiel. Alle Werte lagen zwischen 2 und 10. Am deutlichsten war der Unterschied zwischen den vorne und hinten liegenden Clustern beim BioSemi-System: Der okzipitale Wert (9,76) war mehr als doppelt so hoch (okzipital/zentral = 2,6) wie der zentrale (3,76) und fast doppelt so hoch wie der frontale (5,26). Bei s1 liegt das Verhältnis bei 8,39/3,67 = 2,29. Bei s2 war die Abstufung am geringsten, der Unterschied zwischen okzipital (4,58) und frontal (2,74) war relativ gesehen kleiner (okzipital / frontal = 1,67).\newline
 
 Mit einer Alpha-Suppression von 9,76 lag das BioSemi-System nahe an einem Verhältnis von 10. Auch mit dem OpenBCI-System wurde in s1, mit 8,39 ein guter und nur wenig abweichender (OpenBCI / BioSemi = \textbf{0,86}) Wert erreicht. \newline
 
