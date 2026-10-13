@@ -31,15 +31,15 @@ Die Suppressionen schwanken stark zwischen 2,6 und 22,7. Diese Unterschiede zwis
 Würde ein durchschnittlicher Schwellenwert aus allen Versuchspersonenzur Steuerung berechnet werden, könnten Versuchspersonen mit geringer Suppression diesen nicht erreichen und der Roboterarm zu empfindlich auf geringe Alpha-Power-Schwankungen bei Versuchspersonen mit großer Suppression reagieren könnte. \newline
 Deswegen muss bei der Programmierung eines Roboterarms beachtet werden, dass der Schwellenwert der Alpha-Suppression zur Initiation für eine Bewegung individuell angepasst werden sollte. \newline
 
-\textit{2) Bei beiden Systemen ist die Alpha-Suppression okzipital oder parietal am größten und ist deutlich größer als die Suppression in den frontalen und zentralen Hirnregionen.}\newline
-
-Auch diese Hypothese wird durch die Daten bestätigt (siehe Abschnitt \ref{sec:supp}). Der Unterschied zwischen am vorderen und hinteren Hirnteil iegenden Cluster war unter den drei Versuchsbedingungen unterschiedlich stark ausgeprägt (2,60 > 2,29 > 1,71). Bei s2 war der relative Unterschied der Suppression zwischen dem okzipitalen und zentralen Cluster nur 1,71. Dieser Unterschied ist zwar größer als eins (entspräche keinem Unterschied zwischen den Regionen), kann aber auch nur durch Zufall oder äußere Faktoren entstanden sein. Dies zeigt, dass die Messung unter Versuchsbedingung s2 möglicherweise nicht verwertbar ist, da hier nicht mit Sicherheit gesagt werden kann, dass diese Suppression der \gls{berger-effekt}, der physiologisch am Hinterkopf zu erwarten ist, ist und nicht ein Störsignal, welches sich auf alle Cluster auswirkt, ist. Die Begründung für diese schlechte Datenqualität bei s2 wird in der Diskussion von Hypothese sechs angebracht.\newline
-Für die anderen beiden Versuchsbedingungen wurde jedoch der \gls{berger-effekt} nachgewiesen. Es ist möglich, über einen 60 Sekunden langen Abschnitt die Alpha-Suppression aufzuzeichnen und aufgrund dieser Suppression ein Steuersignal für einen Roboterarm zu senden.\newline
-
-\textit{3) Die Rangfolge der Versuchspersonen nach ihrer Alpha-Power stimmt zwischen den Versuchsbedingungen stark überein ($\rho \geq 0{,}5$).}\newline
+\textit{2) Die Rangfolge der Versuchspersonen nach ihrer Alpha-Power stimmt zwischen den Versuchsbedingungen stark überein ($\rho \geq 0{,}5$).}\newline
 
 Die Rangkorrelation zwischen s1 und s3 war sehr gut und liegt bei $\rho$ = 0,94, also deutlich über dem Schwellenwert von 0,5. Die Korrelation zwischen s2 und s3 lag nur bei  $\rho$ = 0,66 und ist damit zwar über dem Schwellenwert, ist aber deutlich geringer als 0,94. Die Erklärung für diesen Wert ist bei der Diskussion von Hypothese sechs gegeben.\newline 
 Diese Rangfolge weist zusätzlich zu dem Verhältnis von 0,86 zwischen der Alpha-Suppression darauf hin, dass die Daten des OpenBCI-Systems ähnlich zu denen des BioSemi-Systems sind.\newline
+
+\textit{3) Bei beiden Systemen ist die Alpha-Suppression okzipital oder parietal am größten und ist deutlich größer als die Suppression in den frontalen und zentralen Hirnregionen.}\newline
+
+Auch diese Hypothese wird durch die Daten bestätigt (siehe Abschnitt \ref{sec:supp}). Der Unterschied zwischen am vorderen und hinteren Hirnteil iegenden Cluster war unter den drei Versuchsbedingungen unterschiedlich stark ausgeprägt (2,60 > 2,29 > 1,71). Bei s2 war der relative Unterschied der Suppression zwischen dem okzipitalen und zentralen Cluster nur 1,71. Dieser Unterschied ist zwar größer als eins (entspräche keinem Unterschied zwischen den Regionen), kann aber auch nur durch Zufall oder äußere Faktoren entstanden sein. Dies zeigt, dass die Messung unter Versuchsbedingung s2 möglicherweise nicht verwertbar ist, da hier nicht mit Sicherheit gesagt werden kann, dass diese Suppression der \gls{berger-effekt}, der physiologisch am Hinterkopf zu erwarten ist, ist und nicht ein Störsignal, welches sich auf alle Cluster auswirkt, ist. Die Begründung für diese schlechte Datenqualität bei s2 wird in der Diskussion von Hypothese sechs angebracht.\newline
+Für die anderen beiden Versuchsbedingungen wurde jedoch der \gls{berger-effekt} nachgewiesen. Es ist möglich, über einen 60 Sekunden langen Abschnitt die Alpha-Suppression aufzuzeichnen und aufgrund dieser Suppression ein Steuersignal für einen Roboterarm zu senden.\newline
 
 \textbf{P1-Paradigma}\newline
 Die mittlere P1-Amplitude war bei den Messungen mit dem OpenBCI-System grundlegend geringer als beim BioSemi-System (s2/s3 = 0,86 und s1/s3 = 0,57). Das zeigt, dass das BioSemi-System ERPs und einzelne ERP-Komponenten stärker erfassen kann als das OpenBCI-System. Das liegt vermutlich an besser messenden Elektroden, keinem störenden Bluetooth-Signal und der Elektrodenanzahl. Das bedeutet weiterhin, dass das OpenBCI-System bei dem P1-Paradigma, auch unabhängig vom Rauschen, schlechtere Werte liefert als das BioSemi-System. Dieses Paradimga wird nicht als Grundlage für eine BCI-Anwendung genutzt, da der Reiz nicht von einem Menschen selbst ausgeht, sondern ein Stimulus benötigt ist. Dieses Paradigma wird lediglich zum Vergleich der Datenqualität der Systeme genutzt. Wie valide die gemessenen Daten sind, wird im Folgenden diskutiert.\newline
@@ -51,35 +51,8 @@ Die SNR war für das BioSemi-System größer als für das OpenBCI-System (4,83 >
 
 \textit{5) Bei beiden Systemen ist die gemessene mittlere P1-Amplitude für große, kontrastreiche Stimuli größer als für kleine, kontrastreduzierte Stimuli. Dabei ist der Unterschied beim BioSemi-System größer als beim OpenBCI-System.}\newline
 
-Die Daten zur Einschätzung dieser Hypothese sind in Tabelle \ref{tab:p1_amplituden} und Tabelle \ref{tab:snr} zu finden. Der Unterschied zwischen großen, kontrastreichen und kleinen, kontrastreduzierten Stimuli lag bei s3, also beim BioSemi-System bei 0,77\textmu V und war damit mehr als doppelt so groß wie OpenBCI mit geschlossener Kabine (0,34 \textmu V). Der Wert für s1, war im Vergleich dazu sehr gering (0,05 \textmu V).
-Um zu überprüfen, ob diese Unterschiede außerhalb des Fehlerintervalls liegen, muss der relative Unterschied betrachtet werden, der so berechnet wird:
-
-\begin{equation} \text{relative Amplitudenreduktion} = \frac{\text{P1-Amplitude für große Reize} - \text{P1-Amplitude für kleine Reize}}{\text{P1-Amplitude für große Reize}} 
-\end{equation} 
-
-Aus dem Signal-Rausch-Verhältnis lässt sich eine grobe Abschätzung für den Messfehler einer Messung bestimmen. Der exakte Messfehler ist in der Praxis nicht zu errechnen, die Nutzung des relativen Fehlers wird als Näherung verwendet. Dabei gilt:
-
-\begin{equation}
-    \text{relativer Messfehler} \approx \frac{1}{\text{SNR}}
-\end{equation}
-
-\begin{table}[htbp]
-    \centering
-    \caption{Relative Amplitudenreduktion der P1, SNR und relativer Messfehler je Versuchsbedingung in Bezug auf große, kontrastreiche Stimuli}
-    \label{tab:p1_reduktion}
-    \begin{tabular}{cccc}
-    \toprule
-    Versuchsbedingung & Relative Amplitudenreduktion & SNR & Relativer Fehler \\
-    \midrule
-    s1 & $3{,}3\,\%$  & 1,72 & $58{,}14\,\%$ \\
-    s2 & $14{,}2\,\%$ & 2,53 & $40{,}0\,\%$  \\
-    s3 & $25{,}9\,\%$ & 4,83 & $20{,}7\,\%$  \\
-    \bottomrule
-    \end{tabular}
-    \tabquelle{Eigene Darstellung}
-\end{table}
-
-In Tabelle \ref{tab:p1_reduktion} sind die Werte für alle Versuchsbedingungen zu sehen. Es fällt auf, dass für s1 und s2 die relative Amplitudenreduktion geringer ist als der relative Fehler. Der absolute Unterschied liegt also im Fehlerintervall. \newline
+Die Daten zur Einschätzung dieser Hypothese sind in Tabelle \ref{tab:p1_amplituden} und Tabelle \ref{tab:snr} zu finden. Der Unterschied zwischen großen, kontrastreichen und kleinen, kontrastreduzierten Stimuli lag bei s3, also beim BioSemi-System bei 0,77\,\textmu V und war damit mehr als doppelt so groß wie OpenBCI mit geschlossener Kabine (0,34\,\textmu V). Der Wert für s1 war im Vergleich dazu sehr gering (0,05\,\textmu V).
+Wie die grobe Abschätzung des Messfehlers in Tabelle~\ref{tab:p1_reduktion} zeigt, ist für s1 und s2 die relative Amplitudenreduktion geringer als der relative Fehler. Der absolute Unterschied liegt also im Fehlerintervall. \newline
 Es ist außerdem zu sehen, dass die Daten bei Bedingung 1 am wenigsten aussagekräftig sind, da der relative Fehler mehr als zehnmal so groß ist wie der gewünschte Effekt.\newline
 S3 war die einzige Bedingung, bei der die Amplitudenreduktion knapp außerhalb des Fehlerintervalls liegt. Die Hypothese, es lässt sich ein Unterschied zwischen den Darbietungsformen messen, ist nur für das BioSemi-System zu bestätigen, nicht für das OpenBCI-System, selbst unter Laborbedingungen. Der absolute Unterschied ist nur der Richtung nach korrekt, aber nicht belastbar.\newline
 
@@ -91,7 +64,7 @@ Hier werden zwei konkrete Aspekte zur Umsetzung eines Roboterarms-BCIs diskutier
 \textit{6) Die Kriterien für die Datenqualität sind auch bei offener Kabinentür ohne Kinnstütze (s1) erfüllt, die Datenqualität ist bei geschlossener Kabinentür mit Kinnstütze (s2) aber besser.}\newline
 
 Beim Auswerten des Alpha-Paradigmas fiel mehrmals auf, dass die Daten aus s2 wesentlich schlechter sind als die Daten aus s1 (siehe Hypothese 2 und 3). Das ist unerwartet, aber leicht zu erklären: Die Kabinentür war in s2 zwar geschlossen, was elektrische Störungen reduziert, aber dieser Einfluss ist gering. Einen größeren Einfluss hat die Vigilanz (allgemeine Wachheit) der Versuchspersonen. Es ist naheliegend, dass sie nach zwanzig Minuten in einem abgedunkelten Raum, wobei sie nahezu nichts tun müssen, müde werden oder sich langweilen. Beides erhöht die Alpha-Power mit geöffneten Augen, hat aber wenig Einfluss auf die Alpha-Aktivität mit geschlossenen Augen, da sich die Versuchspersonen auch nach nur zehn Minuten mit geschlossenen Augen sehr entspannen. S1 ist die zuerst durchgeführte Bedingung und liefert theoretisch die aussagekräftigste Alpha-Aktivität bei EO. \newline
-S2 fand danach statt und hatte eine höhere Alpha-Aktivität bei EO (wie in Abschnitt \ref{sec:frequenzbandanalyse}, Absatz drei beschrieben), was darin resultiert, dass die Alpha-Suppression im Durchschnitt geringer ist. Die Alpha-Aktivität aufgrund Müdigkeit ist in allen Hirnregionen zu messen, deswegen ist der Unterschied zwischen den Elektroden-Clustern so gering (siehe Hypothese zwei). Die Müdigkeit ist bei jeder Versuchsperson unterschiedlich stark ausgeprägt. Das spiegelt sich in der geringen Ähnlichkeit der Listen der Versuchspersonen wider (Hypothese drei).\newline
+S2 fand danach statt und hatte eine höhere Alpha-Aktivität bei EO (wie in Abschnitt \ref{sec:frequenzbandanalyse}, Absatz drei beschrieben), was darin resultiert, dass die Alpha-Suppression im Durchschnitt geringer ist. Die Alpha-Aktivität aufgrund Müdigkeit ist in allen Hirnregionen zu messen, deswegen ist der Unterschied zwischen den Elektroden-Clustern so gering (siehe Hypothese drei). Die Müdigkeit ist bei jeder Versuchsperson unterschiedlich stark ausgeprägt. Das spiegelt sich in der geringen Ähnlichkeit der Listen der Versuchspersonen wider (Hypothese zwei).\newline
 Nach dieser Argumentation ist zu erwarten, dass die Messwerte unter Bedingung s3 noch stärker durch Müdigkeit beeinflusst sind. Dies ist jedoch nicht der Fall, die Werte sind sehr ähnlich zu s1 was Rangfolge und Alpha-Suppression betrifft. Das kann mit der Beschaffenheit und Zeitpunkt der Messung des BioSemi-Systems zu begründen sein. Es wird ein kaltes Elektrolytgel verwendet, das unangenehm kühl auf der Haut anliegt. Dieses Elektrolytgel sowie eine Umbauphase von 25 Minuten können der Grund sein, warum Müdigkeit bei s3 keinen so großen Einfluss hat wie bei s2. \newline
 Anzumerken ist, dass bei Versuchsperson fünf die Reihenfolge der Bedingungen aus logistischen Gründen geändert wurde. Zuerst wurde s3 durchgeführt, dann s1 und zum Schluss s2. In diesem Fall war die Versuchsperson bei s3 am wachsten und bei s2 am müdesten, was die Datenqualität bei s2 verschlechtert und bei s3 verbessert. \newline
 

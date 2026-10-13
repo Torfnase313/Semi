@@ -110,6 +110,35 @@ Grundrauschen und \acrshort{snr} der P1 sind in Tabelle~\ref{tab:snr} zusammenge
   \tabquelle{Eigene Darstellung}
 \end{table}
 
+Um grob abzuschätzen, ob die Unterschiede zwischen den Darbietungsformen über den Messfehler hinausgehen, wurde die relative Amplitudenreduktion mit dem relativen Messfehler verglichen (vgl. Abschnitt~\ref{sec:p1auswertung}). Die relative Amplitudenreduktion wurde wie folgt berechnet:
+
+\begin{equation} \text{relative Amplitudenreduktion} = \frac{\text{P1-Amplitude für große Reize} - \text{P1-Amplitude für kleine Reize}}{\text{P1-Amplitude für große Reize}}
+\end{equation}
+
+Aus dem \acrshort{snr} lässt sich eine grobe Abschätzung für den Messfehler bestimmen. Der exakte Messfehler ist in der Praxis nicht zu errechnen, daher wird der relative Fehler als Näherung verwendet:
+
+\begin{equation}
+    \text{relativer Messfehler} \approx \frac{1}{\text{SNR}}
+\end{equation}
+
+\begin{table}[htbp]
+    \centering
+    \caption{Relative Amplitudenreduktion der P1, SNR und relativer Messfehler je Versuchsbedingung in Bezug auf große, kontrastreiche Stimuli}
+    \label{tab:p1_reduktion}
+    \begin{tabular}{cccc}
+    \toprule
+    Versuchsbedingung & Relative Amplitudenreduktion & SNR & Relativer Fehler \\
+    \midrule
+    s1 & $3{,}3\,\%$  & 1,72 & $58{,}1\,\%$ \\
+    s2 & $14{,}2\,\%$ & 2,53 & $39{,}5\,\%$  \\
+    s3 & $25{,}9\,\%$ & 4,83 & $20{,}7\,\%$  \\
+    \bottomrule
+    \end{tabular}
+    \tabquelle{Eigene Darstellung}
+\end{table}
+
+Für s1 und s2 war die relative Amplitudenreduktion geringer als der relative Messfehler, für s3 lag sie knapp darüber (Tabelle~\ref{tab:p1_reduktion}).
+
 \section{Ergebnisse für das Alpha-Paradigma}
 \autor{Katharina Ensslen}
 
