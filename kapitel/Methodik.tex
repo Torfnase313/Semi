@@ -47,10 +47,10 @@ Geplant war die Teilnahme von 10--15 Versuchspersonen; an der Studie im Juli 202
 Unsere Datenerhebung gliederte sich in drei Versuchsbedingungen, die von den Versuchspersonen durchlaufen wurden. Die Versuchsbedingungen waren dabei folgendermaßen aufgebaut: \\
 \begin{tabularx}{\textwidth}{@{}lX@{}}
 -- \textbf{Versuchsbedingung 1 (s1):} & Die Messung fand mit dem OpenBCI-System und ohne Kinnstütze statt, zudem stand die Tür der speziellen Kabine offen, um möglichst alltagsnahe Situationen zu simulieren.  \\
--- \textbf{Versuchsbedingung 2 (s2):} & Die Messung fand mit dem OpenBCI-System statt, nun mit einer Kinnstütze, und die Tür der Kabine war geschlossen. \\
--- \textbf{Versuchsbedingung 3 (s3):} & Die Messung fand mit dem BioSemi-System statt, unter idealen Bedingungen, d.\,h. die Kabine war geschlossen und die Versuchsperson befand sich in einer Kinnstütze. \\
+-- \textbf{Versuchsbedingung 2 (s2):} & Die Messung fand mit dem OpenBCI-System statt, die Tür der Kabine war geschlossen und die Versuchsperson befand sich in einer Kinnstütze. \\
+-- \textbf{Versuchsbedingung 3 (s3):} & Die Messung fand mit dem BioSemi-System unter idealen Bedingungen statt, die Tür der Kabine war geschlossen und die Versuchsperson befand sich in einer Kinnstütze. \\
 \end{tabularx}
-Dabei wurde zudem darauf geachtet, dass die Rahmenbedingungen konstant waren. Das beinhaltete gleichbleibende Beleuchtungsstärke und einen konstanten Geräuschpegel.
+Zusätzlich wurde darauf geachtet, dass die Rahmenbedingungen konstant waren. Das beinhaltete gleichbleibende Beleuchtungsstärke und einen konstanten Geräuschpegel.
 
 
 \subsection{Messung mit dem BioSemi-System}
@@ -164,9 +164,9 @@ wurden mit derselben Zuordnung die Zeitpunkte der Tastendrücke vorhergesagt,
 die meist auf 0 bis 9\,ms mit den aufgezeichneten Triggern
 übereinstimmten.
 
-Nach der Rekonstruktion der Trigger erfolgte die bereits beschriebene Analyse. Alle Entscheidungen zur Auswertung wurden von uns
+Nach der Rekonstruktion der Trigger erfolgte die bereits beschriebene Analyse. Alle Entscheidungen zur Auswertung wurden von den Verfasserinnen und Verfassern dieser Arbeit selbst
 getroffen, und die Ergebnisse der von \gls{claude-code} erstellten Programme
-wurden von uns überprüft. Zusätzlich wurden die Ergebnisse von
+wurden von ihnen überprüft. Zusätzlich wurden die Ergebnisse von
 Wissenschaftlerinnen und Wissenschaftlern des Instituts für Psychologie
 kontrolliert.
 
@@ -211,7 +211,7 @@ Da einzelne Aktionspotenziale und selbst einzelne ereigniskorrelierte Antworten 
 \subsection{Auswertung der Alpha-Power}
 \label{sec:alphaauswertung}
 \autor{Lorenz Kobylka}
-Die Auswertung gliedert sich in zwei Ebenen und einzelne Teilschritte. Nach der Vorverarbeitung mit einem Bandpass von 1--40\,Hz (vgl. Abschnitt~\ref{sec:vorverarbeitung}) wurden zunächst die Bereiche extrahiert, bei denen die Versuchsperson die Augen geöffnet (\acrshort{eo}) hatte und wo sie die Augen geschlossen (\acrshort{ec}) hatte. Hierbei wurden im Gegensatz zu der \acrshort{erp}-Analyse keine kurzen Epochen ausgeschnitten, sondern längere zusammenhängende Blöcke. \newline
+Die Auswertung gliedert sich in zwei Ebenen und einzelne Teilschritte. Nach der Vorverarbeitung mit einem Bandpass von 1--40\,Hz (vgl. Abschnitt~\ref{sec:vorverarbeitung}) wurden zunächst die Abschnitte extrahiert, in denen die Versuchsperson die Augen geöffnet (\acrshort{eo}) beziehungsweise geschlossen (\acrshort{ec}) hatte. Hierbei wurden im Gegensatz zu der \acrshort{erp}-Analyse keine kurzen Epochen ausgeschnitten, sondern längere zusammenhängende Blöcke. \newline
 
 Zur genaueren Untersuchung wurde nun die \gls{psdgl} (\acrshort{psd}) mittels der \gls{welch}\footnote{Vgl. \cite{welch1967}} für jede Versuchsperson für Augen geöffnet und Augen geschlossen berechnet. Dabei ist wichtig zu erwähnen, dass die \acrshort{psd} über das gesamte Spektrum berechnet wurde und nicht nur über das Alpha-Band.  Dadurch ist es möglich, die Stärke der Alpha-Aktivität in diesen Blöcken zu quantifizieren und somit zu vergleichen. Diese \acrshortpl{psd} wurden dann über alle Versuchspersonen, frequenzweise und kanalweise, gemittelt. Aus diesen gemittelten Spektren wurde der Mittelwert im Alpha-Band (8--12\,Hz) gezogen, einmal für die Bedingung Augen offen und einmal für die Bedingung Augen geschlossen. Dieser Mittelwert wird als Alpha-Power bezeichnet und gibt in der Einheit \textmu V$^2$/Hz an, wie stark die Alpha-Aktivität ist. Anschließend wurde das Verhältnis \acrshort{ec}/\acrshort{eo} gebildet, das als Alpha-Suppression bezeichnet wird. Ist der Wert größer als 1, ist die Alpha-Aktivität bei geschlossenen Augen stärker als bei offenen. Die Kanäle wurden mittels \glspl{elektrodencluster} zu Kopfregionen zusammengefasst, deren mittlere Verhältnisse verglichen wurden, wobei ein besonderer Fokus auf der okzipitalen Region lag (okzipital: O1, O2; parietal: P3, P7, P8; zentral: C3, C4; frontal: Fp1, F8). Die Alpha-Power der einzelnen Versuchspersonen sowie deren Rangfolge wurden dagegen über die okzipito-parietale Region (O1, O2, P7, P8) gemittelt, also über dieselben Elektroden wie bei der P1-Auswertung.
 
