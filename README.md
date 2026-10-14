@@ -29,8 +29,6 @@ GANZ AM ENDE (nach Fazit)
 3. Theorie/Praxis-Verhältnis (1/3 : 2/3) nochmal prüfen
 
 ---------------------------------------------
-ANMERKUNGEN LEHRERIN/BETREUER - SELBST UMFORMULIEREN (Stand 14.10.)
----------------------------------------------
 (kleine Fehler sind schon korrigiert; hier stehen nur Stellen, für die ganze Sätze neu formuliert werden müssen)
 Lorenz
 - 2.1: "Weitere wichtige Funktionen sind das Arbeitsgedächtnis und die Planung zukünftiger Handlungen." -> "Ausdruck!"
