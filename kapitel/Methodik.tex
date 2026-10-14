@@ -3,7 +3,7 @@
 \chapter{Methodisches Vorgehen einer EEG-Validierungsstudie}
 \label{chap:methodik}
 
-\section{Beschreibung der Messapparatur}
+\section[{Beschreibung der Messapparatur~[Katharina Ensslen]}]{Beschreibung der Messapparatur}
 \autor{Katharina Ensslen}
 
 Die Geräte, die miteinander verglichen wurden, nutzen beide nicht-invasive Elektroden und leiten die gemessenen Daten digital an einen Rechner weiter. Die Geräte werden zur Forschung genutzt. Die gleiche Einteilung der genutzten Geräte ermöglicht eine bessere Vergleichbarkeit.
@@ -34,12 +34,12 @@ Zusätzlich zu den messenden Elektroden enthält das System zwei Ohrclips, die a
     \label{headset}
 \end{figure}
 
-\section{Beschreibung der Stichprobe} 
+\section[{Beschreibung der Stichprobe~[Lorenz Kobylka]}]{Beschreibung der Stichprobe} 
 \autor{Lorenz Kobylka}
 
 Geplant war die Teilnahme von 10--15 Versuchspersonen; an der Studie im Juli 2026 nahmen zehn Versuchspersonen teil. Sie waren zwischen 16 und 18 Jahren alt und besuchten das Carl-Zeiss-Gymnasium in der elften Klasse. Bevor ein \acrshort{eeg} aufgenommen wurde, unterschrieben die Versuchspersonen eine schriftliche Einverständniserklärung, füllten einen Händigkeitsfragebogen aus und gaben demografische Daten, wie Alter und Geschlecht, an. Ein genehmigter Ethik-Antrag unterstützte das Aufnehmen von Daten von Minderjährigen. Die Versuchspersonen absolvierten \acrshort{eeg}-Messungen unter drei verschiedenen Bedingungen, die jeweils etwa zehn Minuten dauerten.
 
-\section{Experimentalaufbau für die Messung} 
+\section[{Experimentalaufbau für die Messung~[Lorenz Kobylka]}]{Experimentalaufbau für die Messung} 
 \autor{Lorenz Kobylka}
 \subsection{Versuchsbedingungen}
 \label{sec:bedingungen}
@@ -63,7 +63,7 @@ Um die Alpha-Power messen zu können (\Romannum{2}), wurde das \acrshort{eeg} ei
 
 Zur Erhebung der \acrshort{eeg}-Daten durchliefen die Versuchspersonen den bereits in Abschnitt~\ref{sec:messung_biosemi} beschriebenen Untersuchungsablauf, wobei die gleichen Aufgaben bearbeitet wurden und sich lediglich die eingesetzten Messinstrumente unterschieden. Zuerst durchlief die Versuchsperson die Versuchsbedingung s1. Diese Daten wurden aufgezeichnet und gespeichert. Im Anschluss folgte s2.
 
-    \subsection{Zeitlicher Ablauf des Experiments} 
+    \subsection[{Zeitlicher Ablauf des Experiments~[Lorenz Kobylka]}]{Zeitlicher Ablauf des Experiments} 
 \autor{Lorenz Kobylka}
 
 Der Ablauf sah dabei folgendermaßen aus: 
@@ -87,7 +87,7 @@ Der Ablauf sah dabei folgendermaßen aus:
 \end{itemize}
 
 Für die Datenerhebung mit unseren Versuchspersonen war eine Gesamtdauer von etwa 110 Minuten pro Person eingeplant. Diese Zeit umfasste sowohl die eigentliche \acrshort{eeg}-Messung als auch die Vor- und Nachbereitung im Labor.
-\section{Auswertungsmethodik}
+\section[{Auswertungsmethodik~[Alisa Fiedler]}]{Auswertungsmethodik}
 \label{sec:auswertung}
 \autor{Alisa Fiedler}
 
@@ -95,7 +95,7 @@ Die im vorangegangenen Abschnitt beschriebenen Rohdaten wurden für beide Zielgr
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.85\textwidth]{bilder/Analysis_Pipeline}
+	\includegraphics[width=0.85\textwidth]{bilder/Analysis_Pipeline.pdf}
     \quelle{Eigene Abbildung.}
     \caption{Auswertungsstränge}
     \label{analysis}
@@ -103,11 +103,11 @@ Die im vorangegangenen Abschnitt beschriebenen Rohdaten wurden für beide Zielgr
 
 \subsection{Vorverarbeitung der Rohdaten}
 \label{sec:vorverarbeitung}
-Vor der eigentlichen Analyse wurden die Rohdaten für jede Versuchsperson mit einem \gls{bandpass} gefiltert und mit einem \gls{notch} vom 50-Hz-Netzbrummen befreit (vgl. Abschnitt~\ref{sec:stoer}). Da sich die Anforderungen der beiden Zielgrößen unterscheiden, erhielt jeder Auswertungsstrang eigene Filtergrenzen: 0,1--30\,Hz für die \acrshortpl{erp}, die eine feine zeitliche Auflösung im niederfrequenten Bereich benötigen, und 1--40\,Hz für die Alpha-Power. Danach erfolgte eine Re-Referenzierung auf die \gls{durchschnittsreferenz}. Dies war für diese Arbeit notwendig, da das OpenBCI-System gegen die Ohrclips als Referenz misst, während das BioSemi-System die \acrshort{cms}- und \acrshort{drl}-Elektroden als Referenz nutzt (vgl. Abschnitt~\ref{sec:stoer}). Durch die gemeinsame Durchschnittsreferenz sind die Daten beider Systeme auf dieselbe Weise referenziert.
+Die Daten des BioSemi-Systems wurden zunächst von 512 auf 250\,Hz heruntergerechnet (Downsampling), um die Datenmenge zu verringern. Anschließend wurden die Rohdaten für jede Versuchsperson mit einem \gls{bandpass} gefiltert und mit einem \gls{notch} vom 50-Hz-Netzbrummen befreit (vgl. Abschnitt~\ref{sec:stoer}). Da sich die Anforderungen der beiden Zielgrößen unterscheiden, erhielt jeder Auswertungsstrang eigene Filtergrenzen: 0,1--30\,Hz für die \acrshortpl{erp}, die eine feine zeitliche Auflösung im niederfrequenten Bereich benötigen, und 1--40\,Hz für die Alpha-Power. Danach erfolgte eine Re-Referenzierung auf die \gls{durchschnittsreferenz}. Dies war für diese Arbeit notwendig, da das OpenBCI-System gegen die Ohrclips als Referenz misst, während das BioSemi-System die \acrshort{cms}- und \acrshort{drl}-Elektroden als Referenz nutzt (vgl. Abschnitt~\ref{sec:stoer}). Durch die gemeinsame Durchschnittsreferenz sind die Daten beider Systeme auf dieselbe Weise referenziert.
 
 Elektroden, die vor oder während der Messung als defekt oder stark verrauscht auffielen, wurden markiert und aus den benachbarten Elektroden mittels \gls{spline} rechnerisch ersetzt (Interpolation).\footnote{Vgl. \cite{ferree_spherical}} So hatten alle Versuchspersonen dieselbe Anzahl an Kanälen, was eine Gruppenmittelung ermöglicht. Beim OpenBCI-System betraf dies in den auswertbaren Datensätzen im Mittel etwa 7 der 16 Elektroden, vor allem frontale Elektroden wie F3, F4 und F7 sowie P4. 
 
-\subsection {Vorverarbeitung der Rohdaten: Ergänzungen für OpenBCI}
+\subsection[{Vorverarbeitung der Rohdaten: Ergänzungen für OpenBCI~[Sophie Kleppe]}]{Vorverarbeitung der Rohdaten: Ergänzungen für OpenBCI}
 \label{sec:openbci_trigger}
 \autor{Sophie Kleppe}
 
@@ -163,7 +163,7 @@ wurden von ihnen überprüft. Zusätzlich wurden die Ergebnisse von
 Wissenschaftlerinnen und Wissenschaftlern des Instituts für Psychologie
 kontrolliert.
 
-\subsection{Auswertung der P1}
+\subsection[{Auswertung der P1~[Alisa Fiedler]}]{Auswertung der P1}
 \label{sec:p1auswertung}
 \autor{Alisa Fiedler}
 
@@ -189,10 +189,14 @@ Da einzelne Aktionspotenziale und selbst einzelne ereigniskorrelierte Antworten 
 
 \textbf{Kontrastvergleich:} Abschließend wurden die mittleren P1-Amplituden der Darbietungsbedingungen groß, kontrastreich und klein, kontrastreduziert für jede Versuchsbedingung miteinander verglichen. Dieser Vergleich dient als Kriterium dafür, ob ein System die P1 klar erkennbar abbildet (vgl. Abschnitt~\ref{sec:fragestellung}).
 
-\subsection{Auswertung der Alpha-Power}
+\subsection[{Auswertung der Alpha-Power~[Lorenz Kobylka]}]{Auswertung der Alpha-Power}
 \label{sec:alphaauswertung}
 \autor{Lorenz Kobylka}
 Die Auswertung gliedert sich in zwei Ebenen und einzelne Teilschritte. Nach der Vorverarbeitung mit einem Bandpass von 1--40\,Hz (vgl. Abschnitt~\ref{sec:vorverarbeitung}) wurden zunächst die Abschnitte extrahiert, in denen die Versuchsperson die Augen geöffnet (\acrshort{eo}) beziehungsweise geschlossen (\acrshort{ec}) hatte. Hierbei wurden im Gegensatz zu der \acrshort{erp}-Analyse keine kurzen Epochen ausgeschnitten, sondern längere zusammenhängende Blöcke.
 
 Zur genaueren Untersuchung wurde nun die \gls{psdgl} (\acrshort{psd}) mittels der \gls{welch}\footnote{Vgl. \cite{welch1967}} für jede Versuchsperson für Augen geöffnet und Augen geschlossen berechnet. Dabei ist wichtig zu erwähnen, dass die \acrshort{psd} über das gesamte Spektrum berechnet wurde und nicht nur über das Alpha-Band.  Dadurch ist es möglich, die Stärke der Alpha-Aktivität in diesen Blöcken zu quantifizieren und somit zu vergleichen. Diese \acrshortpl{psd} wurden dann über alle Versuchspersonen, frequenzweise und kanalweise, gemittelt. Aus diesen gemittelten Spektren wurde der Mittelwert im Alpha-Band (8--12\,Hz) gezogen, einmal für die Bedingung Augen offen und einmal für die Bedingung Augen geschlossen. Dieser Mittelwert wird als Alpha-Power bezeichnet und gibt in der Einheit \textmu V$^2$/Hz an, wie stark die Alpha-Aktivität ist. Anschließend wurde das Verhältnis \acrshort{ec}/\acrshort{eo} gebildet, das als Alpha-Suppression bezeichnet wird. Ist der Wert größer als 1, ist die Alpha-Aktivität bei geschlossenen Augen stärker als bei offenen. Die Kanäle wurden mittels \glspl{elektrodencluster} zu Kopfregionen zusammengefasst, deren mittlere Verhältnisse verglichen wurden, wobei ein besonderer Fokus auf der okzipitalen Region lag (okzipital: O1, O2; parietal: P3, P7, P8; zentral: C3, C4; frontal: Fp1, F8). Die Alpha-Power der einzelnen Versuchspersonen sowie deren Rangfolge wurden dagegen über die okzipito-parietale Region (O1, O2, P7, P8) gemittelt, also über dieselben Elektroden wie bei der P1-Auswertung.
+
+\textbf{Rangfolge der Versuchspersonen:} Um zu prüfen, ob die Unterschiede zwischen den Versuchspersonen von beiden Systemen gleich abgebildet werden, wurden die Versuchspersonen in jeder Versuchsbedingung nach ihrer Alpha-Power bei geöffneten Augen über der okzipito-parietalen Region (O1, O2, P7, P8) sortiert. Die Übereinstimmung zweier Rangfolgen wurde mit der \gls{spearman} ($\rho$) bestimmt. Ein Wert ab 0,5 gilt dabei als starker Zusammenhang.\footnote{Vgl. \cite{cohen1988}}
+
+\textbf{Erkennung des Augenzustands in kurzen Abschnitten:} Um zu prüfen, ob sich der Augenzustand bereits aus kurzen Abschnitten erkennen lässt, wurden die Blöcke mit geöffneten und geschlossenen Augen (je etwa 60\,s) in Abschnitte von 2\,s zerlegt. Für jeden Abschnitt wurde die Alpha-Power (8--12\,Hz) über denselben Elektroden berechnet. Als Schwelle diente der Wert in der Mitte zwischen der mittleren Alpha-Power bei geöffneten und bei geschlossenen Augen. Lag die Alpha-Power eines Abschnitts über der Schwelle, wurde er als \glqq Augen geschlossen\grqq{} eingeordnet, sonst als \glqq Augen geöffnet\grqq{}. Damit die Schwelle nicht an denselben Abschnitten bestimmt wurde, an denen sie anschließend geprüft wurde, wurde sie abwechselnd aus jedem zweiten Abschnitt bestimmt und an den übrigen Abschnitten getestet. Die Trefferquote gibt an, welcher Anteil der Abschnitte richtig eingeordnet wurde. Sie wurde für geöffnete und geschlossene Augen getrennt berechnet und anschließend gemittelt. Durch bloßes Raten würde eine Trefferquote von 50\,\% erreicht, die \gls{zufallsgrenze} liegt bei rund 60 Abschnitten pro Versuchsperson bei 62\,\% (vgl. Abschnitt~\ref{sec:fragestellung}).
 
