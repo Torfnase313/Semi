@@ -159,9 +159,9 @@
 
 \usepackage[affil-it]{authblk}	
 %Zitierweise nach CZG: Kurzbeleg in der Fußnote "Vgl. Familienname (Jahr): S. x."
-%Quellenverzeichnis: alle Autor:innen (maxbibnames=99); im Kurzbeleg bei 3-5 Autor:innen
-%beim ersten Zitat alle Namen, danach "Erstautor et al." (siehe \AtEveryCitekey unten);
-%bei mehr als 5 Autor:innen von Anfang an "et al.".
+%Quellenverzeichnis: alle Autor:innen (maxbibnames=99); im Kurzbeleg ab 3 Autor:innen
+%immer "Erstautor et al." (Anmerkung der Fachlehrerin, abweichend vom CZG-Dokument,
+%das bei 3-5 Autor:innen bei der Erstnennung alle Namen vorsieht).
 \usepackage[datamodel=datamodel,backend=biber,style=authoryear,autocite=footnote,
   maxbibnames=99,minbibnames=99,maxcitenames=5,mincitenames=1,
   uniquename=false,uniquelist=false,citetracker=true,ibidtracker=constrict,pagetracker=true,
@@ -219,10 +219,10 @@
 \DeclareFieldFormat{postnote}{#1}
 \renewcommand*{\multicitedelim}{\addsemicolon\space}
 
-%3-5 Autor:innen: beim ersten Zitat alle Namen, danach "et al."
+%ab 3 Autor:innen immer "et al." (siehe oben)
 %Endet die Autorenliste im Literatureintrag mit "and others" (mehr Autor:innen als
 %eingetragen), steht von Anfang an "Erstautor et al."
-\AtEveryCitekey{\ifciteseen{\defcounter{maxnames}{2}}{\defcounter{maxnames}{5}}%
+\AtEveryCitekey{\defcounter{maxnames}{2}%
   \ifandothers{labelname}{\defcounter{maxnames}{1}}{}}
 
 %Datum ohne Leerzeichen: TT.MM.JJJJ
