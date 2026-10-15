@@ -67,7 +67,12 @@
 \counterwithout{footnote}{chapter}
 
 %Name der Verfasserin / des Verfassers in kleinerer Schrift unter der Überschrift
-\newcommand{\autor}[1]{\par\noindent{\small\textit{#1}}\par}
+%Autorenname bleibt mit Überschrift und erstem Absatz auf einer Seite
+\newcommand{\autor}[1]{\par\nopagebreak\noindent{\small\textit{#1}}\par\nopagebreak}
+%keine einzelnen Zeilen am Seitenanfang/-ende
+\clubpenalty=10000
+\widowpenalty=10000
+\displaywidowpenalty=10000
 
 %Abstand vor Kapitelbeginn
 \RedeclareSectionCommand[
