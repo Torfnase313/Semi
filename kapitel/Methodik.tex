@@ -103,7 +103,7 @@ Die im vorangegangenen Abschnitt beschriebenen Rohdaten wurden für beide Zielgr
 \label{sec:vorverarbeitung}
 Vor der eigentlichen Analyse wurden die Rohdaten für jede Versuchsperson mit einem \gls{bandpass} gefiltert und mit einem \gls{notch} vom 50-Hz-Netzbrummen befreit (vgl. Abschnitt~\ref{sec:stoer}). Da sich die Anforderungen der beiden Zielgrößen unterscheiden, erhielt jeder Auswertungsstrang eigene Filtergrenzen: 0,1--30\,Hz für die \acrshortpl{erp}, die eine feine zeitliche Auflösung im niederfrequenten Bereich benötigen, und 1--40\,Hz für die Alpha-Power. Danach erfolgte eine Re-Referenzierung auf die \gls{durchschnittsreferenz}. Dies war für diese Arbeit notwendig, da das OpenBCI-System gegen die Ohrclips als Referenz misst, während das BioSemi-System die \acrshort{cms}- und \acrshort{drl}-Elektroden als Referenz nutzt (vgl. Abschnitt~\ref{sec:stoer}). Durch die gemeinsame Durchschnittsreferenz sind die Daten beider Systeme auf dieselbe Weise referenziert.
 
-Elektroden, die vor oder während der Messung als defekt oder stark verrauscht auffielen, wurden markiert und aus den benachbarten Elektroden mittels \gls{spline} rechnerisch ersetzt (Interpolation).\footnote{Vgl. \cite{ferree_spherical}} So hatten alle Versuchspersonen dieselbe Anzahl an Kanälen, was eine Gruppenmittelung ermöglicht. 
+Elektroden, die vor oder während der Messung als defekt oder stark verrauscht auffielen, wurden markiert und aus den benachbarten Elektroden mittels \gls{spline} rechnerisch ersetzt (Interpolation).\footnote{Vgl. \cite[S.~8~f.]{bigdelyshamlo2015_prep}} So hatten alle Versuchspersonen dieselbe Anzahl an Kanälen, was eine Gruppenmittelung ermöglicht. 
 
 \subsection{Vorverarbeitung der Rohdaten: Ergänzungen für OpenBCI}
 \label{sec:openbci_trigger}
