@@ -29,3 +29,6 @@
 *.synctex.gz
 *.toc
 *.xml
+
+# persönliche Unterschriften nicht ins öffentliche Repository
+unterschrift_*
