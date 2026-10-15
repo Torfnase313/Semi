@@ -40,7 +40,11 @@ Gamma ist das Frequenzband mit der höchsten Frequenz, welches üblicherweise im
 \section*{Steuerung einer Neuroprothese über Beta-Aktivität}
 \addcontentsline{toc}{section}{Steuerung einer Neuroprothese über Beta-Aktivität}
 
-% TODO Sophie: Text schreibt Sophie selbst (Stichpunkte im Chat)
+\textit{Motor Imagery} kommt bei \glspl{neuroprothese} zum Einsatz und ersetzt das Steuersignal aus Restbewegungen, welches bei Menschen mit Tetraplegie häufig nicht mehr vorhanden ist.\footnote{Vgl. \cite[S.~6~f.]{rupp2014_bci_sci}} Aus dem Englischen übersetzt bedeutet Motor Imagery \glqq Vorstellung einer Bewegung\grqq{}. Die Funktionsweise ist dementsprechend: Der Patient stellt sich eine Bewegung, beispielsweise der Hand oder des Fußes, vor, ohne dass sie ausgeführt wird.\footnote{Vgl. \cite[S.~1265]{mulder2007}} Während der Vorstellung kommt es zur \gls{desynchronisation}: Die Beta-Aktivität sinkt über dem motorischen Kortex. Anschließend kommt es zu einem Rebound der Beta-Aktivität, das heißt zu einem Anstieg auf einen Wert, der deutlich über dem Anfangsniveau liegt. Die Beta-Power wird dabei über eine Elektrode über dem Scheitel fortlaufend berechnet und analysiert.\footnote{Vgl. \cite[S.~24]{pfurtscheller2009_brainswitch}; \cite[S.~1]{rhodes2024_pmbr}}
+
+Da bei der Vorstellung einer Bewegung ähnliche motorische Areale aktiv werden wie bei einer echten Bewegung, entsteht ein vergleichbares Muster der Beta-Aktivität: Es kommt ebenfalls zur Desynchronisation und anschließend zum Rebound.\footnote{Vgl. \cite[S.~1265]{mulder2007}} Für die Beta-Aktivität wird ein Schwellenwert festgelegt. Überschreitet die Beta-Power diesen Schwellenwert, wird ein Schaltsignal ausgelöst.\footnote{Vgl. \cite[S.~24]{pfurtscheller2009_brainswitch}} Dies führt dazu, dass die Neuroprothese die gelähmten Handmuskeln über elektrische Impulse wieder anregen kann.\footnote{Vgl. \cite[S.~33--36]{pfurtscheller2003}} Jedes Schaltsignal löst dabei den nächsten Schritt der Greifbewegung aus.\footnote{Vgl. \cite[S.~169]{mullerputz2005}}
+
+Erfolge wurden bei Motor Imagery aber vor allem auch mit kortikalen Implantaten verzeichnet, da diese von einer reinen Schalteranwendung hin zu einer kontinuierlichen Steuerung gehen.\footnote{Vgl. \cite[S.~372]{hochberg2012_roboticarm}}
 
 \section*{Weitere frühe visuelle ERP-Komponenten}
 \addcontentsline{toc}{section}{Weitere frühe visuelle ERP-Komponenten}
